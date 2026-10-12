@@ -157,3 +157,11 @@ posters/
 - 叙事表述改为“选定的聚合组合/叙事样本”，不称单件档案行程。砖红样本为 `新加坡 → 万益成 → 潮安`，地图只表达新加坡—潮安两端关系。
 - 暂缓项不变：`compare` 无数据、`radial` 为人工模拟边、`scatter` 尚未证明独立结论。
 
+## 13. 2026-10-12｜`asset:` 视觉结构素材扩充 v1
+
+- 走查三联海报参考图后，确认当前缺口主要是结构层而非更多具象物件：撕纸边、照片装裱、账页骨架、无字邮戳环、灰蓝底纹和窗格/墙面边角。
+- 新增 6 个透明 PNG：`qiaopi-torn-paper-edge-v1`、`qiaopi-photo-mount-frame-v1`、`qiaopi-postmark-rings-v1`、`qiaopi-ledger-fragment-v1`、`qiaopi-blue-wash-texture-v1`、`qiaopi-window-lattice-fragment-v1`。
+- 所有新增素材均标注为生成式氛围资产，不承担事实、日期、数量、地名或人物身份；可读中文、地图、统计图和砖红路线继续由人工/Figma/SVG 负责。
+- 已上传至 Figma `04_PNG Assets`，统一命名为 `GENERATED/...`；新增节点放置在 y=4000 与 y=5200 两行，便于后续逐一拖入三张 A0。
+- 详细走查与组合规则见 `charts/png/qiaopi-visual-asset-audit-v1.md`。
+
