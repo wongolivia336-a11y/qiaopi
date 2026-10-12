@@ -1,0 +1,523 @@
+{
+  "schema_version": "qiaopi-panel-01-derived/v1",
+  "source": "课程资料/侨批可用数据-summary-v3.js",
+  "generated": "2026-10-12",
+  "unit": "侨批记录条数",
+  "normalization": {
+    "source_aliases": {
+      "印尼": "印度尼西亚"
+    }
+  },
+  "audit": {
+    "total_records": 50064,
+    "flows_sum": 50062,
+    "flows_gap_to_total": 2,
+    "unknown_source": 796,
+    "unknown_county": 683,
+    "unknown_both": 548,
+    "missing_union": 931,
+    "mapped_records": 49124,
+    "mapped_share": 0.981224
+  },
+  "coordinates": {
+    "method": "名称匹配后的城市/县级制图坐标；非 Excel 原始字段，来源待人工补录",
+    "origins": {
+      "泰国": [
+        100.5,
+        13.75
+      ],
+      "新加坡": [
+        103.82,
+        1.35
+      ],
+      "马来西亚": [
+        101.69,
+        3.14
+      ],
+      "印度尼西亚": [
+        106.85,
+        -6.2
+      ],
+      "越南": [
+        105.84,
+        21.03
+      ],
+      "柬埔寨": [
+        104.92,
+        11.56
+      ],
+      "香港": [
+        114.17,
+        22.32
+      ],
+      "澳大利亚": [
+        151.21,
+        -33.87
+      ]
+    },
+    "counties": {
+      "潮安": [
+        116.63,
+        23.66
+      ],
+      "澄海": [
+        116.77,
+        23.47
+      ],
+      "揭阳": [
+        116.37,
+        23.55
+      ],
+      "饶平": [
+        117,
+        23.67
+      ],
+      "普宁": [
+        116.17,
+        23.3
+      ],
+      "汕头": [
+        116.68,
+        23.35
+      ],
+      "潮阳": [
+        116.6,
+        23.26
+      ],
+      "丰顺": [
+        116.18,
+        23.74
+      ],
+      "潮州": [
+        116.63,
+        23.66
+      ],
+      "广州": [
+        113.26,
+        23.13
+      ],
+      "惠来": [
+        116.3,
+        23.03
+      ],
+      "诏安": [
+        117.18,
+        23.71
+      ],
+      "揭西": [
+        115.84,
+        23.43
+      ],
+      "大埔": [
+        116.7,
+        24.35
+      ]
+    }
+  },
+  "map_flows": [
+    {
+      "source": "新加坡",
+      "county": "潮安",
+      "count": 14505
+    },
+    {
+      "source": "泰国",
+      "county": "澄海",
+      "count": 12781
+    },
+    {
+      "source": "泰国",
+      "county": "潮安",
+      "count": 7880
+    },
+    {
+      "source": "马来西亚",
+      "county": "潮安",
+      "count": 3978
+    },
+    {
+      "source": "新加坡",
+      "county": "澄海",
+      "count": 2786
+    },
+    {
+      "source": "泰国",
+      "county": "饶平",
+      "count": 1296
+    },
+    {
+      "source": "泰国",
+      "county": "普宁",
+      "count": 893
+    },
+    {
+      "source": "马来西亚",
+      "county": "澄海",
+      "count": 760
+    },
+    {
+      "source": "泰国",
+      "county": "揭阳",
+      "count": 724
+    },
+    {
+      "source": "香港",
+      "county": "潮安",
+      "count": 527
+    },
+    {
+      "source": "新加坡",
+      "county": "揭阳",
+      "count": 470
+    },
+    {
+      "source": "新加坡",
+      "county": "汕头",
+      "count": 401
+    },
+    {
+      "source": "马来西亚",
+      "county": "揭阳",
+      "count": 301
+    },
+    {
+      "source": "泰国",
+      "county": "潮阳",
+      "count": 200
+    },
+    {
+      "source": "印度尼西亚",
+      "county": "潮安",
+      "count": 172
+    },
+    {
+      "source": "香港",
+      "county": "澄海",
+      "count": 164
+    },
+    {
+      "source": "泰国",
+      "county": "丰顺",
+      "count": 155
+    },
+    {
+      "source": "越南",
+      "county": "澄海",
+      "count": 126
+    },
+    {
+      "source": "新加坡",
+      "county": "潮阳",
+      "count": 101
+    },
+    {
+      "source": "马来西亚",
+      "county": "汕头",
+      "count": 74
+    },
+    {
+      "source": "泰国",
+      "county": "汕头",
+      "count": 70
+    },
+    {
+      "source": "新加坡",
+      "county": "丰顺",
+      "count": 70
+    },
+    {
+      "source": "新加坡",
+      "county": "饶平",
+      "count": 60
+    },
+    {
+      "source": "泰国",
+      "county": "广州",
+      "count": 56
+    },
+    {
+      "source": "柬埔寨",
+      "county": "饶平",
+      "count": 53
+    },
+    {
+      "source": "新加坡",
+      "county": "普宁",
+      "count": 48
+    },
+    {
+      "source": "泰国",
+      "county": "惠来",
+      "count": 48
+    },
+    {
+      "source": "泰国",
+      "county": "潮州",
+      "count": 40
+    },
+    {
+      "source": "新加坡",
+      "county": "潮州",
+      "count": 38
+    },
+    {
+      "source": "香港",
+      "county": "普宁",
+      "count": 31
+    },
+    {
+      "source": "印度尼西亚",
+      "county": "揭阳",
+      "count": 28
+    },
+    {
+      "source": "香港",
+      "county": "汕头",
+      "count": 27
+    },
+    {
+      "source": "泰国",
+      "county": "揭西",
+      "count": 27
+    },
+    {
+      "source": "马来西亚",
+      "county": "饶平",
+      "count": 22
+    },
+    {
+      "source": "马来西亚",
+      "county": "普宁",
+      "count": 22
+    },
+    {
+      "source": "泰国",
+      "county": "诏安",
+      "count": 19
+    },
+    {
+      "source": "印度尼西亚",
+      "county": "澄海",
+      "count": 17
+    },
+    {
+      "source": "越南",
+      "county": "潮安",
+      "count": 17
+    },
+    {
+      "source": "香港",
+      "county": "丰顺",
+      "count": 17
+    },
+    {
+      "source": "新加坡",
+      "county": "诏安",
+      "count": 16
+    },
+    {
+      "source": "印度尼西亚",
+      "county": "汕头",
+      "count": 16
+    },
+    {
+      "source": "柬埔寨",
+      "county": "澄海",
+      "count": 13
+    },
+    {
+      "source": "香港",
+      "county": "揭阳",
+      "count": 12
+    },
+    {
+      "source": "柬埔寨",
+      "county": "汕头",
+      "count": 12
+    },
+    {
+      "source": "马来西亚",
+      "county": "诏安",
+      "count": 9
+    },
+    {
+      "source": "柬埔寨",
+      "county": "揭阳",
+      "count": 8
+    },
+    {
+      "source": "越南",
+      "county": "饶平",
+      "count": 6
+    },
+    {
+      "source": "马来西亚",
+      "county": "潮阳",
+      "count": 5
+    },
+    {
+      "source": "马来西亚",
+      "county": "潮州",
+      "count": 4
+    },
+    {
+      "source": "越南",
+      "county": "汕头",
+      "count": 4
+    },
+    {
+      "source": "新加坡",
+      "county": "大埔",
+      "count": 3
+    },
+    {
+      "source": "香港",
+      "county": "饶平",
+      "count": 2
+    },
+    {
+      "source": "新加坡",
+      "county": "广州",
+      "count": 2
+    },
+    {
+      "source": "香港",
+      "county": "潮阳",
+      "count": 2
+    },
+    {
+      "source": "印度尼西亚",
+      "county": "丰顺",
+      "count": 1
+    },
+    {
+      "source": "新加坡",
+      "county": "揭西",
+      "count": 1
+    },
+    {
+      "source": "柬埔寨",
+      "county": "潮安",
+      "count": 1
+    },
+    {
+      "source": "越南",
+      "county": "普宁",
+      "count": 1
+    },
+    {
+      "source": "柬埔寨",
+      "county": "普宁",
+      "count": 1
+    },
+    {
+      "source": "马来西亚",
+      "county": "广州",
+      "count": 1
+    }
+  ],
+  "source_totals": {
+    "新加坡": 18501,
+    "泰国": 24189,
+    "马来西亚": 5176,
+    "香港": 782,
+    "印度尼西亚": 234,
+    "越南": 154,
+    "柬埔寨": 88
+  },
+  "county_totals": {
+    "潮安": 27080,
+    "澄海": 16647,
+    "饶平": 1439,
+    "普宁": 996,
+    "揭阳": 1543,
+    "汕头": 604,
+    "潮阳": 308,
+    "丰顺": 243,
+    "广州": 59,
+    "惠来": 48,
+    "潮州": 82,
+    "揭西": 28,
+    "诏安": 44,
+    "大埔": 3
+  },
+  "county_entropy": [
+    {
+      "county": "潮安",
+      "known_total": 27083,
+      "unknown_source_count": 175,
+      "k": 8,
+      "H_norm": 0.52426
+    },
+    {
+      "county": "澄海",
+      "known_total": 16647,
+      "unknown_source_count": 62,
+      "k": 7,
+      "H_norm": 0.379302
+    },
+    {
+      "county": "揭阳",
+      "known_total": 1543,
+      "unknown_source_count": 5,
+      "k": 6,
+      "H_norm": 0.655098
+    },
+    {
+      "county": "饶平",
+      "known_total": 1439,
+      "unknown_source_count": 2,
+      "k": 6,
+      "H_norm": 0.24794
+    },
+    {
+      "county": "普宁",
+      "known_total": 996,
+      "unknown_source_count": 0,
+      "k": 6,
+      "H_norm": 0.251201
+    },
+    {
+      "county": "汕头",
+      "known_total": 604,
+      "unknown_source_count": 2,
+      "k": 7,
+      "H_norm": 0.578197
+    },
+    {
+      "county": "潮阳",
+      "known_total": 308,
+      "unknown_source_count": 0,
+      "k": 4,
+      "H_norm": 0.537841
+    },
+    {
+      "county": "丰顺",
+      "known_total": 243,
+      "unknown_source_count": 1,
+      "k": 4,
+      "H_norm": 0.616036
+    },
+    {
+      "county": "潮州",
+      "known_total": 82,
+      "unknown_source_count": 0,
+      "k": 3,
+      "H_norm": 0.777282
+    },
+    {
+      "county": "广州",
+      "known_total": 59,
+      "unknown_source_count": 0,
+      "k": 3,
+      "H_norm": 0.212421
+    },
+    {
+      "county": "诏安",
+      "known_total": 44,
+      "unknown_source_count": 1,
+      "k": 3,
+      "H_norm": 0.960376
+    }
+  ]
+}

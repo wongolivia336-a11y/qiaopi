@@ -7,6 +7,8 @@
     "published_summary": "课程资料/侨批可用数据-summary-v3.js",
     "published_summary_object": "window.QIAOPI_DATA",
     "total_records": 50064,
+    "flows_total": 50062,
+    "flows_gap_note": "flows 聚合表比 total 少 2 条；原因待回到本地原始数据核验，图表不得把 flows 称为完整全库路径。",
     "unit": "侨批记录条数",
     "missing_value": "未知",
     "missing_value_note": "未知表示资料未记录或无法识别，不是一个真实地区或批局。"
@@ -28,7 +30,7 @@
         "edge_width": "sqrt(count)",
         "source_node_area": "source_total",
         "county_node_area": "county_total",
-        "edge_color": "灰蓝=全库路径；砖红=选中收批县或叙事样本"
+        "edge_color": "灰蓝=flows 中纳入制图的聚合路径；砖红=选定的聚合组合/叙事样本"
       },
       "axes": {
         "type": "geographic map",
@@ -37,10 +39,10 @@
         "axis_note": "端点关系，不等同真实海上航线"
       },
       "legend": [
-        "线宽＝侨批记录条数",
+        "灰蓝线宽∝√侨批记录条数；砖红叙事索引为固定线宽，不编码数量",
         "圆面积＝地点总记录量",
-        "灰蓝＝全库路径",
-        "砖红＝重点路径"
+        "灰蓝＝flows 中纳入制图的聚合路径",
+        "砖红＝叙事样本组合（不代表单件行程或全库总流量）"
       ],
       "uncertainty": [
         "来源地为未知的记录单独统计，不放入正式来源节点",
