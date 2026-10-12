@@ -3,7 +3,7 @@
   "project": "一封侨批，抵达之后",
   "data_contract": "docs/qiaopi-data-contracts-v1.md",
   "source": {
-    "raw_file": "E:\\OneDrive\\xwechat_files\\wxid_uj0c3dsol87522_a3fe\\msg\\file\\2026-10\\侨批可用数据.xlsx",
+    "raw_file": "local-only: 侨批可用数据.xlsx (path intentionally omitted)",
     "published_summary": "课程资料/侨批可用数据-summary-v3.js",
     "published_summary_object": "window.QIAOPI_DATA",
     "total_records": 50064,
