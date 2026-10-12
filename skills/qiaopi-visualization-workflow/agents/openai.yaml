@@ -1,0 +1,5 @@
+interface:
+  display_name: "Qiaopi Visualization Workflow"
+  short_description: "Turn qiaopi data into a three-poster A0 workflow"
+  default_prompt: "Use this workflow to turn qiaopi data into three connected A0 posters with editable SVG charts, transparent PNG assets, Figma organization, and GitHub traceability."
+
