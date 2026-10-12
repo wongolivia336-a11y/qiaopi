@@ -115,13 +115,18 @@
       "claim": "可识别的来源地—批局—收批县组合呈现不同规模的中介路径，但批局字段有大量缺失。",
       "source_table": "routeTriples",
       "fields_used": ["source", "office", "county", "count"],
-      "derived_values": ["top_n filtering by count for legibility"],
+      "derived_values": [
+        "source_top_n = 6 known sources + other + missing",
+        "office_top_n = 10 named offices + other + missing",
+        "county_top_n = 6 known counties + other + missing",
+        "all collapsed bins preserve the 50,064-record total"
+      ],
       "encodings": {
-        "mark": "three-column parallel edge / thread",
+        "mark": "three-column Sankey band / thread",
         "left_node": "source",
         "middle_node": "office",
         "right_node": "county",
-        "edge_width": "sqrt(count)",
+        "edge_width": "count for Sankey bands; sqrt(count) only for thin-line thread variant",
         "edge_color": "重点批局或叙事样本=砖红；其他=灰蓝"
       },
       "axes": {
@@ -129,14 +134,15 @@
         "columns": "寄批地｜批局｜收批县",
         "unit": "每条聚合路径的记录条数"
       },
-      "legend": ["一条线＝一组来源地—批局—收批县聚合关系", "线宽∝√记录量"],
+      "legend": ["一条带＝一组来源地—批局—收批县聚合关系", "Sankey 带宽∝记录量；细线变体才使用 √记录量"],
       "uncertainty": [
         "未知批局不可被叙述为某个具体批局",
         "展示 Top-N 时必须标注截断规则",
         "聚合路径不是每一封信的逐件中转顺序"
       ],
-      "template_family": "B3 THREADS",
-      "status": "keep-with-audit"
+      "template_family": "B3 THREADS / Sankey",
+      "output": "charts/svg/panel-02-threads-sankey-v1.svg",
+      "status": "rebuilt-from-workbook"
     },
     {
       "id": "office-reach",

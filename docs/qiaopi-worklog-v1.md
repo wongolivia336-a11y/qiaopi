@@ -178,3 +178,11 @@ posters/
 - 节点 `98:2` 命名为 `SVG_P01_map-route-v1_EDITABLE`，放入 `A0_01_此岸_起信` 的地图区，保留真实底图、经纬轴、灰蓝全库关系和砖红叙事样本线。
 - 参考图中的小型国别/县域剪影仍未伪造；下一轮若需要，将基于真实地理数据提取为独立 SVG 图层。
 
+## 16. 2026-10-12｜`chart:` 从本地 Excel 重建三段式 Sankey
+
+- 读取用户附上的本地 Excel，仅使用 `来源国`、`批局名`、`收批县` 三个字段；原始 Excel 不复制到仓库。
+- 生成字段级派生表：`data/derived/panel-02-sankey-derived-v1.json` 与 `data/derived/panel-02-sankey-edges-v1.csv`。
+- 生成 `charts/svg/panel-02-threads-sankey-v1.svg`：来源国 → 批局名 → 收批县；带宽按记录数成正比，未知类别单独保留，叙事样本路径 `新加坡 → 万益成 → 潮安` 为 1,267 条真实组合并用砖红标注。
+- SVG 已上传到 Figma `02_SVG Chart Library` 与 `03_A0 Triptych`；P02 的 `SLOT_P02_NETWORK` 已由 `SVG_P02_threads-sankey-v1_EDITABLE` 占位替换，`SLOT_P02_FLOW` 继续留给 office-reach。
+- 工具评估与外部导出边界见 `docs/qiaopi-chart-toolchain-v1.md`。
+
