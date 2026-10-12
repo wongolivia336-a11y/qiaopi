@@ -14,7 +14,8 @@
 
 - 仓库：`wongolivia336-a11y/qiaopi`
 - 分支：`main`
-- 当前基线提交：[`8e2cdfb`](https://github.com/wongolivia336-a11y/qiaopi/commit/8e2cdfb7d3d0f9eb733c39ede326283c72dd3a76)
+- 本轮开始时基线提交：[`8e2cdfb`](https://github.com/wongolivia336-a11y/qiaopi/commit/8e2cdfb7d3d0f9eb733c39ede326283c72dd3a76)
+- 本轮工作日志提交：[`f6f4576`](https://github.com/wongolivia336-a11y/qiaopi/commit/f6f4576905c8b78f71019be4a34bc84377fe0bd3)
 - 基线内容：v4 HTML 原型、字段摘要脚本、地图依赖和两项 PNG 资产。
 - 原始 Excel 不上传；Excel 只作为本地源文件保存。公开仓库中的摘要脚本必须注明字段来源、处理时间和是否含身份字段。
 
