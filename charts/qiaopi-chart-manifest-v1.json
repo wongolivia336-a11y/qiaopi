@@ -1,0 +1,291 @@
+{
+  "schema_version": "qiaopi-chart-manifest/v1",
+  "project": "一封侨批，抵达之后",
+  "data_contract": "docs/qiaopi-data-contracts-v1.md",
+  "source": {
+    "raw_file": "E:\\OneDrive\\xwechat_files\\wxid_uj0c3dsol87522_a3fe\\msg\\file\\2026-10\\侨批可用数据.xlsx",
+    "published_summary": "课程资料/侨批可用数据-summary-v3.js",
+    "published_summary_object": "window.QIAOPI_DATA",
+    "total_records": 50064,
+    "unit": "侨批记录条数",
+    "missing_value": "未知",
+    "missing_value_note": "未知表示资料未记录或无法识别，不是一个真实地区或批局。"
+  },
+  "charts": [
+    {
+      "id": "map-route",
+      "panel": "01 此岸｜起信",
+      "claim": "海外来源地与潮汕收批县之间存在非均衡的记录连接。",
+      "source_table": "flows",
+      "fields_used": ["source", "county", "count"],
+      "derived_values": [
+        "source_total = sum(count) grouped by source",
+        "county_total = sum(count) grouped by county",
+        "geometry = external coordinate lookup by source/county name"
+      ],
+      "encodings": {
+        "mark": "curved geographic edge + node",
+        "edge_width": "sqrt(count)",
+        "source_node_area": "source_total",
+        "county_node_area": "county_total",
+        "edge_color": "灰蓝=全库路径；砖红=选中收批县或叙事样本"
+      },
+      "axes": {
+        "type": "geographic map",
+        "x": "经度 / °E（外部坐标字典）",
+        "y": "纬度 / °N（外部坐标字典）",
+        "axis_note": "端点关系，不等同真实海上航线"
+      },
+      "legend": [
+        "线宽＝侨批记录条数",
+        "圆面积＝地点总记录量",
+        "灰蓝＝全库路径",
+        "砖红＝重点路径"
+      ],
+      "uncertainty": [
+        "来源地为未知的记录单独统计，不放入正式来源节点",
+        "地理坐标来自名称匹配，不是 Excel 原始经纬度",
+        "未知县/未知来源不应被解释为真实地区"
+      ],
+      "template_family": "MAP TRANSLATION",
+      "status": "keep-with-audit"
+    },
+    {
+      "id": "source-county-matrix",
+      "panel": "01 此岸｜起信",
+      "claim": "不同海外来源地与收批县形成不同强度的组合，而不是平均连接。",
+      "source_table": "flows",
+      "fields_used": ["source", "county", "count"],
+      "derived_values": ["pivot rows=source, columns=county, cell=count"],
+      "encodings": {
+        "mark": "bubble matrix",
+        "x_position": "county category",
+        "y_position": "source category",
+        "bubble_area": "count",
+        "color": "重点组合=砖红；其他组合=灰蓝"
+      },
+      "axes": {
+        "x": "收批县（类别）",
+        "y": "海外来源地（类别）",
+        "unit": "每个圆代表的记录条数"
+      },
+      "legend": ["圆面积＝记录条数", "未知行列单独标注，不混入已知类别"],
+      "uncertainty": [
+        "组合是聚合计数，不是逐件时间顺序",
+        "同义来源地名称需先归一化（例如印度尼西亚/印尼）"
+      ],
+      "template_family": "L4 ARC MATRIX",
+      "status": "keep"
+    },
+    {
+      "id": "entropy-profile",
+      "panel": "01 此岸｜起信",
+      "claim": "不同收批县的海外来源结构集中度不同。",
+      "source_table": "flows",
+      "fields_used": ["source", "county", "count"],
+      "derived_values": [
+        "p_i = count(source_i, county) / sum(count(source, county))",
+        "H_norm = -sum(p_i * ln(p_i)) / ln(k), with unknown source excluded",
+        "k = number of known source categories observed for the county"
+      ],
+      "encodings": {
+        "mark": "horizontal interval/bar",
+        "x_position": "H_norm in [0,1]",
+        "y_position": "county category",
+        "bar_length": "normalized source entropy"
+      },
+      "axes": {
+        "x": "归一化来源集中度 H_norm（0–1，无量纲）",
+        "y": "收批县（类别）",
+        "interpretation": "越低=记录更集中；越高=记录更分散"
+      },
+      "legend": ["H_norm＝来源结构集中度，不是人口多样性或文化开放度"],
+      "uncertainty": [
+        "未知来源不参与熵值计算，但必须报告其数量",
+        "k 由当期可见的已知来源类别决定；最终 SVG 需附公式"
+      ],
+      "template_family": "F5 TICK ROWS",
+      "status": "keep-with-audit"
+    },
+    {
+      "id": "threads",
+      "panel": "02 中途｜经批局",
+      "claim": "可识别的来源地—批局—收批县组合呈现不同规模的中介路径，但批局字段有大量缺失。",
+      "source_table": "routeTriples",
+      "fields_used": ["source", "office", "county", "count"],
+      "derived_values": ["top_n filtering by count for legibility"],
+      "encodings": {
+        "mark": "three-column parallel edge / thread",
+        "left_node": "source",
+        "middle_node": "office",
+        "right_node": "county",
+        "edge_width": "sqrt(count)",
+        "edge_color": "重点批局或叙事样本=砖红；其他=灰蓝"
+      },
+      "axes": {
+        "type": "categorical three-column layout",
+        "columns": "寄批地｜批局｜收批县",
+        "unit": "每条聚合路径的记录条数"
+      },
+      "legend": ["一条线＝一组来源地—批局—收批县聚合关系", "线宽∝√记录量"],
+      "uncertainty": [
+        "未知批局不可被叙述为某个具体批局",
+        "展示 Top-N 时必须标注截断规则",
+        "聚合路径不是每一封信的逐件中转顺序"
+      ],
+      "template_family": "B3 THREADS",
+      "status": "keep-with-audit"
+    },
+    {
+      "id": "office-reach",
+      "panel": "02 中途｜经批局",
+      "claim": "不同批局的可识别记录量和收批县覆盖范围并不相同。",
+      "source_table": "officeCounty",
+      "fields_used": ["office", "county", "count"],
+      "derived_values": [
+        "office_total = sum(count) grouped by office",
+        "known_county_count = count distinct county per office, excluding unknown county"
+      ],
+      "encodings": {
+        "mark": "ranked bars or radial network",
+        "bar_1": "office_total (records)",
+        "bar_2": "known_county_count (distinct counties)",
+        "edge_width_if_network": "sqrt(count)"
+      },
+      "axes": {
+        "bar_1_x": "记录条数",
+        "bar_2_x": "已知收批县数量（个）",
+        "y": "批局（类别）",
+        "network_layout": "内圈=批局，外圈=收批县"
+      },
+      "legend": ["记录量与覆盖县数分开编码，不能合成为无单位分数"],
+      "uncertainty": [
+        "未知批局不进入批局排名，另列缺失量",
+        "覆盖范围是摘要中的已知县类别数，不等同经营半径或地理距离",
+        "officeCounty 不包含中转时间顺序"
+      ],
+      "template_family": "OFFICE REACH / REPLACEMENT FOR RADIAL",
+      "status": "rebuild-required"
+    },
+    {
+      "id": "annual-confidence",
+      "panel": "03 彼岸｜抵达",
+      "claim": "年度记录量、日期直读比例和推断待核比例并不同步。",
+      "source_table": "yearStats",
+      "fields_used": ["year", "count", "direct", "inferred"],
+      "derived_values": [
+        "direct_rate = direct / count * 100",
+        "inferred_rate = inferred / count * 100",
+        "unknown_year_count = total - sum(yearStats.count)"
+      ],
+      "encodings": {
+        "mark": "aligned small multiples: bars + lines",
+        "bar_height": "count (records)",
+        "line_1": "direct_rate (%)",
+        "line_2": "inferred_rate (%)"
+      },
+      "axes": {
+        "x": "年份（公历）",
+        "y_1": "年度记录条数",
+        "y_2": "日期可信度比例（%）",
+        "axis_note": "条数与百分比不得共用无标注的同一坐标轴"
+      },
+      "legend": ["柱＝记录条数", "直读＝直接读取比例", "推断待核＝推断/待核比例", "无年另列"],
+      "uncertainty": [
+        "无年记录不放入任何具体年份",
+        "推断待核不与直读年份混合",
+        "外部历史事件竖线必须另附史料来源，不能默认解释为因果"
+      ],
+      "template_family": "F2 HAIRLINE LINE",
+      "status": "keep-with-audit"
+    },
+    {
+      "id": "calendar-heat",
+      "panel": "03 彼岸｜抵达",
+      "claim": "档案记录密度在不同年份和月份组合中不均匀。",
+      "source_table": "calendar",
+      "fields_used": ["year", "month", "count"],
+      "derived_values": ["missing combinations remain NA; do not coerce to zero"],
+      "encodings": {
+        "mark": "rectangular heatmap",
+        "x_position": "year",
+        "y_position": "month",
+        "fill_opacity": "count relative to displayed maximum"
+      },
+      "axes": {
+        "x": "年份",
+        "y": "月份（1–12）",
+        "unit": "每格记录条数"
+      },
+      "legend": ["色深＝该年月组合的记录条数", "空白＝摘要中无记录，不等同于现实中没有寄信"],
+      "uncertainty": [
+        "只反映档案记录密度",
+        "不能单凭高值解释春节、季风或节庆动机",
+        "月份字段的来源和缺失规则需在数据字典中确认"
+      ],
+      "template_family": "L17 CALENDAR HEAT",
+      "status": "keep-with-audit"
+    },
+    {
+      "id": "lineage",
+      "panel": "03 彼岸｜抵达",
+      "claim": "高频寄批人—收批县组合拥有可见的记录覆盖区间，但摘要端点不能证明通信连续。",
+      "source_table": "senderCounty",
+      "fields_used": ["sender", "county", "count", "start", "end"],
+      "derived_values": ["coverage_interval = [start, end]", "continuous_years/gaps require raw row-level years"],
+      "encodings": {
+        "mark": "interval timeline with points",
+        "x_position": "year",
+        "y_position": "sender + county combination",
+        "interval_length": "end - start",
+        "point_size": "count"
+      },
+      "axes": {
+        "x": "年份",
+        "y": "寄批人—收批县组合",
+        "unit": "组合记录条数与覆盖年份"
+      },
+      "legend": ["实线＝摘要中首末年份覆盖区间", "若重算逐年空窗，空窗必须标为档案无记录"],
+      "uncertainty": [
+        "当前摘要不含逐年记录集合，不能绘制真实中断/恢复",
+        "姓名属于可识别字段，公开前需进行授权核验",
+        "不能把寄批人—收批县组合直接解释为家谱或家庭关系"
+      ],
+      "template_family": "L11 TREND LINEAGE / COVERAGE INTERVAL",
+      "status": "rebuild-required"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "compare",
+      "panel": "02 中途｜经批局",
+      "claim": "信用网络与快递网络的结构差异。",
+      "source_table": null,
+      "fields_used": [],
+      "reason": "当前图只有海外端、批局、批脚、信＋款四条概念线，没有对应的数值字段、边、时间或金额数据。",
+      "replacement": "使用 office-reach 展示 officeCounty 的真实边；金额或物品字段补齐后再另立图表。",
+      "status": "deferred-conceptual"
+    },
+    {
+      "id": "radial",
+      "panel": "02 中途｜经批局",
+      "claim": "批局的经营半径高度不均。",
+      "source_table": "officeCounty",
+      "fields_used": ["office", "county", "count"],
+      "reason": "当前 HTML 使用 46 条人工循环边和固定索引分配，没有读取 officeCounty 的真实边和 count。",
+      "replacement": "用 office-reach 从 officeCounty 重新生成真实边；可继续采用 radial 版式，但不可复用现有绘图代码。",
+      "status": "deferred-implementation"
+    },
+    {
+      "id": "scatter",
+      "panel": "03 彼岸｜抵达",
+      "claim": "年度记录量与日期直读比例之间的关系。",
+      "source_table": "yearStats",
+      "fields_used": ["year", "count", "direct"],
+      "reason": "字段足以计算年度散点，但当前没有明确要检验的统计假设，且图与 annual-confidence 信息重复。",
+      "replacement": "若保留，需把样本定义为年份、补充相关性/不确定性说明，并证明它揭示了独立事实；否则删除以节省 A0 版面。",
+      "status": "deferred-statistical"
+    }
+  ]
+}
+
