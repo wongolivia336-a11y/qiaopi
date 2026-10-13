@@ -7,7 +7,7 @@
 | `00_Art Direction` | 项目 custom 色板、禁用项、灰蓝统计/砖红叙事规则 |
 | `01_Data Contracts` | 三图字段、单位、缺失值、`flows` 合计差 2 条、坐标来源待补 |
 | `02_SVG Chart Library` | 导入三个 `panel-01-*.svg`，组件名分别为 `P01_HeroMap`、`P01_SourceCountyMatrix`、`P01_EntropyProfile` |
-| `03_A0 Triptych` | 三张 A0 竖版 frame；已加入可隐藏的 `SLOT_*` 图表预留区与 `COLLAGE_*` PNG 拼贴层，尚未导入真实 SVG/中文标题 |
+| `03_A0 Triptych` | 三张 A0 竖版 frame；P01/P02/P03 已分别放入真实可编辑 SVG，标题仍由人工 Figma 处理 |
 | `04_PNG Assets` | 仅保留信封、印章、照片、港口、木棉花等局部素材与来源信息 |
 | `99_References` | GitHub commit、摘要版本、坐标来源、档案图像授权与参考资料 |
 
@@ -46,4 +46,18 @@
 - 处理：保留底图、经纬轴、灰蓝真实流向和砖红叙事样本线；后续可在 Figma 中继续缩放、隐藏图层或替换字体。
 
 参考图里其他小型国别/县域剪影暂不做成 PNG；应从真实地理数据生成独立 SVG，避免产生无法核对的假地图。
+
+### 2026-10-13｜真实 SVG 槽位更新
+
+| 海报 / 槽位 | 当前节点 | 文件 | 处理 |
+| --- | --- | --- | --- |
+| P01 / `SLOT_P01_MAP` | `109:2` | `panel-01-map-route-v1.svg` | 旧版本隐藏；聚焦南洋—潮汕主航域并保留县域局部展开 |
+| P01 / `SLOT_P01_MATRIX` | `112:2` | `panel-01-source-county-matrix-v1.svg` | 已放入槽位，隐藏占位标签 |
+| P01 / `SLOT_P01_ENTROPY` | `114:2` | `panel-01-entropy-profile-compact-v1.svg` | 820×1050 窄槽专用版，替换原拥挤熵图 |
+| P02 / `SLOT_P02_NETWORK` | `109:522` | `panel-02-threads-sankey-v1.svg` | 轻色 Sankey，砖红只标叙事样本 |
+| P02 / `SLOT_P02_FLOW` | `110:2` | `panel-02-office-reach-v1.svg` | 左记录量、右县域覆盖类别数的双指标图 |
+| P03 / `SLOT_P03_TIME` | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 横向双面板：年度堆叠柱 + 日期可信度双线 |
+
+Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导入 SVG 的可编辑向量树，不是整页截图。
+
 
