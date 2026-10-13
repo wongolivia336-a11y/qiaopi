@@ -55,11 +55,17 @@
 | P01 / `SLOT_P01_MATRIX` | `112:2` | `panel-01-source-county-matrix-v1.svg` | 已放入槽位，隐藏占位标签 |
 | P01 / `SLOT_P01_ENTROPY` | `114:2` | `panel-01-entropy-profile-compact-v1.svg` | 820×1050 窄槽专用版，替换原拥挤熵图 |
 | P02 / `SLOT_P02_NETWORK` | `121:2` | `panel-02-threads-sankey-v2.svg` | 分层 Sankey：真实细流 + Top-16 主流 + 叙事样本局部放大 |
-| P02 / `SLOT_P02_FLOW` | `110:2` | `panel-02-office-reach-v1.svg` | 左记录量、右县域覆盖类别数的双指标图 |
+| P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
 | P03 / `SLOT_P03_TIME` | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 横向双面板：年度堆叠柱 + 日期可信度双线 |
 | P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA |
 | P03 / `SLOT_P03_LINEAGE` | `117:2` | `panel-03-lineage-compact-v1.svg` | 窄栏版寄批人—收批县覆盖区间 |
 
 Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导入 SVG 的可编辑向量树，不是整页截图。
+
+### P02 圆形网络替代视图
+
+- SVG Library：`124:2`，完整 `1900 × 1500` 版本。
+- P02 lower flow slot：`125:2`，`680 × 537` 紧凑预览，与 `110:2` office-reach 并列。
+- 圆周分段为来源国、批局、收批县；圆周位置不代表地图方向，弦线宽度和透明度才表达记录量层级。
 
 
