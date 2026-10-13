@@ -17,7 +17,7 @@ const countyTotals = Object.fromEntries(data.nodes.county.map(n => [n, 0]));
 for (const e of sourceEdges) { sourceTotals[e.source] += e.count; officeTotals[e.target] += e.count; }
 for (const e of officeEdges) countyTotals[e.target] += e.count;
 
-const W = 1600, H = 1500, plotTop = 270, plotBottom = 1240, nodeW = 26, gap = 22;
+const W = 1600, H = 1500, plotTop = 285, plotBottom = 1215, nodeW = 34, gap = 20;
 const X = { source: 120, office: 705, county: 1310 };
 const total = data.rows;
 const scale = (plotBottom - plotTop - gap * 7) / total;
@@ -56,8 +56,10 @@ function renderLinks(edges, leftColumn, rightColumn, groupId) {
     leftOffset[e.source] += h; rightOffset[e.target] += h;
     const sample = (e.source === '新加坡' && e.target === '万益成') || (e.source === '万益成' && e.target === '潮安');
     const fill = sample ? C.red : C.slate;
-    const opacity = sample ? 0.66 : 0.24;
-    parts.push(`<path data-key="${esc(e.source)}|${esc(e.target)}" d="${linkPath(X[leftColumn] + nodeW, sy, X[rightColumn], ty, h)}" fill="${fill}" fill-opacity="${opacity}" stroke="none"><title>${esc(e.source)} → ${esc(e.target)}：${fmt(e.count)} 条</title></path>`);
+    // Preserve exact width while reducing the visual fog created by dozens of
+    // low-volume links. A larger relation gets a slightly darker archival ink.
+    const opacity = sample ? 0.72 : Math.min(0.34, 0.10 + Math.log10(e.count + 1) * 0.055);
+    parts.push(`<path data-key="${esc(e.source)}|${esc(e.target)}" d="${linkPath(X[leftColumn] + nodeW, sy, X[rightColumn], ty, h)}" fill="${fill}" fill-opacity="${opacity.toFixed(3)}" stroke="${sample ? C.red : 'none'}" stroke-opacity="${sample ? 0.2 : 0}"><title>${esc(e.source)} → ${esc(e.target)}：${fmt(e.count)} 条</title></path>`);
   }
   return `<g id="${groupId}">${parts.join('')}</g>`;
 }
@@ -70,7 +72,8 @@ function renderNodes(column, nodes, totals, color) {
     const stroke = missing ? C.taupe : C.paper;
     const textX = column === 'source' ? X[column] - 16 : X[column] + nodeW + 16;
     const anchor = column === 'source' ? 'end' : 'start';
-    return `<g data-node="${esc(n)}"><rect x="${X[column]}" y="${item.y.toFixed(1)}" width="${nodeW}" height="${item.h.toFixed(1)}" rx="8" fill="${fill}" stroke="${stroke}" stroke-width="2"/><text class="label" x="${textX}" y="${(item.y + Math.min(22, item.h) + 3).toFixed(1)}" text-anchor="${anchor}">${esc(n)}</text><text class="small" x="${textX}" y="${(item.y + Math.min(42, item.h + 20)).toFixed(1)}" text-anchor="${anchor}">${fmt(totals[n])} 条</text></g>`;
+    const dash = missing ? ' stroke-dasharray="4 4"' : '';
+    return `<g data-node="${esc(n)}"><rect x="${X[column]}" y="${item.y.toFixed(1)}" width="${nodeW}" height="${item.h.toFixed(1)}" rx="10" fill="${fill}" stroke="${stroke}" stroke-width="2"${dash}/><text class="label" x="${textX}" y="${(item.y + Math.min(22, item.h) + 3).toFixed(1)}" text-anchor="${anchor}">${esc(n)}</text><text class="small" x="${textX}" y="${(item.y + Math.min(42, item.h + 20)).toFixed(1)}" text-anchor="${anchor}">${fmt(totals[n])} 条</text></g>`;
   }).join('')}</g>`;
 }
 
@@ -89,7 +92,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 <style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:${C.ink}}.title{font-size:42px;font-weight:700}.sub{font-size:20px;fill:#5F5850}.column{font-size:17px;font-weight:700;letter-spacing:2px}.label{font-size:17px}.small{font-size:14px;fill:#5F5850}.note{font-size:15px;fill:#5F5850}.hair{vector-effect:non-scaling-stroke}</style>
 <rect id="background" width="${W}" height="${H}" fill="${C.paper}"/>
 <g id="chart-title"><text class="title" x="70" y="76">${esc(title)}</text><text class="sub" x="70" y="115">${esc(subtitle)}</text><text class="small" x="1530" y="76" text-anchor="end">CONTRACT · threads / sankey</text></g>
-<g id="column-labels"><text class="column" x="${X.source + nodeW / 2}" y="205" text-anchor="middle">来源国</text><text class="column" x="${X.office + nodeW / 2}" y="205" text-anchor="middle">批局名</text><text class="column" x="${X.county + nodeW / 2}" y="205" text-anchor="middle">收批县</text><line x1="70" x2="1530" y1="225" y2="225" stroke="${C.dust}"/></g>
+<g id="column-labels"><rect x="70" y="170" width="330" height="72" rx="10" fill="${C.paper}" stroke="${C.dust}"/><rect x="635" y="170" width="330" height="72" rx="10" fill="${C.paper}" stroke="${C.dust}"/><rect x="1200" y="170" width="330" height="72" rx="10" fill="${C.paper}" stroke="${C.dust}"/><text class="column" x="${X.source + nodeW / 2}" y="200" text-anchor="middle">来源国</text><text class="small" x="${X.source + nodeW / 2}" y="222" text-anchor="middle">寄出地 / 记录数</text><text class="column" x="${X.office + nodeW / 2}" y="200" text-anchor="middle">批局名</text><text class="small" x="${X.office + nodeW / 2}" y="222" text-anchor="middle">中转节点 / 记录数</text><text class="column" x="${X.county + nodeW / 2}" y="200" text-anchor="middle">收批县</text><text class="small" x="${X.county + nodeW / 2}" y="222" text-anchor="middle">抵达地 / 记录数</text><line x1="70" x2="1530" y1="255" y2="255" stroke="${C.dust}"/></g>
 ${sourceOffice}${officeCounty}${nodes}
 <g id="annotations"><rect x="70" y="1275" width="1460" height="125" fill="none" stroke="${C.dust}"/><text class="note" x="95" y="1312">砖红带：叙事样本路径，新加坡 → 万益成 → 潮安；该组合在原始记录中出现 ${fmt(data.sample_path.count)} 条，不代表全库总流量。</text><text class="note" x="95" y="1345">缺失：来源国未记录 ${fmt(data.raw_totals.source['未记录来源'])} 条；批局名未记录 ${fmt(data.raw_totals.office['未记录批局'])} 条；收批县未记录 ${fmt(data.raw_totals.county['未记录收批县'])} 条。未知单独保留，不并入具体节点。</text><text class="note" x="95" y="1378">数据来源：本地《侨批可用数据(1).xlsx》字段级聚合；仓库仅保存来源国、批局名、收批县和记录数，不上传原始 Excel。</text></g>
 <g id="legend" transform="translate(920 1435)"><rect width="18" height="18" rx="6" fill="${C.slate}" fill-opacity=".45"/><text class="small" x="28" y="14">灰蓝＝全库真实关系</text><rect x="190" width="18" height="18" rx="6" fill="${C.red}" fill-opacity=".66"/><text class="small" x="218" y="14">砖红＝叙事样本路径</text></g>
@@ -97,3 +100,4 @@ ${sourceOffice}${officeCounty}${nodes}
 
 fs.writeFileSync(path.join(outDir, 'panel-02-threads-sankey-v1.svg'), svg);
 console.log(JSON.stringify({ output: 'charts/svg/panel-02-threads-sankey-v1.svg', sourceEdges: sourceEdges.length, officeEdges: officeEdges.length, scale }));
+
