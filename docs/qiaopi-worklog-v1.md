@@ -250,4 +250,12 @@ posters/
 - 图中加入组合数、可识别日期行数、平均覆盖区间、日期缺失提示和时间轴注释，使其在 P03 作为“长期关系证据层”与 annual-confidence、calendar-heat 形成繁复但可核验的证据组。
 - 严格注明：摘要不含逐年记录集合，不能把区间解释为连续通信或真实断档；寄批人属于可识别字段，公开展出前需核验授权，也不能直接解释为家谱。
 
+## 25. 2026-10-13｜`chart:` 升级 P02 Sankey 为分层网络 v2
+
+- 新增 `charts/scripts/generate-panel-02-sankey-v2-svg.mjs` 与 `charts/svg/panel-02-threads-sankey-v2.svg`；数据仍来自本地 Excel 的 `来源国`、`批局名`、`收批县` 字段级派生表 `panel-02-sankey-derived-v1.json`，没有增加人工模拟边。
+- 视觉上拆成 `sankey-links-base` 与 `sankey-links-focus` 两个可编辑层：全部真实聚合边以浅灰蓝低透明度保留网络繁复度，来源—批局与批局—收批县两段各取真实记录量前 16 条加细描边，形成主流/细流层级；带宽仍按记录条数编码。
+- 节点改为轻量档案卡片：阶段导轨、节点总量/占比、未知虚线节点、Top-N “其他”边界和缺失值审计卡均保留；避免黑色重节点与无意义装饰线。
+- 新增真实 `新加坡 → 万益成 → 潮安` 局部放大 inset，数值显示 `routeTriples.sample_path.count`，并明确是叙事样本，不是全库总流量；同时保留缺失批局 25,374 条等边界说明。
+- manifest 将 `threads` 输出更新为 `panel-02-threads-sankey-v2.svg`，状态为 `upgraded-hierarchical-editable-svg`；P02 中原 v1 可保留隐藏作为回溯版本，v2 作为新版候选。
+
 
