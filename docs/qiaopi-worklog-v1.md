@@ -186,3 +186,13 @@ posters/
 - SVG 已上传到 Figma `02_SVG Chart Library` 与 `03_A0 Triptych`；P02 的 `SLOT_P02_NETWORK` 已由 `SVG_P02_threads-sankey-v1_EDITABLE` 占位替换，`SLOT_P02_FLOW` 继续留给 office-reach。
 - 工具评估与外部导出边界见 `docs/qiaopi-chart-toolchain-v1.md`。
 
+## 17. 2026-10-13｜`chart:` 修复 P01 底图并美化 P02 Sankey
+
+- 修复 `generate-panel-01-svg.mjs` 的 TopoJSON 多边形环解码：旧实现把 polygon ring 当作单个 arc id，导致底图路径空白、异常拉伸；新实现按 Polygon / MultiPolygon 的 ring 结构解码。
+- P01 地图改为聚焦“南洋—潮汕主航域”（95–123°E、8°S–32°N），不删除原始字段，只避免 3 条澳大利亚记录压缩主要视觉尺度。
+- 新增 `潮汕收批地 · 局部展开`，将潮安、澄海、揭阳、饶平、普宁、汕头等县域的名称和记录数拆开显示，并明确标注“位置为阅读性展开，不按比例”。
+- P02 Sankey 增加三段栏头、缺失节点虚线边框、按流量动态调整的灰蓝透明度；砖红仍只表达 `新加坡 → 万益成 → 潮安` 叙事样本路径。
+- 新 SVG 已重新导入 Figma `03_A0 Triptych`：P01 节点 `P01_Map_Route_EDITABLE_v2`，P02 节点 `P02_Threads_Sankey_EDITABLE_v2`；旧版本保留但隐藏，便于回溯。
+- 远程 GitHub 已记录为 `chart:` 提交；当前最新远程提交为 `66d6cc59dcf70cb2cdddb20b0010094bf93be760`。
+
+
