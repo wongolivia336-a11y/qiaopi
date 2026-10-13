@@ -107,6 +107,7 @@
         "k 由当期可见的已知来源类别决定；最终 SVG 需附公式"
       ],
       "template_family": "F5 TICK ROWS",
+      "output": "charts/svg/panel-01-entropy-profile-compact-v1.svg",
       "status": "keep-with-audit"
     },
     {
@@ -205,8 +206,10 @@
         "推断待核不与直读年份混合",
         "外部历史事件竖线必须另附史料来源，不能默认解释为因果"
       ],
-      "template_family": "F2 HAIRLINE LINE",
-      "status": "keep-with-audit"
+      "template_family": "WIDE DUAL-PANEL STACKED BAR + CONFIDENCE LINES",
+      "output": "charts/svg/panel-03-annual-confidence-wide-v1.svg",
+      "derived_output": "data/derived/panel-03-annual-confidence-derived-v1.json",
+      "status": "rebuilt-from-published-summary"
     },
     {
       "id": "calendar-heat",
