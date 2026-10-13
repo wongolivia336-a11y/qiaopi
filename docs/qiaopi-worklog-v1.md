@@ -266,4 +266,12 @@ posters/
 - 已导入 Figma `02_SVG Chart Library`（节点 `124:2`），并在 P02 `SLOT_P02_FLOW` 的空白左侧放入紧凑预览（节点 `125:2`），与 office-reach 并列，便于比较直线 Sankey 与圆形网络两种读法。
 - manifest 新增 `threads-circular`，状态为 `new-real-data-alternate-view`；原 deferred `radial` 不再作为最终实现依据。
 
+## 27. 2026-10-13｜`chart:` 补充 P01 海外来源结构侧栏并清理三页占位文字
+
+- 新增 `charts/scripts/generate-panel-01-source-profile-svg.mjs` 与 `charts/svg/panel-01-source-profile-v1.svg`；使用公开摘要 `flows.source / flows.count` 聚合 7 个已知来源地，按记录量排序，泰国 24,189 条、新加坡 18,501 条，未知来源 796 条另列。
+- P01 新 SVG 导入 `03_A0 Triptych` 右侧空栏，节点 `141:2`，尺寸 `760 × 1,576`；它把原先的大段空白变成可核验的来源结构索引，不添加人工关系。
+- 三张 A0 的 `TITLE / 章节信息`、`SVG FLOW DETAIL`、`CAPTION / SOURCE NOTES`、`LETTER / QUOTE` 均已替换为真实中文章节标题、读图说明或明确的待接入家书字段；标题使用 Figma 可编辑文本，字体为 `Noto Sans SC`，避免 SVG 导入后的固定宽度换行看起来像乱码。
+- P02 新增“读法二 / 圆形网络与批局覆盖”分隔层；P03 新增“抵达之后 / 时间与关系证据”分隔层；P01 新增“航路注记”与“证据层 / 组合与来源结构”。
+- 所有新增文字均不虚构家书原文、人物身份或历史解释；P03 家书区明确保留 EID、日期、寄批人、收批县与授权信息字段，等待人工接入真实样本。
+
 
