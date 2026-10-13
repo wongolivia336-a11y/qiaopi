@@ -111,6 +111,29 @@
       "status": "keep-with-audit"
     },
     {
+      "id": "source-profile",
+      "panel": "01 此岸｜起信",
+      "claim": "海外来源记录量高度不均，泰国与新加坡构成主要来源结构。",
+      "source_table": "flows",
+      "fields_used": ["source", "count"],
+      "derived_values": ["source_total = sum(count) grouped by source", "mapped_share = flows_sum / total_records"],
+      "encodings": {
+        "mark": "ranked horizontal bars",
+        "bar_length": "source_total (records)",
+        "color": "灰蓝=已知来源；砖红=叙事样本所在来源地"
+      },
+      "axes": {
+        "x": "侨批记录条数",
+        "y": "海外来源地（类别）",
+        "unit": "条"
+      },
+      "legend": ["灰蓝条＝已知来源地记录量", "砖红条＝新加坡叙事样本来源地", "未知来源另列"],
+      "uncertainty": ["flows 合计 50,062，比全库少 2 条；差额不做推测", "来源地是字段级类别，不等同人口规模"],
+      "template_family": "RANKED SOURCE PROFILE",
+      "output": "charts/svg/panel-01-source-profile-v1.svg",
+      "status": "new-real-data-support-chart"
+    },
+    {
       "id": "threads",
       "panel": "02 中途｜经批局",
       "claim": "可识别的来源地—批局—收批县组合呈现不同规模的中介路径，但批局字段有大量缺失。",
