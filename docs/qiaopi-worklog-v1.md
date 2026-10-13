@@ -230,4 +230,18 @@ posters/
 - 新版把相同真实字段拆成左右两块：左侧灰蓝/灰褐堆叠柱为年度记录条数，右侧灰蓝/灰褐双线为日期直读/推断待核比例；下方共享年份刻度、图例、无年记录与 1694 年孤立记录说明。
 - 仍保留 2020 年砖红提示，但不把它解释为叙事路线；SVG 分组包括 `count-panel`、`confidence-panel`、`confidence-lines`、`legend`、`data-callouts`、`source-and-notes`，可独立编辑。
 
+## 23. 2026-10-13｜`chart:` 完成 P03 calendar-heat 年月密度图
+
+- 从公开字段级摘要 `课程资料/侨批可用数据-summary-v3.js` 的 `calendar.year / calendar.month / calendar.count` 重建 `charts/svg/panel-03-calendar-heat-v1.svg`，并保存 `data/derived/panel-03-calendar-derived-v1.json`；原始 Excel 不读取、不上传。
+- 图面用 `1915–2020 × 1–12 月` 的真实年月矩阵，空组合保留为 NA；上方增加年度总量折线，右侧增加跨年份月份总量条，形成参考图所需的密度层/注释层/图例层，而不是单一色块。
+- 计算口径：显示区间有 36,095 条、865 个已出现年月组合、407 个空白组合；另有 850 条年份已知但月份未知（`month=0`），以及主轴外早期记录，均单列说明。
+- 颜色只使用分段透明度的灰蓝/灰褐和相对高值砖红提示，不使用连续渐变；SVG 分组包括 `annual-strip`、`heatmap`、`month-profile`、`legend`、`data-callouts`、`source-and-notes`。
+
+## 24. 2026-10-13｜`chart:` 完成 P03 lineage 覆盖区间图
+
+- 从公开字段级摘要的 `senderCounty.sender / county / count / start / end` 生成 `charts/svg/panel-03-lineage-v1.svg`，并保存 `data/derived/panel-03-lineage-derived-v1.json`。
+- 30 个真实寄批人—收批县组合行全部保留：29 行有首末年份，1 行日期缺失；实线只表达摘要首年与末年，端点圆面积表达组合记录条数，收批县类别用灰蓝/灰褐/尘色区分。
+- 图中加入组合数、可识别日期行数、平均覆盖区间、日期缺失提示和时间轴注释，使其在 P03 作为“长期关系证据层”与 annual-confidence、calendar-heat 形成繁复但可核验的证据组。
+- 严格注明：摘要不含逐年记录集合，不能把区间解释为连续通信或真实断档；寄批人属于可识别字段，公开展出前需核验授权，也不能直接解释为家谱。
+
 
