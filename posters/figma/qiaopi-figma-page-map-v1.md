@@ -58,10 +58,13 @@
 | P02 / `SLOT_P02_NETWORK` | `121:2` | `panel-02-threads-sankey-v2.svg` | 分层 Sankey：真实细流 + Top-16 主流 + 叙事样本局部放大 |
 | P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
 | P03 / `SLOT_P03_TIME` | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 横向双面板：年度堆叠柱 + 日期可信度双线 |
+| P03 / `02_SVG Chart Library` 备选时间叙事 | 待导入 | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
 | P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA |
 | P03 / `SLOT_P03_LINEAGE` | `117:2` | `panel-03-lineage-compact-v1.svg` | 窄栏版寄批人—收批县覆盖区间 |
 
 Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导入 SVG 的可编辑向量树，不是整页截图。
+
+`panel-03-time-ribbon-v1.svg` 已先在本地与 GitHub 固化，待 Figma 连接稳定后再导入 `02_SVG Chart Library`；它是 P03 的备选时间叙事，不替换现有 `annual-confidence`，避免把两种读法误当成同一统计图。
 
 ### P02 圆形网络替代视图
 
