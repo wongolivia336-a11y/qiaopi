@@ -201,4 +201,11 @@ posters/
 - 将 P02 收批县节点从深墨色改为灰蓝，文字墨色同步调整为柔和的深灰褐；灰蓝关系带和砖红样本带的编码不变。
 - Figma 中更新为 `P01_Map_Route_EDITABLE_v3_LIGHT` 与 `P02_Threads_Sankey_EDITABLE_v3_LIGHT`，旧版本隐藏保留。
 
+## 19. 2026-10-13｜`chart:` 完成 office-reach 双指标 SVG
+
+- 从本地 Excel 使用 `批局名`、`收批县` 两个字段生成 `data/derived/office-reach-derived-v1.json`。
+- 生成 `charts/svg/panel-02-office-reach-v1.svg`：左侧灰蓝横条表达批局可识别记录量，右侧灰褐点位表达已知收批县类别数；两个指标分开编码，不合成为无单位分数。
+- 排除“未记录批局”后展示记录量最高的 12 个批局；`万益成` 以砖红强调，因为它是跨面板叙事样本路径中的批局。
+- 明确标注：已知收批县数量是字段类别覆盖，不等同经营半径或地理距离；缺失批局与缺失收批县分别列出。
+
 
