@@ -233,10 +233,13 @@
       "uncertainty": [
         "只反映档案记录密度",
         "不能单凭高值解释春节、季风或节庆动机",
-        "月份字段的来源和缺失规则需在数据字典中确认"
+        "月份字段的来源和缺失规则需在数据字典中确认",
+        "month=0 的已知年份记录单独统计，不压入 1–12 月热力格"
       ],
       "template_family": "L17 CALENDAR HEAT",
-      "status": "keep-with-audit"
+      "output": "charts/svg/panel-03-calendar-heat-v1.svg",
+      "derived_output": "data/derived/panel-03-calendar-derived-v1.json",
+      "status": "rebuilt-from-published-summary"
     },
     {
       "id": "lineage",
@@ -264,7 +267,9 @@
         "不能把寄批人—收批县组合直接解释为家谱或家庭关系"
       ],
       "template_family": "L11 TREND LINEAGE / COVERAGE INTERVAL",
-      "status": "rebuild-required"
+      "output": "charts/svg/panel-03-lineage-v1.svg",
+      "derived_output": "data/derived/panel-03-lineage-derived-v1.json",
+      "status": "rebuilt-from-published-summary"
     }
   ],
   "deferred": [
