@@ -57,6 +57,8 @@
 | P02 / `SLOT_P02_NETWORK` | `109:522` | `panel-02-threads-sankey-v1.svg` | 轻色 Sankey，砖红只标叙事样本 |
 | P02 / `SLOT_P02_FLOW` | `110:2` | `panel-02-office-reach-v1.svg` | 左记录量、右县域覆盖类别数的双指标图 |
 | P03 / `SLOT_P03_TIME` | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 横向双面板：年度堆叠柱 + 日期可信度双线 |
+| P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA |
+| P03 / `SLOT_P03_LINEAGE` | `117:2` | `panel-03-lineage-compact-v1.svg` | 窄栏版寄批人—收批县覆盖区间 |
 
 Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导入 SVG 的可编辑向量树，不是整页截图。
 
