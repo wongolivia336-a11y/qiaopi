@@ -258,4 +258,12 @@ posters/
 - 新增真实 `新加坡 → 万益成 → 潮安` 局部放大 inset，数值显示 `routeTriples.sample_path.count`，并明确是叙事样本，不是全库总流量；同时保留缺失批局 25,374 条等边界说明。
 - manifest 将 `threads` 输出更新为 `panel-02-threads-sankey-v2.svg`，状态为 `upgraded-hierarchical-editable-svg`；P02 中原 v1 可保留隐藏作为回溯版本，v2 作为新版候选。
 
+## 26. 2026-10-13｜`chart:` 增加 P02 圆形弦图替代视图
+
+- 新增 `charts/scripts/generate-panel-02-circular-chord-svg.mjs` 与 `charts/svg/panel-02-circular-chord-v1.svg`；仍使用 `routeTriples` 的真实字段级聚合，不复用旧 radial 的人工循环边。
+- 圆周分为来源国、批局、收批县三个阶段段落；淡线保留全部 139 条真实聚合边，重点层突出来源—批局和批局—收批县各前 12 条关系，砖红只表达真实叙事样本 `新加坡 → 万益成 → 潮安`。
+- SVG 具有 `chord-links-base`、`chord-links-focus`、`stage-arc-source`、`stage-arc-office`、`stage-arc-county`、`radial-field`、`annotation` 等可编辑分组；圆周位置只表达阶段和类别，不表达地理方向。
+- 已导入 Figma `02_SVG Chart Library`（节点 `124:2`），并在 P02 `SLOT_P02_FLOW` 的空白左侧放入紧凑预览（节点 `125:2`），与 office-reach 并列，便于比较直线 Sankey 与圆形网络两种读法。
+- manifest 新增 `threads-circular`，状态为 `new-real-data-alternate-view`；原 deferred `radial` 不再作为最终实现依据。
+
 
