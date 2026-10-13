@@ -1,0 +1,265 @@
+{
+  "schema_version": "qiaopi-panel-03-lineage-derived/v1",
+  "source": "课程资料/侨批可用数据-summary-v3.js",
+  "generated": "2026-10-13",
+  "unit": "组合记录条数；覆盖区间单位为年份",
+  "fields": [
+    "senderCounty.sender",
+    "senderCounty.county",
+    "senderCounty.count",
+    "senderCounty.start",
+    "senderCounty.end"
+  ],
+  "rows": [
+    {
+      "sender": "李耀锡",
+      "county": "潮安",
+      "count": 237,
+      "start": 1947,
+      "end": 1978,
+      "coverage_years": 31
+    },
+    {
+      "sender": "许文权",
+      "county": "澄海",
+      "count": 235,
+      "start": 1937,
+      "end": 1984,
+      "coverage_years": 47
+    },
+    {
+      "sender": "陈锦汉",
+      "county": "潮安",
+      "count": 233,
+      "start": 1959,
+      "end": 2020,
+      "coverage_years": 61
+    },
+    {
+      "sender": "郑秋明",
+      "county": "潮安",
+      "count": 183,
+      "start": 1959,
+      "end": 1989,
+      "coverage_years": 30
+    },
+    {
+      "sender": "陈绵辉",
+      "county": "潮安",
+      "count": 180,
+      "start": 1931,
+      "end": 1986,
+      "coverage_years": 55
+    },
+    {
+      "sender": "林锐焕",
+      "county": "澄海",
+      "count": 164,
+      "start": 1940,
+      "end": 1980,
+      "coverage_years": 40
+    },
+    {
+      "sender": "陈汝杰",
+      "county": "潮安",
+      "count": 162,
+      "start": 1939,
+      "end": 1971,
+      "coverage_years": 32
+    },
+    {
+      "sender": "黄长财",
+      "county": "潮安",
+      "count": 156,
+      "start": 1937,
+      "end": 2020,
+      "coverage_years": 83
+    },
+    {
+      "sender": "吴秋亮",
+      "county": "潮安",
+      "count": 156,
+      "start": 1951,
+      "end": 1983,
+      "coverage_years": 32
+    },
+    {
+      "sender": "梁芝明",
+      "county": "澄海",
+      "count": 156,
+      "start": 1965,
+      "end": 1985,
+      "coverage_years": 20
+    },
+    {
+      "sender": "王俊森",
+      "county": "澄海",
+      "count": 148,
+      "start": 1957,
+      "end": 1983,
+      "coverage_years": 26
+    },
+    {
+      "sender": "陈友富",
+      "county": "潮安",
+      "count": 145,
+      "start": 1941,
+      "end": 2020,
+      "coverage_years": 79
+    },
+    {
+      "sender": "宋嘉锐",
+      "county": "澄海",
+      "count": 141,
+      "start": 1934,
+      "end": 1955,
+      "coverage_years": 21
+    },
+    {
+      "sender": "沈时锐",
+      "county": "潮安",
+      "count": 139,
+      "start": 1939,
+      "end": 1977,
+      "coverage_years": 38
+    },
+    {
+      "sender": "陈好清",
+      "county": "揭阳",
+      "count": 138,
+      "start": 1928,
+      "end": 1966,
+      "coverage_years": 38
+    },
+    {
+      "sender": "陈转祥",
+      "county": "澄海",
+      "count": 132,
+      "start": 1946,
+      "end": 2020,
+      "coverage_years": 74
+    },
+    {
+      "sender": "谢忠胜",
+      "county": "潮安",
+      "count": 131,
+      "start": 1941,
+      "end": 2020,
+      "coverage_years": 79
+    },
+    {
+      "sender": "曾木浩",
+      "county": "潮安",
+      "count": 131,
+      "start": 1947,
+      "end": 1977,
+      "coverage_years": 30
+    },
+    {
+      "sender": "周耀卿",
+      "county": "澄海",
+      "count": 122,
+      "start": 1961,
+      "end": 1984,
+      "coverage_years": 23
+    },
+    {
+      "sender": "陈开雄",
+      "county": "澄海",
+      "count": 121,
+      "start": 1963,
+      "end": 2020,
+      "coverage_years": 57
+    },
+    {
+      "sender": "叶灶兴",
+      "county": "澄海",
+      "count": 121,
+      "start": 1966,
+      "end": 1982,
+      "coverage_years": 16
+    },
+    {
+      "sender": "谢树泉",
+      "county": "汕头",
+      "count": 119,
+      "start": 1948,
+      "end": 1975,
+      "coverage_years": 27
+    },
+    {
+      "sender": "许南振",
+      "county": "潮安",
+      "count": 118,
+      "start": 1953,
+      "end": 1985,
+      "coverage_years": 32
+    },
+    {
+      "sender": "许建德",
+      "county": "澄海",
+      "count": 115,
+      "start": 1960,
+      "end": 2020,
+      "coverage_years": 60
+    },
+    {
+      "sender": "曾加丰",
+      "county": "澄海",
+      "count": 115,
+      "start": 1938,
+      "end": 1991,
+      "coverage_years": 53
+    },
+    {
+      "sender": "陈乐深",
+      "county": "澄海",
+      "count": 115,
+      "start": 1965,
+      "end": 1982,
+      "coverage_years": 17
+    },
+    {
+      "sender": "林钦满",
+      "county": "澄海",
+      "count": 113,
+      "start": 1959,
+      "end": 1987,
+      "coverage_years": 28
+    },
+    {
+      "sender": "沈怀泉",
+      "county": "潮安",
+      "count": 112,
+      "start": 1946,
+      "end": 1980,
+      "coverage_years": 34
+    },
+    {
+      "sender": "黄作述",
+      "county": "澄海",
+      "count": 110,
+      "start": 1968,
+      "end": 1983,
+      "coverage_years": 15
+    },
+    {
+      "sender": "未知",
+      "county": "潮安",
+      "count": 183,
+      "start": null,
+      "end": null,
+      "coverage_years": null
+    }
+  ],
+  "audit": {
+    "total_records_in_sender_county_rows": 4431,
+    "combination_rows": 30,
+    "known_interval_rows": 29,
+    "missing_interval_rows": 1,
+    "average_known_interval_years": 40.6,
+    "interval_rule": "摘要端点只表示该组合最早/最晚记录年份；未提供逐年集合，不能把区间内每一年都解释为连续通信。",
+    "identity_rule": "寄批人字段来自公开字段级摘要；公开展出前需单独核验授权，不把组合直接解释为家谱或家庭关系。"
+  }
+}
+
