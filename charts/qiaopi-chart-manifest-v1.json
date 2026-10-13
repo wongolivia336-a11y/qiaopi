@@ -303,6 +303,42 @@
       "status": "rebuilt-from-published-summary"
     },
     {
+      "id": "time-ribbon",
+      "panel": "03 彼岸｜抵达",
+      "claim": "年度记录量的厚薄与日期可信度细线并不同步，时间轴中还存在需要保留的档案空段。",
+      "source_table": "yearStats",
+      "fields_used": ["year", "count", "direct", "inferred"],
+      "derived_values": [
+        "direct_rate = direct / count * 100",
+        "inferred_rate = inferred / count * 100",
+        "contiguous year segments preserve missing-year gaps",
+        "unknown_year_count = total - sum(yearStats.count)"
+      ],
+      "encodings": {
+        "mark": "layered archival ribbon + confidence thread",
+        "ribbon_thickness": "sqrt(count)",
+        "ribbon_fill": "slate direct / taupe inferred",
+        "thread": "direct_rate (0–100%)"
+      },
+      "axes": {
+        "x": "年份（公历）",
+        "y_1": "年度记录条数（纸带厚度）",
+        "y_2": "日期直读比例（%）",
+        "unit": "条 / %"
+      },
+      "legend": ["灰蓝纸带＝直读", "灰褐纸带＝推断/待核", "细线＝直读日期比例"],
+      "uncertainty": [
+        "无年记录 13,118 条不压入年份",
+        "1694 年孤立记录不压入主轴",
+        "时间空段只表示当前摘要未覆盖，不等于现实中没有寄信",
+        "不能以外部历史事件解释因果"
+      ],
+      "template_family": "ARCHIVAL TIME RIBBON",
+      "output": "charts/svg/panel-03-time-ribbon-v1.svg",
+      "derived_output": "data/derived/panel-03-annual-confidence-derived-v1.json",
+      "status": "new-real-data-alternate-view"
+    },
+    {
       "id": "lineage",
       "panel": "03 彼岸｜抵达",
       "claim": "高频寄批人—收批县组合拥有可见的记录覆盖区间，但摘要端点不能证明通信连续。",
