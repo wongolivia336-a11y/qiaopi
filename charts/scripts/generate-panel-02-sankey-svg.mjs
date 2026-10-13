@@ -6,7 +6,7 @@ const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'derived', 'pane
 const outDir = path.join(root, 'charts', 'svg');
 fs.mkdirSync(outDir, { recursive: true });
 
-const C = { paper: '#E9E1D2', ink: '#27231F', slate: '#718083', red: '#9E4435', taupe: '#81786D', dust: '#B9A58F', pale: '#D8CFC0' };
+const C = { paper: '#E9E1D2', ink: '#3E3933', slate: '#718083', red: '#9E4435', taupe: '#81786D', county: '#687371', dust: '#B9A58F', pale: '#D8CFC0' };
 const fmt = n => new Intl.NumberFormat('zh-CN').format(n);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]));
 const sourceEdges = data.edges.filter(d => d.stage === 'source-office');
@@ -84,7 +84,7 @@ const officeCounty = renderLinks(officeEdges, 'office', 'county', 'sankey-links-
 const nodes = [
   renderNodes('source', data.nodes.source, sourceTotals, C.slate),
   renderNodes('office', data.nodes.office, officeTotals, C.taupe),
-  renderNodes('county', data.nodes.county, countyTotals, C.ink),
+  renderNodes('county', data.nodes.county, countyTotals, C.county),
 ].join('');
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
