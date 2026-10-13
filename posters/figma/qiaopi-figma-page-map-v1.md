@@ -52,6 +52,7 @@
 | 海报 / 槽位 | 当前节点 | 文件 | 处理 |
 | --- | --- | --- | --- |
 | P01 / `SLOT_P01_MAP` | `109:2` | `panel-01-map-route-v1.svg` | 旧版本隐藏；聚焦南洋—潮汕主航域并保留县域局部展开 |
+| P01 / 右侧来源结构栏 | `141:2` | `panel-01-source-profile-v1.svg` | 7 个已知来源地的真实记录量排序；泰国/新加坡为主，未知来源另列 |
 | P01 / `SLOT_P01_MATRIX` | `112:2` | `panel-01-source-county-matrix-v1.svg` | 已放入槽位，隐藏占位标签 |
 | P01 / `SLOT_P01_ENTROPY` | `114:2` | `panel-01-entropy-profile-compact-v1.svg` | 820×1050 窄槽专用版，替换原拥挤熵图 |
 | P02 / `SLOT_P02_NETWORK` | `121:2` | `panel-02-threads-sankey-v2.svg` | 分层 Sankey：真实细流 + Top-16 主流 + 叙事样本局部放大 |
@@ -67,5 +68,11 @@ Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导
 - SVG Library：`124:2`，完整 `1900 × 1500` 版本。
 - P02 lower flow slot：`125:2`，`680 × 537` 紧凑预览，与 `110:2` office-reach 并列。
 - 圆周分段为来源国、批局、收批县；圆周位置不代表地图方向，弦线宽度和透明度才表达记录量层级。
+
+### 三页字体与占位清理
+
+- 三个 A0 header 已替换为 `Noto Sans SC` 可编辑文本：章节编号、主标题、副标题、数据口径微注记和横向规则线。
+- 旧的 `TITLE / 章节信息`、`SVG FLOW DETAIL`、`CAPTION / SOURCE NOTES`、`LETTER / QUOTE` 仅作为构图占位，已隐藏或改写为中文读图/字段说明，不再作为最终版面文字。
+- P03 的家书区现在是“待接入真实样本”的结构化卡片，保留 EID、日期、寄批人、收批县、日期可信度字段；没有授权前不填生成式家书文字。
 
 
