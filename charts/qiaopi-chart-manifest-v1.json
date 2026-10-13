@@ -142,8 +142,14 @@
         "聚合路径不是每一封信的逐件中转顺序"
       ],
       "template_family": "B3 THREADS / Sankey",
-      "output": "charts/svg/panel-02-threads-sankey-v1.svg",
-      "status": "rebuilt-from-workbook"
+      "output": "charts/svg/panel-02-threads-sankey-v2.svg",
+      "status": "upgraded-hierarchical-editable-svg",
+      "visual_upgrade": [
+        "all real routeTriples edges remain as low-opacity base ribbons",
+        "top 16 source-office and top 16 office-county relations receive a separate focus layer",
+        "sample path is enlarged in a data-backed inset; no artificial edges are added",
+        "missing and other bins remain explicit, with audit cards and stage guides"
+      ]
     },
     {
       "id": "office-reach",
