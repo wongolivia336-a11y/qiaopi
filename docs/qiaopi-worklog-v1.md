@@ -195,4 +195,10 @@ posters/
 - 新 SVG 已重新导入 Figma `03_A0 Triptych`：P01 节点 `P01_Map_Route_EDITABLE_v2`，P02 节点 `P02_Threads_Sankey_EDITABLE_v2`；旧版本保留但隐藏，便于回溯。
 - 远程 GitHub 已记录为 `chart:` 提交；当前最新远程提交为 `66d6cc59dcf70cb2cdddb20b0010094bf93be760`。
 
+## 18. 2026-10-13｜`chart:` 降低深色节点重量
+
+- 将 P01 收批县节点从墨黑改为灰褐，并保留砖红外圈作为叙事强调。
+- 将 P02 收批县节点从深墨色改为灰蓝，文字墨色同步调整为柔和的深灰褐；灰蓝关系带和砖红样本带的编码不变。
+- Figma 中更新为 `P01_Map_Route_EDITABLE_v3_LIGHT` 与 `P02_Threads_Sankey_EDITABLE_v3_LIGHT`，旧版本隐藏保留。
+
 
