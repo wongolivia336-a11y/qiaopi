@@ -274,4 +274,11 @@ posters/
 - P02 新增“读法二 / 圆形网络与批局覆盖”分隔层；P03 新增“抵达之后 / 时间与关系证据”分隔层；P01 新增“航路注记”与“证据层 / 组合与来源结构”。
 - 所有新增文字均不虚构家书原文、人物身份或历史解释；P03 家书区明确保留 EID、日期、寄批人、收批县与授权信息字段，等待人工接入真实样本。
 
+## 28. 2026-10-13｜`chart:` 新增 P03 archival time-ribbon 备选叙事
+
+- 新增 `charts/scripts/generate-panel-03-time-ribbon-svg.mjs` 与 `charts/svg/panel-03-time-ribbon-v1.svg`；数据只来自公开摘要派生表 `data/derived/panel-03-annual-confidence-derived-v1.json`，不读取或上传原始 Excel。
+- 纸带主轴保留 1915–2020 的 91 个年度行与 3 个连续年份段；灰蓝层表示 `direct`，灰褐层表示 `inferred`，厚度按 `sqrt(count)` 缩放，细线表达 `direct / count` 的日期直读比例。
+- 13,118 条 `unknown_year_count` 不压入任何年份；孤立的 1694 年记录也不伪装成主时间轴连续段。空段只表示当前摘要未覆盖，不等同现实中的通信中断。
+- 该图是参考“纸带/档案层叠”视觉的真实数据替代读法，不声称复刻无法稳定访问的外部参考图，也不添加外部历史事件因果解释。SVG 分组包括 `time-ribbon`、`confidence-thread`、`peak-callouts`、`summary-cards`、`legend` 与 `source-and-notes`，保留 Figma 逐组编辑能力。
+
 
