@@ -230,6 +230,12 @@ posters/
 - 新版把相同真实字段拆成左右两块：左侧灰蓝/灰褐堆叠柱为年度记录条数，右侧灰蓝/灰褐双线为日期直读/推断待核比例；下方共享年份刻度、图例、无年记录与 1694 年孤立记录说明。
 - 仍保留 2020 年砖红提示，但不把它解释为叙事路线；SVG 分组包括 `count-panel`、`confidence-panel`、`confidence-lines`、`legend`、`data-callouts`、`source-and-notes`，可独立编辑。
 
+## 23. 2026-10-13｜`chart:` 补齐 P03 日历热力与关系覆盖证据
+
+- `calendar-heat` 使用 `calendar.year / month / count`：1915–2020 年 × 1–12 月矩阵，36,095 条已知年月记录、865 个已出现组合、407 个 NA 空白组合；850 条年份已知但月份未知的记录另列，不把 NA 当作零。
+- `lineage` 使用 `senderCounty.sender / county / count / start / end`：保留 30 个真实寄批人—收批县组合；29 行有首末年份，1 行日期缺失。原始宽版保留在库中，P03 窄栏实际放入 `panel-03-lineage-compact-v1.svg`，避免标签挤压。
+- 两图均保留标题、轴、单位、图例、来源和缺失值说明；实线只表达摘要首末年份，不证明区间内逐年连续通信，也不直接把组合解释成家谱。
+
 ## 23. 2026-10-13｜`chart:` 完成 P03 calendar-heat 年月密度图
 
 - 从公开字段级摘要 `课程资料/侨批可用数据-summary-v3.js` 的 `calendar.year / calendar.month / calendar.count` 重建 `charts/svg/panel-03-calendar-heat-v1.svg`，并保存 `data/derived/panel-03-calendar-derived-v1.json`；原始 Excel 不读取、不上传。
