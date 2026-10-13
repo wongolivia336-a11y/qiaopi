@@ -70,30 +70,42 @@ ${body}
 }
 
 function mapSvg(){
-  const plot={x:90,y:170,w:1420,h:680}, lon0=75,lon1=122,lat0=-40,lat1=32;
+  // Focus the hero map on the South China Sea / Chaoshan corridor. The three
+  // Australian records remain in the data contract but should not flatten the
+  // visual scale of the much denser Southeast Asia–South China field.
+  const plot={x:90,y:170,w:1420,h:680}, lon0=95,lon1=123,lat0=-8,lat1=32;
   const proj=([lon,lat])=>[plot.x+(lon-lon0)/(lon1-lon0)*plot.w,plot.y+(lat1-lat)/(lat1-lat0)*plot.h];
   const topo=JSON.parse(fs.readFileSync(path.join(root,'课程资料','潮汐邮路-assets','countries-110m.json'),'utf8'));
   const tr=topo.transform, decoded=[];
   for(const arc of topo.arcs){let x=0,y=0;decoded.push(arc.map(([dx,dy])=>{x+=dx;y+=dy;return [x*tr.scale[0]+tr.translate[0],y*tr.scale[1]+tr.translate[1]]}))}
   const arcPts=i=>i>=0?decoded[i]:[...decoded[~i]].reverse();
-  const ringPath=ids=>{const pts=ids.flatMap((id,j)=>arcPts(id).slice(j?1:0));if(pts.some((p,i)=>i&&Math.abs(p[0]-pts[i-1][0])>180))return '';return pts.map((p,i)=>`${i?'L':'M'}${proj(p)[0].toFixed(1)},${proj(p)[1].toFixed(1)}`).join(' ')+' Z'};
+  // TopoJSON polygon rings are arrays of arc ids. The previous version treated
+  // polygon arrays as individual ids, which produced empty and oversized paths.
+  const ringPath=ids=>{const pts=ids.flatMap((id,j)=>arcPts(id).slice(j?1:0));if(!pts.length||pts.some((p,i)=>i&&Math.abs(p[0]-pts[i-1][0])>180))return '';return pts.map((p,i)=>`${i?'L':'M'}${proj(p)[0].toFixed(1)},${proj(p)[1].toFixed(1)}`).join(' ')+' Z'};
   const geomPaths=[];
   const obj=topo.objects[Object.keys(topo.objects)[0]];
-  for(const g of obj.geometries){const polys=g.type==='Polygon'?[g.arcs]:g.type==='MultiPolygon'?g.arcs:[];for(const poly of polys)geomPaths.push(poly.map(ringPath).join(' '))}
+  for(const g of obj.geometries){
+    const polygons=g.type==='Polygon'?[g.arcs]:g.type==='MultiPolygon'?g.arcs:[];
+    for(const polygon of polygons){const rings=polygon.map(ringPath).filter(Boolean);if(rings.length)geomPaths.push(rings.join(' '));}
+  }
   const grid=[];
-  for(let lon=80;lon<=120;lon+=10){const [x]=proj([lon,0]);grid.push(`<line x1="${x}" x2="${x}" y1="${plot.y}" y2="${plot.y+plot.h}" stroke="${COLORS.dust}" stroke-dasharray="3 8"/><text class="axis" x="${x}" y="${plot.y+plot.h+28}" text-anchor="middle">${lon}°E</text>`)}
-  for(let lat=-30;lat<=30;lat+=10){const [,y]=proj([80,lat]);grid.push(`<line x1="${plot.x}" x2="${plot.x+plot.w}" y1="${y}" y2="${y}" stroke="${COLORS.dust}" stroke-dasharray="3 8"/><text class="axis" x="${plot.x-12}" y="${y+5}" text-anchor="end">${Math.abs(lat)}°${lat<0?'S':lat>0?'N':''}</text>`)}
-  const maxEdge=Math.max(...mapFlows.map(d=>d.count)), edgeK=15/Math.sqrt(maxEdge);
+  for(let lon=100;lon<=120;lon+=10){const [x]=proj([lon,0]);grid.push(`<line x1="${x}" x2="${x}" y1="${plot.y}" y2="${plot.y+plot.h}" stroke="${COLORS.dust}" stroke-dasharray="3 8"/><text class="axis" x="${x}" y="${plot.y+plot.h+28}" text-anchor="middle">${lon}°E</text>`)}
+  for(let lat=0;lat<=30;lat+=10){const [,y]=proj([100,lat]);grid.push(`<line x1="${plot.x}" x2="${plot.x+plot.w}" y1="${y}" y2="${y}" stroke="${COLORS.dust}" stroke-dasharray="3 8"/><text class="axis" x="${plot.x-12}" y="${y+5}" text-anchor="end">${lat===0?'0°':`${lat}°N`}</text>`)}
+  const maxEdge=Math.max(...mapFlows.map(d=>d.count)), edgeK=13/Math.sqrt(maxEdge);
   const ordered=[...mapFlows].sort((a,b)=>a.count-b.count);
   const edges=ordered.map(d=>{const [x1,y1]=proj(originCoord[d.source]),[x2,y2]=proj(countyCoord[d.county]);const cx=(x1+x2)/2,cy=Math.min(y1,y2)-60;return `<path data-key="${esc(d.source)}|${esc(d.county)}" d="M${x1.toFixed(1)},${y1.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}" fill="none" stroke="${COLORS.slate}" stroke-width="${(edgeK*Math.sqrt(d.count)).toFixed(2)}" stroke-opacity=".42" class="hair"/>`}).join('');
-  const maxNode=Math.max(...Object.values(sourceTotals),...Object.values(countyTotals)), rK=18/Math.sqrt(maxNode);
+  const maxNode=Math.max(...Object.values(sourceTotals),...Object.values(countyTotals)), rK=16/Math.sqrt(maxNode);
   const nodes=[];
-  for(const [name,total] of Object.entries(sourceTotals)){const [x,y]=proj(originCoord[name]),r=rK*Math.sqrt(total);nodes.push(`<g data-location="${esc(name)}"><circle cx="${x}" cy="${y}" r="${r.toFixed(2)}" fill="${COLORS.slate}" stroke="${COLORS.paper}" stroke-width="2"/><text class="label" x="${x+12}" y="${y-12}">${esc(name)}</text><text class="small" x="${x+12}" y="${y+9}">${fmt(total)} 条</text></g>`)}
-  for(const [name,total] of Object.entries(countyTotals)){const [x,y]=proj(countyCoord[name]),r=rK*Math.sqrt(total);nodes.push(`<circle data-location="${esc(name)}" cx="${x}" cy="${y}" r="${r.toFixed(2)}" fill="${COLORS.ink}" stroke="${COLORS.paper}" stroke-width="1.5"/>`)}
+  const originOffsets={'泰国':[18,-14],'新加坡':[18,22],'马来西亚':[18,-14],'印度尼西亚':[18,22],'越南':[18,-14],'香港':[-18,-16]};
+  for(const [name,total] of Object.entries(sourceTotals)){const [x,y]=proj(originCoord[name]),r=Math.max(5,Math.min(26,rK*Math.sqrt(total))),[dx,dy]=originOffsets[name]||[18,-14];nodes.push(`<g data-location="${esc(name)}"><circle cx="${x}" cy="${y}" r="${r.toFixed(2)}" fill="${COLORS.slate}" stroke="${COLORS.paper}" stroke-width="2"/><line x1="${x+r*.72}" y1="${y}" x2="${x+dx-5}" y2="${y+dy-5}" stroke="${COLORS.taupe}" stroke-width="1"/><text class="label" x="${x+dx}" y="${y+dy}">${esc(name)}</text><text class="small" x="${x+dx}" y="${y+dy+18}">${fmt(total)} 条</text></g>`)}
+  for(const [name,total] of Object.entries(countyTotals)){const [x,y]=proj(countyCoord[name]),r=Math.max(4,Math.min(22,rK*Math.sqrt(total)));nodes.push(`<g data-location="${esc(name)}"><circle cx="${x}" cy="${y}" r="${r.toFixed(2)}" fill="${COLORS.ink}" stroke="${COLORS.paper}" stroke-width="1.5"/><circle cx="${x}" cy="${y}" r="${(r+5).toFixed(2)}" fill="none" stroke="${COLORS.red}" stroke-opacity=".28" stroke-width="1"/></g>`)}
   const [sx,sy]=proj(originCoord['新加坡']),[tx,ty]=proj(countyCoord['潮安']);
   const countyIndex=Object.entries(countyTotals).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([n,v],i)=>`<circle cx="1225" cy="${538+i*29}" r="${Math.max(3,rK*Math.sqrt(v)).toFixed(2)}" fill="${n==='潮安'?COLORS.red:COLORS.ink}"/><text class="small" x="1250" y="${543+i*29}">${esc(n)} · ${fmt(v)} 条</text>`).join('');
   const cx=(sx+tx)/2,cy=Math.min(sy,ty)-60;
-  const body=`<defs><clipPath id="map-clip"><rect x="${plot.x}" y="${plot.y}" width="${plot.w}" height="${plot.h}"/></clipPath></defs><g id="axes-and-grid">${grid.join('')}<text class="axis" x="800" y="915" text-anchor="middle">经度（°E） · 等距经纬投影</text><text class="axis" transform="translate(28 510) rotate(-90)" text-anchor="middle">纬度（°N / °S）</text></g><g id="basemap" clip-path="url(#map-clip)">${geomPaths.map(d=>`<path d="${d}" fill="${COLORS.pale}" stroke="${COLORS.taupe}" stroke-width=".6" class="hair"/>`).join('')}</g><g id="aggregate-routes" clip-path="url(#map-clip)">${edges}</g><g id="narrative-route"><path d="M${sx.toFixed(1)},${sy.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${tx.toFixed(1)},${ty.toFixed(1)}" fill="none" stroke="${COLORS.red}" stroke-width="3" class="hair"/></g><g id="location-nodes">${nodes.join('')}</g><g id="county-index"><rect x="1195" y="492" width="270" height="294" fill="${COLORS.paper}" stroke="${COLORS.dust}"/><text class="value" x="1215" y="522">收批地索引 · TOP 8</text>${countyIndex}</g><g id="narrative-route-label"><line x1="${sx+25}" y1="${sy-25}" x2="${sx+140}" y2="${sy-80}" stroke="${COLORS.red}"/><text class="value" x="${sx+150}" y="${sy-83}" fill="${COLORS.red}">跨面板叙事索引（非数值线宽）</text><text class="small" x="${sx+150}" y="${sy-58}">新加坡 → 万益成 → 潮安；非单件真实航线</text><circle cx="${tx}" cy="${ty}" r="4" fill="${COLORS.red}"/></g>`;
+  const insetX=1110,insetY=505,insetW=365,insetH=300;
+  const insetRows=Object.entries(countyTotals).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const inset=`<g id="chaoshan-inset"><rect x="${insetX}" y="${insetY}" width="${insetW}" height="${insetH}" rx="8" fill="${COLORS.paper}" fill-opacity=".96" stroke="${COLORS.dust}"/><text class="value" x="${insetX+18}" y="${insetY+28}">潮汕收批地 · 局部展开</text><text class="small" x="${insetX+18}" y="${insetY+49}">保留真实县域名；位置为阅读性展开，不按比例</text>${insetRows.map(([name,total],i)=>{const yy=insetY+78+i*25,rr=Math.max(4,Math.min(16,rK*Math.sqrt(total)));return `<line x1="${insetX+18}" x2="${insetX+48}" y1="${yy}" y2="${yy}" stroke="${COLORS.dust}"/><circle cx="${insetX+62}" cy="${yy}" r="${rr.toFixed(1)}" fill="${name==='潮安'?COLORS.red:COLORS.ink}"/><text class="label" x="${insetX+86}" y="${yy+5}">${esc(name)}</text><text class="small" x="${insetX+235}" y="${yy+5}">${fmt(total)} 条</text>`}).join('')}</g>`;
+  const body=`<defs><clipPath id="map-clip"><rect x="${plot.x}" y="${plot.y}" width="${plot.w}" height="${plot.h}"/></clipPath></defs><g id="axes-and-grid">${grid.join('')}<text class="axis" x="800" y="915" text-anchor="middle">经度（°E） · 聚焦南洋—潮汕主航域</text><text class="axis" transform="translate(28 510) rotate(-90)" text-anchor="middle">纬度（°N / °S）</text></g><g id="basemap" clip-path="url(#map-clip)">${geomPaths.map(d=>`<path d="${d}" fill="${COLORS.pale}" stroke="${COLORS.taupe}" stroke-width=".6" class="hair"/>`).join('')}</g><g id="aggregate-routes" clip-path="url(#map-clip)">${edges}</g><g id="narrative-route"><path d="M${sx.toFixed(1)},${sy.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${tx.toFixed(1)},${ty.toFixed(1)}" fill="none" stroke="${COLORS.red}" stroke-width="3" class="hair"/></g><g id="location-nodes">${nodes.join('')}</g>${inset}<g id="county-index" opacity="0"><rect x="1195" y="492" width="270" height="294" fill="${COLORS.paper}" stroke="${COLORS.dust}"/>${countyIndex}</g><g id="narrative-route-label"><line x1="${sx+25}" y1="${sy-25}" x2="${sx+140}" y2="${sy-80}" stroke="${COLORS.red}"/><text class="value" x="${sx+150}" y="${sy-83}" fill="${COLORS.red}">跨面板叙事索引（非数值线宽）</text><text class="small" x="${sx+150}" y="${sy-58}">新加坡 → 万益成 → 潮安；非单件真实航线</text><circle cx="${tx}" cy="${ty}" r="4" fill="${COLORS.red}"/></g>`;
   const legend=`<g transform="translate(820 135)"><path d="M0 0H90" stroke="${COLORS.slate}" stroke-width="7"/><text class="small" x="105" y="5">灰蓝线＝flows 中可定位的聚合端点关系；线宽 ∝ √记录数</text><path d="M0 28H90" stroke="${COLORS.red}" stroke-width="3"/><text class="small" x="105" y="33">砖红线＝跨面板叙事索引；固定线宽，不编码数量</text></g>`;
   return shell({title:'跨海连接并不平均',subtitle:`来源地 → 收批地 · 灰蓝线宽＝记录条数的平方根 · 圆面积＝地点记录总量 · 已绘 ${fmt(mapTotal)} 条`,body,legend,source:'《侨批可用数据》字段级摘要 v3，flows；底图 countries-110m；坐标为名称匹配的制图坐标',note:`缺失/限制：未知来源 796 条、未知收批地 683 条（重叠 548 条）；7 条已知端点未匹配/超出本图范围；flows 合计 ${fmt(rawFlowTotal)}，比全库少 2 条。端点连线不是海上航线。`,contract:'map-route'});
 }
@@ -127,3 +139,4 @@ fs.writeFileSync(path.join(outDir,'panel-01-map-route-v1.svg'),mapSvg());
 fs.writeFileSync(path.join(outDir,'panel-01-source-county-matrix-v1.svg'),matrixSvg());
 fs.writeFileSync(path.join(outDir,'panel-01-entropy-profile-v1.svg'),entropySvg());
 console.log(JSON.stringify({outputs:3,rawFlowTotal,mapTotal,entropy:entropy.slice(0,5)},null,2));
+
