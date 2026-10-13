@@ -155,7 +155,7 @@
         "known_county_count = count distinct county per office, excluding unknown county"
       ],
       "encodings": {
-        "mark": "ranked bars or radial network",
+        "mark": "two-metric ranked bars + lollipop",
         "bar_1": "office_total (records)",
         "bar_2": "known_county_count (distinct counties)",
         "edge_width_if_network": "sqrt(count)"
@@ -172,8 +172,9 @@
         "覆盖范围是摘要中的已知县类别数，不等同经营半径或地理距离",
         "officeCounty 不包含中转时间顺序"
       ],
-      "template_family": "OFFICE REACH / REPLACEMENT FOR RADIAL",
-      "status": "rebuild-required"
+      "template_family": "OFFICE REACH / TWO-METRIC RANKING",
+      "output": "charts/svg/panel-02-office-reach-v1.svg",
+      "status": "rebuilt-from-workbook"
     },
     {
       "id": "annual-confidence",
@@ -296,4 +297,5 @@
     }
   ]
 }
+
 
