@@ -267,7 +267,7 @@
         "不能把寄批人—收批县组合直接解释为家谱或家庭关系"
       ],
       "template_family": "L11 TREND LINEAGE / COVERAGE INTERVAL",
-      "output": "charts/svg/panel-03-lineage-v1.svg",
+      "output": "charts/svg/panel-03-lineage-compact-v1.svg",
       "derived_output": "data/derived/panel-03-lineage-derived-v1.json",
       "status": "rebuilt-from-published-summary"
     }
