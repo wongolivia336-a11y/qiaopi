@@ -1,0 +1,4834 @@
+{
+  "schema_version": "qiaopi-panel-03-calendar-derived/v1",
+  "source": "课程资料/侨批可用数据-summary-v3.js",
+  "generated": "2026-10-13",
+  "unit": "侨批记录条数",
+  "fields": [
+    "calendar.year",
+    "calendar.month",
+    "calendar.count"
+  ],
+  "main_year_range": [
+    1915,
+    2020
+  ],
+  "rows": [
+    {
+      "year": 1915,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1916,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1916,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 1917,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1918,
+      "month": 7,
+      "count": 1
+    },
+    {
+      "year": 1918,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 1918,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1919,
+      "month": 3,
+      "count": 1
+    },
+    {
+      "year": 1919,
+      "month": 4,
+      "count": 2
+    },
+    {
+      "year": 1919,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1919,
+      "month": 8,
+      "count": 2
+    },
+    {
+      "year": 1919,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1919,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 1920,
+      "month": 7,
+      "count": 1
+    },
+    {
+      "year": 1920,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1920,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 1921,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1921,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1921,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1922,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1923,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1923,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1923,
+      "month": 7,
+      "count": 1
+    },
+    {
+      "year": 1924,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 1925,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1925,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1926,
+      "month": 1,
+      "count": 4
+    },
+    {
+      "year": 1926,
+      "month": 4,
+      "count": 2
+    },
+    {
+      "year": 1926,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1926,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1926,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1927,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 1927,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1927,
+      "month": 7,
+      "count": 1
+    },
+    {
+      "year": 1927,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 1927,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1927,
+      "month": 12,
+      "count": 4
+    },
+    {
+      "year": 1928,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1928,
+      "month": 3,
+      "count": 1
+    },
+    {
+      "year": 1928,
+      "month": 4,
+      "count": 2
+    },
+    {
+      "year": 1928,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1928,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1929,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1929,
+      "month": 6,
+      "count": 2
+    },
+    {
+      "year": 1929,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1930,
+      "month": 1,
+      "count": 2
+    },
+    {
+      "year": 1930,
+      "month": 2,
+      "count": 4
+    },
+    {
+      "year": 1930,
+      "month": 3,
+      "count": 3
+    },
+    {
+      "year": 1930,
+      "month": 4,
+      "count": 2
+    },
+    {
+      "year": 1930,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1930,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1930,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 1930,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1930,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1930,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1931,
+      "month": 2,
+      "count": 3
+    },
+    {
+      "year": 1931,
+      "month": 3,
+      "count": 1
+    },
+    {
+      "year": 1931,
+      "month": 4,
+      "count": 3
+    },
+    {
+      "year": 1931,
+      "month": 5,
+      "count": 4
+    },
+    {
+      "year": 1931,
+      "month": 6,
+      "count": 5
+    },
+    {
+      "year": 1931,
+      "month": 7,
+      "count": 5
+    },
+    {
+      "year": 1931,
+      "month": 8,
+      "count": 6
+    },
+    {
+      "year": 1931,
+      "month": 9,
+      "count": 3
+    },
+    {
+      "year": 1931,
+      "month": 10,
+      "count": 3
+    },
+    {
+      "year": 1931,
+      "month": 11,
+      "count": 5
+    },
+    {
+      "year": 1931,
+      "month": 12,
+      "count": 4
+    },
+    {
+      "year": 1932,
+      "month": 1,
+      "count": 7
+    },
+    {
+      "year": 1932,
+      "month": 2,
+      "count": 4
+    },
+    {
+      "year": 1932,
+      "month": 3,
+      "count": 1
+    },
+    {
+      "year": 1932,
+      "month": 4,
+      "count": 5
+    },
+    {
+      "year": 1932,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1932,
+      "month": 6,
+      "count": 3
+    },
+    {
+      "year": 1932,
+      "month": 7,
+      "count": 4
+    },
+    {
+      "year": 1932,
+      "month": 8,
+      "count": 6
+    },
+    {
+      "year": 1932,
+      "month": 9,
+      "count": 5
+    },
+    {
+      "year": 1932,
+      "month": 10,
+      "count": 4
+    },
+    {
+      "year": 1932,
+      "month": 11,
+      "count": 4
+    },
+    {
+      "year": 1932,
+      "month": 12,
+      "count": 2
+    },
+    {
+      "year": 1933,
+      "month": 1,
+      "count": 6
+    },
+    {
+      "year": 1933,
+      "month": 2,
+      "count": 3
+    },
+    {
+      "year": 1933,
+      "month": 3,
+      "count": 2
+    },
+    {
+      "year": 1933,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1933,
+      "month": 5,
+      "count": 6
+    },
+    {
+      "year": 1933,
+      "month": 6,
+      "count": 2
+    },
+    {
+      "year": 1933,
+      "month": 7,
+      "count": 3
+    },
+    {
+      "year": 1933,
+      "month": 8,
+      "count": 6
+    },
+    {
+      "year": 1933,
+      "month": 9,
+      "count": 4
+    },
+    {
+      "year": 1933,
+      "month": 10,
+      "count": 2
+    },
+    {
+      "year": 1933,
+      "month": 11,
+      "count": 6
+    },
+    {
+      "year": 1934,
+      "month": 1,
+      "count": 3
+    },
+    {
+      "year": 1934,
+      "month": 2,
+      "count": 4
+    },
+    {
+      "year": 1934,
+      "month": 3,
+      "count": 3
+    },
+    {
+      "year": 1934,
+      "month": 4,
+      "count": 4
+    },
+    {
+      "year": 1934,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1934,
+      "month": 6,
+      "count": 3
+    },
+    {
+      "year": 1934,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1934,
+      "month": 8,
+      "count": 7
+    },
+    {
+      "year": 1934,
+      "month": 10,
+      "count": 4
+    },
+    {
+      "year": 1935,
+      "month": 1,
+      "count": 7
+    },
+    {
+      "year": 1935,
+      "month": 2,
+      "count": 6
+    },
+    {
+      "year": 1935,
+      "month": 3,
+      "count": 10
+    },
+    {
+      "year": 1935,
+      "month": 4,
+      "count": 7
+    },
+    {
+      "year": 1935,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1935,
+      "month": 6,
+      "count": 3
+    },
+    {
+      "year": 1935,
+      "month": 7,
+      "count": 4
+    },
+    {
+      "year": 1935,
+      "month": 8,
+      "count": 4
+    },
+    {
+      "year": 1935,
+      "month": 9,
+      "count": 3
+    },
+    {
+      "year": 1935,
+      "month": 10,
+      "count": 4
+    },
+    {
+      "year": 1935,
+      "month": 11,
+      "count": 3
+    },
+    {
+      "year": 1935,
+      "month": 12,
+      "count": 6
+    },
+    {
+      "year": 1936,
+      "month": 1,
+      "count": 5
+    },
+    {
+      "year": 1936,
+      "month": 2,
+      "count": 9
+    },
+    {
+      "year": 1936,
+      "month": 3,
+      "count": 6
+    },
+    {
+      "year": 1936,
+      "month": 4,
+      "count": 9
+    },
+    {
+      "year": 1936,
+      "month": 5,
+      "count": 8
+    },
+    {
+      "year": 1936,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1936,
+      "month": 7,
+      "count": 9
+    },
+    {
+      "year": 1936,
+      "month": 8,
+      "count": 4
+    },
+    {
+      "year": 1936,
+      "month": 9,
+      "count": 3
+    },
+    {
+      "year": 1936,
+      "month": 10,
+      "count": 7
+    },
+    {
+      "year": 1936,
+      "month": 11,
+      "count": 2
+    },
+    {
+      "year": 1936,
+      "month": 12,
+      "count": 6
+    },
+    {
+      "year": 1937,
+      "month": 1,
+      "count": 19
+    },
+    {
+      "year": 1937,
+      "month": 2,
+      "count": 11
+    },
+    {
+      "year": 1937,
+      "month": 3,
+      "count": 12
+    },
+    {
+      "year": 1937,
+      "month": 4,
+      "count": 4
+    },
+    {
+      "year": 1937,
+      "month": 5,
+      "count": 6
+    },
+    {
+      "year": 1937,
+      "month": 6,
+      "count": 6
+    },
+    {
+      "year": 1937,
+      "month": 7,
+      "count": 3
+    },
+    {
+      "year": 1937,
+      "month": 8,
+      "count": 6
+    },
+    {
+      "year": 1937,
+      "month": 9,
+      "count": 19
+    },
+    {
+      "year": 1937,
+      "month": 10,
+      "count": 12
+    },
+    {
+      "year": 1937,
+      "month": 11,
+      "count": 13
+    },
+    {
+      "year": 1937,
+      "month": 12,
+      "count": 5
+    },
+    {
+      "year": 1938,
+      "month": 1,
+      "count": 17
+    },
+    {
+      "year": 1938,
+      "month": 2,
+      "count": 10
+    },
+    {
+      "year": 1938,
+      "month": 3,
+      "count": 15
+    },
+    {
+      "year": 1938,
+      "month": 4,
+      "count": 15
+    },
+    {
+      "year": 1938,
+      "month": 5,
+      "count": 11
+    },
+    {
+      "year": 1938,
+      "month": 6,
+      "count": 12
+    },
+    {
+      "year": 1938,
+      "month": 7,
+      "count": 13
+    },
+    {
+      "year": 1938,
+      "month": 8,
+      "count": 12
+    },
+    {
+      "year": 1938,
+      "month": 9,
+      "count": 11
+    },
+    {
+      "year": 1938,
+      "month": 10,
+      "count": 11
+    },
+    {
+      "year": 1938,
+      "month": 11,
+      "count": 12
+    },
+    {
+      "year": 1938,
+      "month": 12,
+      "count": 2
+    },
+    {
+      "year": 1939,
+      "month": 1,
+      "count": 21
+    },
+    {
+      "year": 1939,
+      "month": 2,
+      "count": 11
+    },
+    {
+      "year": 1939,
+      "month": 3,
+      "count": 9
+    },
+    {
+      "year": 1939,
+      "month": 4,
+      "count": 7
+    },
+    {
+      "year": 1939,
+      "month": 5,
+      "count": 6
+    },
+    {
+      "year": 1939,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1939,
+      "month": 7,
+      "count": 1
+    },
+    {
+      "year": 1939,
+      "month": 8,
+      "count": 7
+    },
+    {
+      "year": 1939,
+      "month": 9,
+      "count": 4
+    },
+    {
+      "year": 1939,
+      "month": 10,
+      "count": 9
+    },
+    {
+      "year": 1939,
+      "month": 11,
+      "count": 7
+    },
+    {
+      "year": 1939,
+      "month": 12,
+      "count": 6
+    },
+    {
+      "year": 1940,
+      "month": 1,
+      "count": 15
+    },
+    {
+      "year": 1940,
+      "month": 2,
+      "count": 18
+    },
+    {
+      "year": 1940,
+      "month": 3,
+      "count": 11
+    },
+    {
+      "year": 1940,
+      "month": 4,
+      "count": 8
+    },
+    {
+      "year": 1940,
+      "month": 5,
+      "count": 11
+    },
+    {
+      "year": 1940,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1940,
+      "month": 7,
+      "count": 12
+    },
+    {
+      "year": 1940,
+      "month": 8,
+      "count": 3
+    },
+    {
+      "year": 1940,
+      "month": 9,
+      "count": 9
+    },
+    {
+      "year": 1940,
+      "month": 10,
+      "count": 3
+    },
+    {
+      "year": 1940,
+      "month": 11,
+      "count": 6
+    },
+    {
+      "year": 1940,
+      "month": 12,
+      "count": 14
+    },
+    {
+      "year": 1941,
+      "month": 1,
+      "count": 4
+    },
+    {
+      "year": 1941,
+      "month": 2,
+      "count": 6
+    },
+    {
+      "year": 1941,
+      "month": 3,
+      "count": 5
+    },
+    {
+      "year": 1941,
+      "month": 4,
+      "count": 6
+    },
+    {
+      "year": 1941,
+      "month": 5,
+      "count": 9
+    },
+    {
+      "year": 1941,
+      "month": 6,
+      "count": 10
+    },
+    {
+      "year": 1941,
+      "month": 7,
+      "count": 5
+    },
+    {
+      "year": 1941,
+      "month": 8,
+      "count": 7
+    },
+    {
+      "year": 1941,
+      "month": 9,
+      "count": 5
+    },
+    {
+      "year": 1941,
+      "month": 10,
+      "count": 7
+    },
+    {
+      "year": 1941,
+      "month": 11,
+      "count": 4
+    },
+    {
+      "year": 1942,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1942,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 1942,
+      "month": 3,
+      "count": 4
+    },
+    {
+      "year": 1942,
+      "month": 4,
+      "count": 3
+    },
+    {
+      "year": 1942,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1942,
+      "month": 6,
+      "count": 2
+    },
+    {
+      "year": 1942,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1942,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1942,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1943,
+      "month": 1,
+      "count": 2
+    },
+    {
+      "year": 1943,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1943,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 1943,
+      "month": 9,
+      "count": 2
+    },
+    {
+      "year": 1943,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1943,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 1943,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1944,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1944,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 1944,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1945,
+      "month": 1,
+      "count": 1
+    },
+    {
+      "year": 1945,
+      "month": 8,
+      "count": 2
+    },
+    {
+      "year": 1945,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1945,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1945,
+      "month": 11,
+      "count": 3
+    },
+    {
+      "year": 1945,
+      "month": 12,
+      "count": 3
+    },
+    {
+      "year": 1946,
+      "month": 1,
+      "count": 4
+    },
+    {
+      "year": 1946,
+      "month": 2,
+      "count": 5
+    },
+    {
+      "year": 1946,
+      "month": 3,
+      "count": 7
+    },
+    {
+      "year": 1946,
+      "month": 4,
+      "count": 5
+    },
+    {
+      "year": 1946,
+      "month": 5,
+      "count": 5
+    },
+    {
+      "year": 1946,
+      "month": 6,
+      "count": 7
+    },
+    {
+      "year": 1946,
+      "month": 7,
+      "count": 9
+    },
+    {
+      "year": 1946,
+      "month": 8,
+      "count": 15
+    },
+    {
+      "year": 1946,
+      "month": 9,
+      "count": 12
+    },
+    {
+      "year": 1946,
+      "month": 10,
+      "count": 16
+    },
+    {
+      "year": 1946,
+      "month": 11,
+      "count": 16
+    },
+    {
+      "year": 1946,
+      "month": 12,
+      "count": 18
+    },
+    {
+      "year": 1947,
+      "month": 1,
+      "count": 23
+    },
+    {
+      "year": 1947,
+      "month": 2,
+      "count": 14
+    },
+    {
+      "year": 1947,
+      "month": 3,
+      "count": 24
+    },
+    {
+      "year": 1947,
+      "month": 4,
+      "count": 24
+    },
+    {
+      "year": 1947,
+      "month": 5,
+      "count": 17
+    },
+    {
+      "year": 1947,
+      "month": 6,
+      "count": 18
+    },
+    {
+      "year": 1947,
+      "month": 7,
+      "count": 20
+    },
+    {
+      "year": 1947,
+      "month": 8,
+      "count": 23
+    },
+    {
+      "year": 1947,
+      "month": 9,
+      "count": 20
+    },
+    {
+      "year": 1947,
+      "month": 10,
+      "count": 29
+    },
+    {
+      "year": 1947,
+      "month": 11,
+      "count": 23
+    },
+    {
+      "year": 1947,
+      "month": 12,
+      "count": 30
+    },
+    {
+      "year": 1948,
+      "month": 1,
+      "count": 34
+    },
+    {
+      "year": 1948,
+      "month": 2,
+      "count": 15
+    },
+    {
+      "year": 1948,
+      "month": 3,
+      "count": 29
+    },
+    {
+      "year": 1948,
+      "month": 4,
+      "count": 21
+    },
+    {
+      "year": 1948,
+      "month": 5,
+      "count": 23
+    },
+    {
+      "year": 1948,
+      "month": 6,
+      "count": 25
+    },
+    {
+      "year": 1948,
+      "month": 7,
+      "count": 19
+    },
+    {
+      "year": 1948,
+      "month": 8,
+      "count": 16
+    },
+    {
+      "year": 1948,
+      "month": 9,
+      "count": 13
+    },
+    {
+      "year": 1948,
+      "month": 10,
+      "count": 17
+    },
+    {
+      "year": 1948,
+      "month": 11,
+      "count": 21
+    },
+    {
+      "year": 1948,
+      "month": 12,
+      "count": 30
+    },
+    {
+      "year": 1949,
+      "month": 1,
+      "count": 27
+    },
+    {
+      "year": 1949,
+      "month": 2,
+      "count": 21
+    },
+    {
+      "year": 1949,
+      "month": 3,
+      "count": 26
+    },
+    {
+      "year": 1949,
+      "month": 4,
+      "count": 15
+    },
+    {
+      "year": 1949,
+      "month": 5,
+      "count": 7
+    },
+    {
+      "year": 1949,
+      "month": 6,
+      "count": 15
+    },
+    {
+      "year": 1949,
+      "month": 7,
+      "count": 22
+    },
+    {
+      "year": 1949,
+      "month": 8,
+      "count": 6
+    },
+    {
+      "year": 1949,
+      "month": 9,
+      "count": 16
+    },
+    {
+      "year": 1949,
+      "month": 10,
+      "count": 7
+    },
+    {
+      "year": 1949,
+      "month": 11,
+      "count": 8
+    },
+    {
+      "year": 1949,
+      "month": 12,
+      "count": 17
+    },
+    {
+      "year": 1950,
+      "month": 1,
+      "count": 30
+    },
+    {
+      "year": 1950,
+      "month": 2,
+      "count": 27
+    },
+    {
+      "year": 1950,
+      "month": 3,
+      "count": 31
+    },
+    {
+      "year": 1950,
+      "month": 4,
+      "count": 45
+    },
+    {
+      "year": 1950,
+      "month": 5,
+      "count": 47
+    },
+    {
+      "year": 1950,
+      "month": 6,
+      "count": 31
+    },
+    {
+      "year": 1950,
+      "month": 7,
+      "count": 57
+    },
+    {
+      "year": 1950,
+      "month": 8,
+      "count": 54
+    },
+    {
+      "year": 1950,
+      "month": 9,
+      "count": 46
+    },
+    {
+      "year": 1950,
+      "month": 10,
+      "count": 58
+    },
+    {
+      "year": 1950,
+      "month": 11,
+      "count": 57
+    },
+    {
+      "year": 1950,
+      "month": 12,
+      "count": 58
+    },
+    {
+      "year": 1951,
+      "month": 1,
+      "count": 96
+    },
+    {
+      "year": 1951,
+      "month": 2,
+      "count": 47
+    },
+    {
+      "year": 1951,
+      "month": 3,
+      "count": 60
+    },
+    {
+      "year": 1951,
+      "month": 4,
+      "count": 47
+    },
+    {
+      "year": 1951,
+      "month": 5,
+      "count": 55
+    },
+    {
+      "year": 1951,
+      "month": 6,
+      "count": 45
+    },
+    {
+      "year": 1951,
+      "month": 7,
+      "count": 52
+    },
+    {
+      "year": 1951,
+      "month": 8,
+      "count": 51
+    },
+    {
+      "year": 1951,
+      "month": 9,
+      "count": 43
+    },
+    {
+      "year": 1951,
+      "month": 10,
+      "count": 58
+    },
+    {
+      "year": 1951,
+      "month": 11,
+      "count": 46
+    },
+    {
+      "year": 1951,
+      "month": 12,
+      "count": 52
+    },
+    {
+      "year": 1952,
+      "month": 1,
+      "count": 110
+    },
+    {
+      "year": 1952,
+      "month": 2,
+      "count": 52
+    },
+    {
+      "year": 1952,
+      "month": 3,
+      "count": 52
+    },
+    {
+      "year": 1952,
+      "month": 4,
+      "count": 44
+    },
+    {
+      "year": 1952,
+      "month": 5,
+      "count": 87
+    },
+    {
+      "year": 1952,
+      "month": 6,
+      "count": 39
+    },
+    {
+      "year": 1952,
+      "month": 7,
+      "count": 41
+    },
+    {
+      "year": 1952,
+      "month": 8,
+      "count": 66
+    },
+    {
+      "year": 1952,
+      "month": 9,
+      "count": 61
+    },
+    {
+      "year": 1952,
+      "month": 10,
+      "count": 49
+    },
+    {
+      "year": 1952,
+      "month": 11,
+      "count": 42
+    },
+    {
+      "year": 1952,
+      "month": 12,
+      "count": 44
+    },
+    {
+      "year": 1953,
+      "month": 1,
+      "count": 42
+    },
+    {
+      "year": 1953,
+      "month": 2,
+      "count": 48
+    },
+    {
+      "year": 1953,
+      "month": 3,
+      "count": 55
+    },
+    {
+      "year": 1953,
+      "month": 4,
+      "count": 52
+    },
+    {
+      "year": 1953,
+      "month": 5,
+      "count": 73
+    },
+    {
+      "year": 1953,
+      "month": 6,
+      "count": 58
+    },
+    {
+      "year": 1953,
+      "month": 7,
+      "count": 54
+    },
+    {
+      "year": 1953,
+      "month": 8,
+      "count": 57
+    },
+    {
+      "year": 1953,
+      "month": 9,
+      "count": 48
+    },
+    {
+      "year": 1953,
+      "month": 10,
+      "count": 63
+    },
+    {
+      "year": 1953,
+      "month": 11,
+      "count": 52
+    },
+    {
+      "year": 1953,
+      "month": 12,
+      "count": 58
+    },
+    {
+      "year": 1954,
+      "month": 1,
+      "count": 127
+    },
+    {
+      "year": 1954,
+      "month": 2,
+      "count": 67
+    },
+    {
+      "year": 1954,
+      "month": 3,
+      "count": 75
+    },
+    {
+      "year": 1954,
+      "month": 4,
+      "count": 59
+    },
+    {
+      "year": 1954,
+      "month": 5,
+      "count": 65
+    },
+    {
+      "year": 1954,
+      "month": 6,
+      "count": 74
+    },
+    {
+      "year": 1954,
+      "month": 7,
+      "count": 78
+    },
+    {
+      "year": 1954,
+      "month": 8,
+      "count": 52
+    },
+    {
+      "year": 1954,
+      "month": 9,
+      "count": 61
+    },
+    {
+      "year": 1954,
+      "month": 10,
+      "count": 61
+    },
+    {
+      "year": 1954,
+      "month": 11,
+      "count": 67
+    },
+    {
+      "year": 1954,
+      "month": 12,
+      "count": 71
+    },
+    {
+      "year": 1955,
+      "month": 1,
+      "count": 119
+    },
+    {
+      "year": 1955,
+      "month": 2,
+      "count": 47
+    },
+    {
+      "year": 1955,
+      "month": 3,
+      "count": 64
+    },
+    {
+      "year": 1955,
+      "month": 4,
+      "count": 59
+    },
+    {
+      "year": 1955,
+      "month": 5,
+      "count": 84
+    },
+    {
+      "year": 1955,
+      "month": 6,
+      "count": 79
+    },
+    {
+      "year": 1955,
+      "month": 7,
+      "count": 80
+    },
+    {
+      "year": 1955,
+      "month": 8,
+      "count": 93
+    },
+    {
+      "year": 1955,
+      "month": 9,
+      "count": 66
+    },
+    {
+      "year": 1955,
+      "month": 10,
+      "count": 62
+    },
+    {
+      "year": 1955,
+      "month": 11,
+      "count": 64
+    },
+    {
+      "year": 1955,
+      "month": 12,
+      "count": 58
+    },
+    {
+      "year": 1956,
+      "month": 1,
+      "count": 168
+    },
+    {
+      "year": 1956,
+      "month": 2,
+      "count": 84
+    },
+    {
+      "year": 1956,
+      "month": 3,
+      "count": 60
+    },
+    {
+      "year": 1956,
+      "month": 4,
+      "count": 64
+    },
+    {
+      "year": 1956,
+      "month": 5,
+      "count": 75
+    },
+    {
+      "year": 1956,
+      "month": 6,
+      "count": 70
+    },
+    {
+      "year": 1956,
+      "month": 7,
+      "count": 79
+    },
+    {
+      "year": 1956,
+      "month": 8,
+      "count": 96
+    },
+    {
+      "year": 1956,
+      "month": 9,
+      "count": 62
+    },
+    {
+      "year": 1956,
+      "month": 10,
+      "count": 73
+    },
+    {
+      "year": 1956,
+      "month": 11,
+      "count": 70
+    },
+    {
+      "year": 1956,
+      "month": 12,
+      "count": 72
+    },
+    {
+      "year": 1957,
+      "month": 1,
+      "count": 130
+    },
+    {
+      "year": 1957,
+      "month": 2,
+      "count": 61
+    },
+    {
+      "year": 1957,
+      "month": 3,
+      "count": 62
+    },
+    {
+      "year": 1957,
+      "month": 4,
+      "count": 61
+    },
+    {
+      "year": 1957,
+      "month": 5,
+      "count": 56
+    },
+    {
+      "year": 1957,
+      "month": 6,
+      "count": 55
+    },
+    {
+      "year": 1957,
+      "month": 7,
+      "count": 85
+    },
+    {
+      "year": 1957,
+      "month": 8,
+      "count": 53
+    },
+    {
+      "year": 1957,
+      "month": 9,
+      "count": 48
+    },
+    {
+      "year": 1957,
+      "month": 10,
+      "count": 65
+    },
+    {
+      "year": 1957,
+      "month": 11,
+      "count": 45
+    },
+    {
+      "year": 1957,
+      "month": 12,
+      "count": 59
+    },
+    {
+      "year": 1958,
+      "month": 1,
+      "count": 83
+    },
+    {
+      "year": 1958,
+      "month": 2,
+      "count": 103
+    },
+    {
+      "year": 1958,
+      "month": 3,
+      "count": 64
+    },
+    {
+      "year": 1958,
+      "month": 4,
+      "count": 49
+    },
+    {
+      "year": 1958,
+      "month": 5,
+      "count": 53
+    },
+    {
+      "year": 1958,
+      "month": 6,
+      "count": 44
+    },
+    {
+      "year": 1958,
+      "month": 7,
+      "count": 47
+    },
+    {
+      "year": 1958,
+      "month": 8,
+      "count": 63
+    },
+    {
+      "year": 1958,
+      "month": 9,
+      "count": 42
+    },
+    {
+      "year": 1958,
+      "month": 10,
+      "count": 39
+    },
+    {
+      "year": 1958,
+      "month": 11,
+      "count": 41
+    },
+    {
+      "year": 1958,
+      "month": 12,
+      "count": 36
+    },
+    {
+      "year": 1959,
+      "month": 1,
+      "count": 78
+    },
+    {
+      "year": 1959,
+      "month": 2,
+      "count": 32
+    },
+    {
+      "year": 1959,
+      "month": 3,
+      "count": 37
+    },
+    {
+      "year": 1959,
+      "month": 4,
+      "count": 33
+    },
+    {
+      "year": 1959,
+      "month": 5,
+      "count": 40
+    },
+    {
+      "year": 1959,
+      "month": 6,
+      "count": 28
+    },
+    {
+      "year": 1959,
+      "month": 7,
+      "count": 37
+    },
+    {
+      "year": 1959,
+      "month": 8,
+      "count": 43
+    },
+    {
+      "year": 1959,
+      "month": 9,
+      "count": 40
+    },
+    {
+      "year": 1959,
+      "month": 10,
+      "count": 40
+    },
+    {
+      "year": 1959,
+      "month": 11,
+      "count": 36
+    },
+    {
+      "year": 1959,
+      "month": 12,
+      "count": 30
+    },
+    {
+      "year": 1960,
+      "month": 1,
+      "count": 74
+    },
+    {
+      "year": 1960,
+      "month": 2,
+      "count": 31
+    },
+    {
+      "year": 1960,
+      "month": 3,
+      "count": 59
+    },
+    {
+      "year": 1960,
+      "month": 4,
+      "count": 54
+    },
+    {
+      "year": 1960,
+      "month": 5,
+      "count": 48
+    },
+    {
+      "year": 1960,
+      "month": 6,
+      "count": 53
+    },
+    {
+      "year": 1960,
+      "month": 7,
+      "count": 48
+    },
+    {
+      "year": 1960,
+      "month": 8,
+      "count": 51
+    },
+    {
+      "year": 1960,
+      "month": 9,
+      "count": 35
+    },
+    {
+      "year": 1960,
+      "month": 10,
+      "count": 46
+    },
+    {
+      "year": 1960,
+      "month": 11,
+      "count": 45
+    },
+    {
+      "year": 1960,
+      "month": 12,
+      "count": 38
+    },
+    {
+      "year": 1961,
+      "month": 1,
+      "count": 71
+    },
+    {
+      "year": 1961,
+      "month": 2,
+      "count": 55
+    },
+    {
+      "year": 1961,
+      "month": 3,
+      "count": 52
+    },
+    {
+      "year": 1961,
+      "month": 4,
+      "count": 36
+    },
+    {
+      "year": 1961,
+      "month": 5,
+      "count": 44
+    },
+    {
+      "year": 1961,
+      "month": 6,
+      "count": 36
+    },
+    {
+      "year": 1961,
+      "month": 7,
+      "count": 34
+    },
+    {
+      "year": 1961,
+      "month": 8,
+      "count": 42
+    },
+    {
+      "year": 1961,
+      "month": 9,
+      "count": 25
+    },
+    {
+      "year": 1961,
+      "month": 10,
+      "count": 38
+    },
+    {
+      "year": 1961,
+      "month": 11,
+      "count": 21
+    },
+    {
+      "year": 1961,
+      "month": 12,
+      "count": 27
+    },
+    {
+      "year": 1962,
+      "month": 1,
+      "count": 38
+    },
+    {
+      "year": 1962,
+      "month": 2,
+      "count": 20
+    },
+    {
+      "year": 1962,
+      "month": 3,
+      "count": 21
+    },
+    {
+      "year": 1962,
+      "month": 4,
+      "count": 13
+    },
+    {
+      "year": 1962,
+      "month": 5,
+      "count": 8
+    },
+    {
+      "year": 1962,
+      "month": 6,
+      "count": 13
+    },
+    {
+      "year": 1962,
+      "month": 7,
+      "count": 15
+    },
+    {
+      "year": 1962,
+      "month": 8,
+      "count": 15
+    },
+    {
+      "year": 1962,
+      "month": 9,
+      "count": 12
+    },
+    {
+      "year": 1962,
+      "month": 10,
+      "count": 17
+    },
+    {
+      "year": 1962,
+      "month": 11,
+      "count": 21
+    },
+    {
+      "year": 1962,
+      "month": 12,
+      "count": 22
+    },
+    {
+      "year": 1963,
+      "month": 1,
+      "count": 59
+    },
+    {
+      "year": 1963,
+      "month": 2,
+      "count": 34
+    },
+    {
+      "year": 1963,
+      "month": 3,
+      "count": 27
+    },
+    {
+      "year": 1963,
+      "month": 4,
+      "count": 27
+    },
+    {
+      "year": 1963,
+      "month": 5,
+      "count": 39
+    },
+    {
+      "year": 1963,
+      "month": 6,
+      "count": 35
+    },
+    {
+      "year": 1963,
+      "month": 7,
+      "count": 29
+    },
+    {
+      "year": 1963,
+      "month": 8,
+      "count": 45
+    },
+    {
+      "year": 1963,
+      "month": 9,
+      "count": 30
+    },
+    {
+      "year": 1963,
+      "month": 10,
+      "count": 42
+    },
+    {
+      "year": 1963,
+      "month": 11,
+      "count": 43
+    },
+    {
+      "year": 1963,
+      "month": 12,
+      "count": 47
+    },
+    {
+      "year": 1964,
+      "month": 1,
+      "count": 98
+    },
+    {
+      "year": 1964,
+      "month": 2,
+      "count": 69
+    },
+    {
+      "year": 1964,
+      "month": 3,
+      "count": 59
+    },
+    {
+      "year": 1964,
+      "month": 4,
+      "count": 52
+    },
+    {
+      "year": 1964,
+      "month": 5,
+      "count": 43
+    },
+    {
+      "year": 1964,
+      "month": 6,
+      "count": 66
+    },
+    {
+      "year": 1964,
+      "month": 7,
+      "count": 48
+    },
+    {
+      "year": 1964,
+      "month": 8,
+      "count": 69
+    },
+    {
+      "year": 1964,
+      "month": 9,
+      "count": 49
+    },
+    {
+      "year": 1964,
+      "month": 10,
+      "count": 52
+    },
+    {
+      "year": 1964,
+      "month": 11,
+      "count": 63
+    },
+    {
+      "year": 1964,
+      "month": 12,
+      "count": 56
+    },
+    {
+      "year": 1965,
+      "month": 1,
+      "count": 140
+    },
+    {
+      "year": 1965,
+      "month": 2,
+      "count": 41
+    },
+    {
+      "year": 1965,
+      "month": 3,
+      "count": 66
+    },
+    {
+      "year": 1965,
+      "month": 4,
+      "count": 49
+    },
+    {
+      "year": 1965,
+      "month": 5,
+      "count": 57
+    },
+    {
+      "year": 1965,
+      "month": 6,
+      "count": 55
+    },
+    {
+      "year": 1965,
+      "month": 7,
+      "count": 63
+    },
+    {
+      "year": 1965,
+      "month": 8,
+      "count": 68
+    },
+    {
+      "year": 1965,
+      "month": 9,
+      "count": 63
+    },
+    {
+      "year": 1965,
+      "month": 10,
+      "count": 48
+    },
+    {
+      "year": 1965,
+      "month": 11,
+      "count": 59
+    },
+    {
+      "year": 1965,
+      "month": 12,
+      "count": 74
+    },
+    {
+      "year": 1966,
+      "month": 1,
+      "count": 120
+    },
+    {
+      "year": 1966,
+      "month": 2,
+      "count": 52
+    },
+    {
+      "year": 1966,
+      "month": 3,
+      "count": 69
+    },
+    {
+      "year": 1966,
+      "month": 4,
+      "count": 57
+    },
+    {
+      "year": 1966,
+      "month": 5,
+      "count": 67
+    },
+    {
+      "year": 1966,
+      "month": 6,
+      "count": 67
+    },
+    {
+      "year": 1966,
+      "month": 7,
+      "count": 59
+    },
+    {
+      "year": 1966,
+      "month": 8,
+      "count": 84
+    },
+    {
+      "year": 1966,
+      "month": 9,
+      "count": 55
+    },
+    {
+      "year": 1966,
+      "month": 10,
+      "count": 68
+    },
+    {
+      "year": 1966,
+      "month": 11,
+      "count": 48
+    },
+    {
+      "year": 1966,
+      "month": 12,
+      "count": 47
+    },
+    {
+      "year": 1967,
+      "month": 1,
+      "count": 210
+    },
+    {
+      "year": 1967,
+      "month": 2,
+      "count": 66
+    },
+    {
+      "year": 1967,
+      "month": 3,
+      "count": 74
+    },
+    {
+      "year": 1967,
+      "month": 4,
+      "count": 68
+    },
+    {
+      "year": 1967,
+      "month": 5,
+      "count": 77
+    },
+    {
+      "year": 1967,
+      "month": 6,
+      "count": 68
+    },
+    {
+      "year": 1967,
+      "month": 7,
+      "count": 73
+    },
+    {
+      "year": 1967,
+      "month": 8,
+      "count": 82
+    },
+    {
+      "year": 1967,
+      "month": 9,
+      "count": 83
+    },
+    {
+      "year": 1967,
+      "month": 10,
+      "count": 68
+    },
+    {
+      "year": 1967,
+      "month": 11,
+      "count": 56
+    },
+    {
+      "year": 1967,
+      "month": 12,
+      "count": 88
+    },
+    {
+      "year": 1968,
+      "month": 1,
+      "count": 282
+    },
+    {
+      "year": 1968,
+      "month": 2,
+      "count": 80
+    },
+    {
+      "year": 1968,
+      "month": 3,
+      "count": 68
+    },
+    {
+      "year": 1968,
+      "month": 4,
+      "count": 81
+    },
+    {
+      "year": 1968,
+      "month": 5,
+      "count": 80
+    },
+    {
+      "year": 1968,
+      "month": 6,
+      "count": 61
+    },
+    {
+      "year": 1968,
+      "month": 7,
+      "count": 114
+    },
+    {
+      "year": 1968,
+      "month": 8,
+      "count": 80
+    },
+    {
+      "year": 1968,
+      "month": 9,
+      "count": 81
+    },
+    {
+      "year": 1968,
+      "month": 10,
+      "count": 66
+    },
+    {
+      "year": 1968,
+      "month": 11,
+      "count": 64
+    },
+    {
+      "year": 1968,
+      "month": 12,
+      "count": 75
+    },
+    {
+      "year": 1969,
+      "month": 1,
+      "count": 219
+    },
+    {
+      "year": 1969,
+      "month": 2,
+      "count": 169
+    },
+    {
+      "year": 1969,
+      "month": 3,
+      "count": 115
+    },
+    {
+      "year": 1969,
+      "month": 4,
+      "count": 132
+    },
+    {
+      "year": 1969,
+      "month": 5,
+      "count": 109
+    },
+    {
+      "year": 1969,
+      "month": 6,
+      "count": 134
+    },
+    {
+      "year": 1969,
+      "month": 7,
+      "count": 106
+    },
+    {
+      "year": 1969,
+      "month": 8,
+      "count": 181
+    },
+    {
+      "year": 1969,
+      "month": 9,
+      "count": 119
+    },
+    {
+      "year": 1969,
+      "month": 10,
+      "count": 136
+    },
+    {
+      "year": 1969,
+      "month": 11,
+      "count": 93
+    },
+    {
+      "year": 1969,
+      "month": 12,
+      "count": 127
+    },
+    {
+      "year": 1970,
+      "month": 1,
+      "count": 313
+    },
+    {
+      "year": 1970,
+      "month": 2,
+      "count": 83
+    },
+    {
+      "year": 1970,
+      "month": 3,
+      "count": 110
+    },
+    {
+      "year": 1970,
+      "month": 4,
+      "count": 108
+    },
+    {
+      "year": 1970,
+      "month": 5,
+      "count": 102
+    },
+    {
+      "year": 1970,
+      "month": 6,
+      "count": 124
+    },
+    {
+      "year": 1970,
+      "month": 7,
+      "count": 140
+    },
+    {
+      "year": 1970,
+      "month": 8,
+      "count": 130
+    },
+    {
+      "year": 1970,
+      "month": 9,
+      "count": 103
+    },
+    {
+      "year": 1970,
+      "month": 10,
+      "count": 101
+    },
+    {
+      "year": 1970,
+      "month": 11,
+      "count": 93
+    },
+    {
+      "year": 1970,
+      "month": 12,
+      "count": 135
+    },
+    {
+      "year": 1971,
+      "month": 1,
+      "count": 292
+    },
+    {
+      "year": 1971,
+      "month": 2,
+      "count": 91
+    },
+    {
+      "year": 1971,
+      "month": 3,
+      "count": 125
+    },
+    {
+      "year": 1971,
+      "month": 4,
+      "count": 95
+    },
+    {
+      "year": 1971,
+      "month": 5,
+      "count": 109
+    },
+    {
+      "year": 1971,
+      "month": 6,
+      "count": 96
+    },
+    {
+      "year": 1971,
+      "month": 7,
+      "count": 105
+    },
+    {
+      "year": 1971,
+      "month": 8,
+      "count": 144
+    },
+    {
+      "year": 1971,
+      "month": 9,
+      "count": 123
+    },
+    {
+      "year": 1971,
+      "month": 10,
+      "count": 86
+    },
+    {
+      "year": 1971,
+      "month": 11,
+      "count": 108
+    },
+    {
+      "year": 1971,
+      "month": 12,
+      "count": 116
+    },
+    {
+      "year": 1972,
+      "month": 1,
+      "count": 238
+    },
+    {
+      "year": 1972,
+      "month": 2,
+      "count": 170
+    },
+    {
+      "year": 1972,
+      "month": 3,
+      "count": 109
+    },
+    {
+      "year": 1972,
+      "month": 4,
+      "count": 92
+    },
+    {
+      "year": 1972,
+      "month": 5,
+      "count": 112
+    },
+    {
+      "year": 1972,
+      "month": 6,
+      "count": 94
+    },
+    {
+      "year": 1972,
+      "month": 7,
+      "count": 107
+    },
+    {
+      "year": 1972,
+      "month": 8,
+      "count": 169
+    },
+    {
+      "year": 1972,
+      "month": 9,
+      "count": 98
+    },
+    {
+      "year": 1972,
+      "month": 10,
+      "count": 102
+    },
+    {
+      "year": 1972,
+      "month": 11,
+      "count": 97
+    },
+    {
+      "year": 1972,
+      "month": 12,
+      "count": 102
+    },
+    {
+      "year": 1973,
+      "month": 1,
+      "count": 323
+    },
+    {
+      "year": 1973,
+      "month": 2,
+      "count": 88
+    },
+    {
+      "year": 1973,
+      "month": 3,
+      "count": 115
+    },
+    {
+      "year": 1973,
+      "month": 4,
+      "count": 107
+    },
+    {
+      "year": 1973,
+      "month": 5,
+      "count": 102
+    },
+    {
+      "year": 1973,
+      "month": 6,
+      "count": 113
+    },
+    {
+      "year": 1973,
+      "month": 7,
+      "count": 126
+    },
+    {
+      "year": 1973,
+      "month": 8,
+      "count": 82
+    },
+    {
+      "year": 1973,
+      "month": 9,
+      "count": 85
+    },
+    {
+      "year": 1973,
+      "month": 10,
+      "count": 94
+    },
+    {
+      "year": 1973,
+      "month": 11,
+      "count": 87
+    },
+    {
+      "year": 1973,
+      "month": 12,
+      "count": 170
+    },
+    {
+      "year": 1974,
+      "month": 1,
+      "count": 217
+    },
+    {
+      "year": 1974,
+      "month": 2,
+      "count": 96
+    },
+    {
+      "year": 1974,
+      "month": 3,
+      "count": 99
+    },
+    {
+      "year": 1974,
+      "month": 4,
+      "count": 97
+    },
+    {
+      "year": 1974,
+      "month": 5,
+      "count": 100
+    },
+    {
+      "year": 1974,
+      "month": 6,
+      "count": 107
+    },
+    {
+      "year": 1974,
+      "month": 7,
+      "count": 86
+    },
+    {
+      "year": 1974,
+      "month": 8,
+      "count": 144
+    },
+    {
+      "year": 1974,
+      "month": 9,
+      "count": 75
+    },
+    {
+      "year": 1974,
+      "month": 10,
+      "count": 89
+    },
+    {
+      "year": 1974,
+      "month": 11,
+      "count": 87
+    },
+    {
+      "year": 1974,
+      "month": 12,
+      "count": 96
+    },
+    {
+      "year": 1975,
+      "month": 1,
+      "count": 304
+    },
+    {
+      "year": 1975,
+      "month": 2,
+      "count": 89
+    },
+    {
+      "year": 1975,
+      "month": 3,
+      "count": 112
+    },
+    {
+      "year": 1975,
+      "month": 4,
+      "count": 109
+    },
+    {
+      "year": 1975,
+      "month": 5,
+      "count": 104
+    },
+    {
+      "year": 1975,
+      "month": 6,
+      "count": 107
+    },
+    {
+      "year": 1975,
+      "month": 7,
+      "count": 121
+    },
+    {
+      "year": 1975,
+      "month": 8,
+      "count": 128
+    },
+    {
+      "year": 1975,
+      "month": 9,
+      "count": 95
+    },
+    {
+      "year": 1975,
+      "month": 10,
+      "count": 85
+    },
+    {
+      "year": 1975,
+      "month": 11,
+      "count": 93
+    },
+    {
+      "year": 1975,
+      "month": 12,
+      "count": 119
+    },
+    {
+      "year": 1976,
+      "month": 1,
+      "count": 281
+    },
+    {
+      "year": 1976,
+      "month": 2,
+      "count": 62
+    },
+    {
+      "year": 1976,
+      "month": 3,
+      "count": 105
+    },
+    {
+      "year": 1976,
+      "month": 4,
+      "count": 67
+    },
+    {
+      "year": 1976,
+      "month": 5,
+      "count": 87
+    },
+    {
+      "year": 1976,
+      "month": 6,
+      "count": 83
+    },
+    {
+      "year": 1976,
+      "month": 7,
+      "count": 129
+    },
+    {
+      "year": 1976,
+      "month": 8,
+      "count": 93
+    },
+    {
+      "year": 1976,
+      "month": 9,
+      "count": 70
+    },
+    {
+      "year": 1976,
+      "month": 10,
+      "count": 70
+    },
+    {
+      "year": 1976,
+      "month": 11,
+      "count": 83
+    },
+    {
+      "year": 1976,
+      "month": 12,
+      "count": 82
+    },
+    {
+      "year": 1977,
+      "month": 1,
+      "count": 237
+    },
+    {
+      "year": 1977,
+      "month": 2,
+      "count": 122
+    },
+    {
+      "year": 1977,
+      "month": 3,
+      "count": 87
+    },
+    {
+      "year": 1977,
+      "month": 4,
+      "count": 85
+    },
+    {
+      "year": 1977,
+      "month": 5,
+      "count": 76
+    },
+    {
+      "year": 1977,
+      "month": 6,
+      "count": 86
+    },
+    {
+      "year": 1977,
+      "month": 7,
+      "count": 86
+    },
+    {
+      "year": 1977,
+      "month": 8,
+      "count": 119
+    },
+    {
+      "year": 1977,
+      "month": 9,
+      "count": 73
+    },
+    {
+      "year": 1977,
+      "month": 10,
+      "count": 74
+    },
+    {
+      "year": 1977,
+      "month": 11,
+      "count": 77
+    },
+    {
+      "year": 1977,
+      "month": 12,
+      "count": 81
+    },
+    {
+      "year": 1978,
+      "month": 1,
+      "count": 261
+    },
+    {
+      "year": 1978,
+      "month": 2,
+      "count": 56
+    },
+    {
+      "year": 1978,
+      "month": 3,
+      "count": 45
+    },
+    {
+      "year": 1978,
+      "month": 4,
+      "count": 5
+    },
+    {
+      "year": 1978,
+      "month": 5,
+      "count": 7
+    },
+    {
+      "year": 1978,
+      "month": 6,
+      "count": 9
+    },
+    {
+      "year": 1978,
+      "month": 7,
+      "count": 59
+    },
+    {
+      "year": 1978,
+      "month": 8,
+      "count": 96
+    },
+    {
+      "year": 1978,
+      "month": 9,
+      "count": 76
+    },
+    {
+      "year": 1978,
+      "month": 10,
+      "count": 69
+    },
+    {
+      "year": 1978,
+      "month": 11,
+      "count": 74
+    },
+    {
+      "year": 1978,
+      "month": 12,
+      "count": 105
+    },
+    {
+      "year": 1979,
+      "month": 1,
+      "count": 240
+    },
+    {
+      "year": 1979,
+      "month": 2,
+      "count": 73
+    },
+    {
+      "year": 1979,
+      "month": 3,
+      "count": 79
+    },
+    {
+      "year": 1979,
+      "month": 4,
+      "count": 74
+    },
+    {
+      "year": 1979,
+      "month": 5,
+      "count": 83
+    },
+    {
+      "year": 1979,
+      "month": 6,
+      "count": 62
+    },
+    {
+      "year": 1979,
+      "month": 7,
+      "count": 74
+    },
+    {
+      "year": 1979,
+      "month": 8,
+      "count": 135
+    },
+    {
+      "year": 1979,
+      "month": 9,
+      "count": 82
+    },
+    {
+      "year": 1979,
+      "month": 10,
+      "count": 69
+    },
+    {
+      "year": 1979,
+      "month": 11,
+      "count": 75
+    },
+    {
+      "year": 1979,
+      "month": 12,
+      "count": 79
+    },
+    {
+      "year": 1980,
+      "month": 1,
+      "count": 217
+    },
+    {
+      "year": 1980,
+      "month": 2,
+      "count": 93
+    },
+    {
+      "year": 1980,
+      "month": 3,
+      "count": 73
+    },
+    {
+      "year": 1980,
+      "month": 4,
+      "count": 70
+    },
+    {
+      "year": 1980,
+      "month": 5,
+      "count": 64
+    },
+    {
+      "year": 1980,
+      "month": 6,
+      "count": 75
+    },
+    {
+      "year": 1980,
+      "month": 7,
+      "count": 84
+    },
+    {
+      "year": 1980,
+      "month": 8,
+      "count": 91
+    },
+    {
+      "year": 1980,
+      "month": 9,
+      "count": 60
+    },
+    {
+      "year": 1980,
+      "month": 10,
+      "count": 58
+    },
+    {
+      "year": 1980,
+      "month": 11,
+      "count": 64
+    },
+    {
+      "year": 1980,
+      "month": 12,
+      "count": 82
+    },
+    {
+      "year": 1981,
+      "month": 1,
+      "count": 242
+    },
+    {
+      "year": 1981,
+      "month": 2,
+      "count": 57
+    },
+    {
+      "year": 1981,
+      "month": 3,
+      "count": 74
+    },
+    {
+      "year": 1981,
+      "month": 4,
+      "count": 64
+    },
+    {
+      "year": 1981,
+      "month": 5,
+      "count": 60
+    },
+    {
+      "year": 1981,
+      "month": 6,
+      "count": 51
+    },
+    {
+      "year": 1981,
+      "month": 7,
+      "count": 94
+    },
+    {
+      "year": 1981,
+      "month": 8,
+      "count": 73
+    },
+    {
+      "year": 1981,
+      "month": 9,
+      "count": 47
+    },
+    {
+      "year": 1981,
+      "month": 10,
+      "count": 53
+    },
+    {
+      "year": 1981,
+      "month": 11,
+      "count": 47
+    },
+    {
+      "year": 1981,
+      "month": 12,
+      "count": 123
+    },
+    {
+      "year": 1982,
+      "month": 1,
+      "count": 133
+    },
+    {
+      "year": 1982,
+      "month": 2,
+      "count": 54
+    },
+    {
+      "year": 1982,
+      "month": 3,
+      "count": 58
+    },
+    {
+      "year": 1982,
+      "month": 4,
+      "count": 47
+    },
+    {
+      "year": 1982,
+      "month": 5,
+      "count": 35
+    },
+    {
+      "year": 1982,
+      "month": 6,
+      "count": 59
+    },
+    {
+      "year": 1982,
+      "month": 7,
+      "count": 50
+    },
+    {
+      "year": 1982,
+      "month": 8,
+      "count": 87
+    },
+    {
+      "year": 1982,
+      "month": 9,
+      "count": 52
+    },
+    {
+      "year": 1982,
+      "month": 10,
+      "count": 49
+    },
+    {
+      "year": 1982,
+      "month": 11,
+      "count": 45
+    },
+    {
+      "year": 1982,
+      "month": 12,
+      "count": 58
+    },
+    {
+      "year": 1983,
+      "month": 1,
+      "count": 177
+    },
+    {
+      "year": 1983,
+      "month": 2,
+      "count": 57
+    },
+    {
+      "year": 1983,
+      "month": 3,
+      "count": 51
+    },
+    {
+      "year": 1983,
+      "month": 4,
+      "count": 46
+    },
+    {
+      "year": 1983,
+      "month": 5,
+      "count": 44
+    },
+    {
+      "year": 1983,
+      "month": 6,
+      "count": 55
+    },
+    {
+      "year": 1983,
+      "month": 7,
+      "count": 57
+    },
+    {
+      "year": 1983,
+      "month": 8,
+      "count": 77
+    },
+    {
+      "year": 1983,
+      "month": 9,
+      "count": 37
+    },
+    {
+      "year": 1983,
+      "month": 10,
+      "count": 40
+    },
+    {
+      "year": 1983,
+      "month": 11,
+      "count": 38
+    },
+    {
+      "year": 1983,
+      "month": 12,
+      "count": 54
+    },
+    {
+      "year": 1984,
+      "month": 1,
+      "count": 157
+    },
+    {
+      "year": 1984,
+      "month": 2,
+      "count": 28
+    },
+    {
+      "year": 1984,
+      "month": 3,
+      "count": 41
+    },
+    {
+      "year": 1984,
+      "month": 4,
+      "count": 33
+    },
+    {
+      "year": 1984,
+      "month": 5,
+      "count": 45
+    },
+    {
+      "year": 1984,
+      "month": 6,
+      "count": 31
+    },
+    {
+      "year": 1984,
+      "month": 7,
+      "count": 70
+    },
+    {
+      "year": 1984,
+      "month": 8,
+      "count": 30
+    },
+    {
+      "year": 1984,
+      "month": 9,
+      "count": 14
+    },
+    {
+      "year": 1984,
+      "month": 10,
+      "count": 31
+    },
+    {
+      "year": 1984,
+      "month": 11,
+      "count": 22
+    },
+    {
+      "year": 1984,
+      "month": 12,
+      "count": 31
+    },
+    {
+      "year": 1985,
+      "month": 1,
+      "count": 93
+    },
+    {
+      "year": 1985,
+      "month": 2,
+      "count": 38
+    },
+    {
+      "year": 1985,
+      "month": 3,
+      "count": 27
+    },
+    {
+      "year": 1985,
+      "month": 4,
+      "count": 23
+    },
+    {
+      "year": 1985,
+      "month": 5,
+      "count": 27
+    },
+    {
+      "year": 1985,
+      "month": 6,
+      "count": 16
+    },
+    {
+      "year": 1985,
+      "month": 7,
+      "count": 20
+    },
+    {
+      "year": 1985,
+      "month": 8,
+      "count": 33
+    },
+    {
+      "year": 1985,
+      "month": 9,
+      "count": 13
+    },
+    {
+      "year": 1985,
+      "month": 10,
+      "count": 16
+    },
+    {
+      "year": 1985,
+      "month": 11,
+      "count": 18
+    },
+    {
+      "year": 1985,
+      "month": 12,
+      "count": 23
+    },
+    {
+      "year": 1986,
+      "month": 1,
+      "count": 70
+    },
+    {
+      "year": 1986,
+      "month": 2,
+      "count": 15
+    },
+    {
+      "year": 1986,
+      "month": 3,
+      "count": 14
+    },
+    {
+      "year": 1986,
+      "month": 4,
+      "count": 15
+    },
+    {
+      "year": 1986,
+      "month": 5,
+      "count": 17
+    },
+    {
+      "year": 1986,
+      "month": 6,
+      "count": 14
+    },
+    {
+      "year": 1986,
+      "month": 7,
+      "count": 34
+    },
+    {
+      "year": 1986,
+      "month": 8,
+      "count": 26
+    },
+    {
+      "year": 1986,
+      "month": 9,
+      "count": 13
+    },
+    {
+      "year": 1986,
+      "month": 10,
+      "count": 6
+    },
+    {
+      "year": 1986,
+      "month": 11,
+      "count": 19
+    },
+    {
+      "year": 1986,
+      "month": 12,
+      "count": 25
+    },
+    {
+      "year": 1987,
+      "month": 1,
+      "count": 46
+    },
+    {
+      "year": 1987,
+      "month": 2,
+      "count": 9
+    },
+    {
+      "year": 1987,
+      "month": 3,
+      "count": 15
+    },
+    {
+      "year": 1987,
+      "month": 4,
+      "count": 7
+    },
+    {
+      "year": 1987,
+      "month": 5,
+      "count": 6
+    },
+    {
+      "year": 1987,
+      "month": 6,
+      "count": 10
+    },
+    {
+      "year": 1987,
+      "month": 7,
+      "count": 17
+    },
+    {
+      "year": 1987,
+      "month": 8,
+      "count": 28
+    },
+    {
+      "year": 1987,
+      "month": 9,
+      "count": 8
+    },
+    {
+      "year": 1987,
+      "month": 10,
+      "count": 9
+    },
+    {
+      "year": 1987,
+      "month": 11,
+      "count": 7
+    },
+    {
+      "year": 1987,
+      "month": 12,
+      "count": 16
+    },
+    {
+      "year": 1988,
+      "month": 1,
+      "count": 39
+    },
+    {
+      "year": 1988,
+      "month": 2,
+      "count": 12
+    },
+    {
+      "year": 1988,
+      "month": 3,
+      "count": 7
+    },
+    {
+      "year": 1988,
+      "month": 4,
+      "count": 5
+    },
+    {
+      "year": 1988,
+      "month": 5,
+      "count": 10
+    },
+    {
+      "year": 1988,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1988,
+      "month": 7,
+      "count": 13
+    },
+    {
+      "year": 1988,
+      "month": 8,
+      "count": 16
+    },
+    {
+      "year": 1988,
+      "month": 9,
+      "count": 4
+    },
+    {
+      "year": 1988,
+      "month": 10,
+      "count": 5
+    },
+    {
+      "year": 1988,
+      "month": 11,
+      "count": 7
+    },
+    {
+      "year": 1988,
+      "month": 12,
+      "count": 11
+    },
+    {
+      "year": 1989,
+      "month": 1,
+      "count": 29
+    },
+    {
+      "year": 1989,
+      "month": 2,
+      "count": 4
+    },
+    {
+      "year": 1989,
+      "month": 3,
+      "count": 7
+    },
+    {
+      "year": 1989,
+      "month": 4,
+      "count": 3
+    },
+    {
+      "year": 1989,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1989,
+      "month": 6,
+      "count": 7
+    },
+    {
+      "year": 1989,
+      "month": 7,
+      "count": 11
+    },
+    {
+      "year": 1989,
+      "month": 8,
+      "count": 8
+    },
+    {
+      "year": 1989,
+      "month": 9,
+      "count": 3
+    },
+    {
+      "year": 1989,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1989,
+      "month": 11,
+      "count": 8
+    },
+    {
+      "year": 1989,
+      "month": 12,
+      "count": 11
+    },
+    {
+      "year": 1990,
+      "month": 1,
+      "count": 12
+    },
+    {
+      "year": 1990,
+      "month": 2,
+      "count": 4
+    },
+    {
+      "year": 1990,
+      "month": 3,
+      "count": 3
+    },
+    {
+      "year": 1990,
+      "month": 4,
+      "count": 4
+    },
+    {
+      "year": 1990,
+      "month": 5,
+      "count": 4
+    },
+    {
+      "year": 1990,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1990,
+      "month": 7,
+      "count": 5
+    },
+    {
+      "year": 1990,
+      "month": 8,
+      "count": 8
+    },
+    {
+      "year": 1990,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1990,
+      "month": 10,
+      "count": 3
+    },
+    {
+      "year": 1990,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 1990,
+      "month": 12,
+      "count": 3
+    },
+    {
+      "year": 1991,
+      "month": 1,
+      "count": 14
+    },
+    {
+      "year": 1991,
+      "month": 2,
+      "count": 2
+    },
+    {
+      "year": 1991,
+      "month": 3,
+      "count": 2
+    },
+    {
+      "year": 1991,
+      "month": 4,
+      "count": 3
+    },
+    {
+      "year": 1991,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1991,
+      "month": 6,
+      "count": 3
+    },
+    {
+      "year": 1991,
+      "month": 7,
+      "count": 6
+    },
+    {
+      "year": 1991,
+      "month": 8,
+      "count": 4
+    },
+    {
+      "year": 1991,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1991,
+      "month": 10,
+      "count": 3
+    },
+    {
+      "year": 1991,
+      "month": 11,
+      "count": 3
+    },
+    {
+      "year": 1991,
+      "month": 12,
+      "count": 5
+    },
+    {
+      "year": 1992,
+      "month": 1,
+      "count": 9
+    },
+    {
+      "year": 1992,
+      "month": 3,
+      "count": 2
+    },
+    {
+      "year": 1992,
+      "month": 4,
+      "count": 2
+    },
+    {
+      "year": 1992,
+      "month": 5,
+      "count": 2
+    },
+    {
+      "year": 1992,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1992,
+      "month": 7,
+      "count": 6
+    },
+    {
+      "year": 1992,
+      "month": 8,
+      "count": 3
+    },
+    {
+      "year": 1992,
+      "month": 9,
+      "count": 2
+    },
+    {
+      "year": 1992,
+      "month": 10,
+      "count": 2
+    },
+    {
+      "year": 1992,
+      "month": 11,
+      "count": 2
+    },
+    {
+      "year": 1992,
+      "month": 12,
+      "count": 9
+    },
+    {
+      "year": 1993,
+      "month": 1,
+      "count": 4
+    },
+    {
+      "year": 1993,
+      "month": 2,
+      "count": 3
+    },
+    {
+      "year": 1993,
+      "month": 3,
+      "count": 2
+    },
+    {
+      "year": 1993,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1993,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1993,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1993,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1993,
+      "month": 8,
+      "count": 4
+    },
+    {
+      "year": 1993,
+      "month": 9,
+      "count": 2
+    },
+    {
+      "year": 1993,
+      "month": 10,
+      "count": 3
+    },
+    {
+      "year": 1993,
+      "month": 11,
+      "count": 2
+    },
+    {
+      "year": 1993,
+      "month": 12,
+      "count": 2
+    },
+    {
+      "year": 1994,
+      "month": 1,
+      "count": 13
+    },
+    {
+      "year": 1994,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 1994,
+      "month": 3,
+      "count": 3
+    },
+    {
+      "year": 1994,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1994,
+      "month": 5,
+      "count": 3
+    },
+    {
+      "year": 1994,
+      "month": 6,
+      "count": 2
+    },
+    {
+      "year": 1994,
+      "month": 7,
+      "count": 3
+    },
+    {
+      "year": 1994,
+      "month": 8,
+      "count": 6
+    },
+    {
+      "year": 1994,
+      "month": 9,
+      "count": 1
+    },
+    {
+      "year": 1994,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1994,
+      "month": 11,
+      "count": 2
+    },
+    {
+      "year": 1994,
+      "month": 12,
+      "count": 4
+    },
+    {
+      "year": 1995,
+      "month": 1,
+      "count": 10
+    },
+    {
+      "year": 1995,
+      "month": 2,
+      "count": 2
+    },
+    {
+      "year": 1995,
+      "month": 3,
+      "count": 2
+    },
+    {
+      "year": 1995,
+      "month": 4,
+      "count": 2
+    },
+    {
+      "year": 1995,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1995,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1995,
+      "month": 7,
+      "count": 5
+    },
+    {
+      "year": 1995,
+      "month": 8,
+      "count": 3
+    },
+    {
+      "year": 1995,
+      "month": 9,
+      "count": 2
+    },
+    {
+      "year": 1995,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 1995,
+      "month": 11,
+      "count": 2
+    },
+    {
+      "year": 1995,
+      "month": 12,
+      "count": 2
+    },
+    {
+      "year": 1996,
+      "month": 1,
+      "count": 4
+    },
+    {
+      "year": 1996,
+      "month": 3,
+      "count": 1
+    },
+    {
+      "year": 1996,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1996,
+      "month": 5,
+      "count": 3
+    },
+    {
+      "year": 1996,
+      "month": 6,
+      "count": 4
+    },
+    {
+      "year": 1996,
+      "month": 7,
+      "count": 3
+    },
+    {
+      "year": 1996,
+      "month": 8,
+      "count": 5
+    },
+    {
+      "year": 1996,
+      "month": 9,
+      "count": 2
+    },
+    {
+      "year": 1996,
+      "month": 10,
+      "count": 2
+    },
+    {
+      "year": 1996,
+      "month": 11,
+      "count": 5
+    },
+    {
+      "year": 1996,
+      "month": 12,
+      "count": 3
+    },
+    {
+      "year": 1997,
+      "month": 1,
+      "count": 12
+    },
+    {
+      "year": 1997,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 1997,
+      "month": 3,
+      "count": 1
+    },
+    {
+      "year": 1997,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 1997,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1997,
+      "month": 7,
+      "count": 5
+    },
+    {
+      "year": 1997,
+      "month": 8,
+      "count": 2
+    },
+    {
+      "year": 1997,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 1997,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1998,
+      "month": 1,
+      "count": 6
+    },
+    {
+      "year": 1998,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1998,
+      "month": 8,
+      "count": 4
+    },
+    {
+      "year": 1998,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 1999,
+      "month": 1,
+      "count": 3
+    },
+    {
+      "year": 1999,
+      "month": 2,
+      "count": 2
+    },
+    {
+      "year": 1999,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 1999,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 1999,
+      "month": 7,
+      "count": 2
+    },
+    {
+      "year": 1999,
+      "month": 8,
+      "count": 2
+    },
+    {
+      "year": 1999,
+      "month": 10,
+      "count": 2
+    },
+    {
+      "year": 1999,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 1999,
+      "month": 12,
+      "count": 2
+    },
+    {
+      "year": 2000,
+      "month": 1,
+      "count": 3
+    },
+    {
+      "year": 2000,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 2000,
+      "month": 6,
+      "count": 1
+    },
+    {
+      "year": 2000,
+      "month": 8,
+      "count": 2
+    },
+    {
+      "year": 2000,
+      "month": 12,
+      "count": 2
+    },
+    {
+      "year": 2001,
+      "month": 2,
+      "count": 1
+    },
+    {
+      "year": 2001,
+      "month": 4,
+      "count": 1
+    },
+    {
+      "year": 2001,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 2001,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 2001,
+      "month": 12,
+      "count": 1
+    },
+    {
+      "year": 2002,
+      "month": 1,
+      "count": 2
+    },
+    {
+      "year": 2002,
+      "month": 8,
+      "count": 1
+    },
+    {
+      "year": 2002,
+      "month": 10,
+      "count": 1
+    },
+    {
+      "year": 2003,
+      "month": 5,
+      "count": 1
+    },
+    {
+      "year": 2006,
+      "month": 11,
+      "count": 1
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "count": 131
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "count": 46
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "count": 57
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "count": 46
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "count": 64
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "count": 61
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "count": 74
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "count": 79
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "count": 57
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "count": 44
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "count": 55
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "count": 71
+    }
+  ],
+  "month_totals": [
+    {
+      "month": 1,
+      "count": 6633
+    },
+    {
+      "month": 2,
+      "count": 2692
+    },
+    {
+      "month": 3,
+      "count": 2766
+    },
+    {
+      "month": 4,
+      "count": 2444
+    },
+    {
+      "month": 5,
+      "count": 2606
+    },
+    {
+      "month": 6,
+      "count": 2528
+    },
+    {
+      "month": 7,
+      "count": 2936
+    },
+    {
+      "month": 8,
+      "count": 3315
+    },
+    {
+      "month": 9,
+      "count": 2406
+    },
+    {
+      "month": 10,
+      "count": 2458
+    },
+    {
+      "month": 11,
+      "count": 2394
+    },
+    {
+      "month": 12,
+      "count": 2917
+    }
+  ],
+  "year_totals": [
+    {
+      "year": 1915,
+      "count": 1
+    },
+    {
+      "year": 1916,
+      "count": 2
+    },
+    {
+      "year": 1917,
+      "count": 1
+    },
+    {
+      "year": 1918,
+      "count": 3
+    },
+    {
+      "year": 1919,
+      "count": 9
+    },
+    {
+      "year": 1920,
+      "count": 3
+    },
+    {
+      "year": 1921,
+      "count": 3
+    },
+    {
+      "year": 1922,
+      "count": 1
+    },
+    {
+      "year": 1923,
+      "count": 3
+    },
+    {
+      "year": 1924,
+      "count": 1
+    },
+    {
+      "year": 1925,
+      "count": 2
+    },
+    {
+      "year": 1926,
+      "count": 10
+    },
+    {
+      "year": 1927,
+      "count": 10
+    },
+    {
+      "year": 1928,
+      "count": 6
+    },
+    {
+      "year": 1929,
+      "count": 4
+    },
+    {
+      "year": 1930,
+      "count": 18
+    },
+    {
+      "year": 1931,
+      "count": 42
+    },
+    {
+      "year": 1932,
+      "count": 47
+    },
+    {
+      "year": 1933,
+      "count": 41
+    },
+    {
+      "year": 1934,
+      "count": 32
+    },
+    {
+      "year": 1935,
+      "count": 59
+    },
+    {
+      "year": 1936,
+      "count": 72
+    },
+    {
+      "year": 1937,
+      "count": 116
+    },
+    {
+      "year": 1938,
+      "count": 141
+    },
+    {
+      "year": 1939,
+      "count": 92
+    },
+    {
+      "year": 1940,
+      "count": 114
+    },
+    {
+      "year": 1941,
+      "count": 68
+    },
+    {
+      "year": 1942,
+      "count": 16
+    },
+    {
+      "year": 1943,
+      "count": 10
+    },
+    {
+      "year": 1944,
+      "count": 3
+    },
+    {
+      "year": 1945,
+      "count": 11
+    },
+    {
+      "year": 1946,
+      "count": 119
+    },
+    {
+      "year": 1947,
+      "count": 265
+    },
+    {
+      "year": 1948,
+      "count": 263
+    },
+    {
+      "year": 1949,
+      "count": 187
+    },
+    {
+      "year": 1950,
+      "count": 541
+    },
+    {
+      "year": 1951,
+      "count": 652
+    },
+    {
+      "year": 1952,
+      "count": 687
+    },
+    {
+      "year": 1953,
+      "count": 660
+    },
+    {
+      "year": 1954,
+      "count": 857
+    },
+    {
+      "year": 1955,
+      "count": 875
+    },
+    {
+      "year": 1956,
+      "count": 973
+    },
+    {
+      "year": 1957,
+      "count": 780
+    },
+    {
+      "year": 1958,
+      "count": 664
+    },
+    {
+      "year": 1959,
+      "count": 474
+    },
+    {
+      "year": 1960,
+      "count": 582
+    },
+    {
+      "year": 1961,
+      "count": 481
+    },
+    {
+      "year": 1962,
+      "count": 215
+    },
+    {
+      "year": 1963,
+      "count": 457
+    },
+    {
+      "year": 1964,
+      "count": 724
+    },
+    {
+      "year": 1965,
+      "count": 783
+    },
+    {
+      "year": 1966,
+      "count": 793
+    },
+    {
+      "year": 1967,
+      "count": 1013
+    },
+    {
+      "year": 1968,
+      "count": 1132
+    },
+    {
+      "year": 1969,
+      "count": 1640
+    },
+    {
+      "year": 1970,
+      "count": 1542
+    },
+    {
+      "year": 1971,
+      "count": 1490
+    },
+    {
+      "year": 1972,
+      "count": 1490
+    },
+    {
+      "year": 1973,
+      "count": 1492
+    },
+    {
+      "year": 1974,
+      "count": 1293
+    },
+    {
+      "year": 1975,
+      "count": 1466
+    },
+    {
+      "year": 1976,
+      "count": 1212
+    },
+    {
+      "year": 1977,
+      "count": 1203
+    },
+    {
+      "year": 1978,
+      "count": 862
+    },
+    {
+      "year": 1979,
+      "count": 1125
+    },
+    {
+      "year": 1980,
+      "count": 1031
+    },
+    {
+      "year": 1981,
+      "count": 985
+    },
+    {
+      "year": 1982,
+      "count": 727
+    },
+    {
+      "year": 1983,
+      "count": 733
+    },
+    {
+      "year": 1984,
+      "count": 533
+    },
+    {
+      "year": 1985,
+      "count": 347
+    },
+    {
+      "year": 1986,
+      "count": 268
+    },
+    {
+      "year": 1987,
+      "count": 178
+    },
+    {
+      "year": 1988,
+      "count": 133
+    },
+    {
+      "year": 1989,
+      "count": 94
+    },
+    {
+      "year": 1990,
+      "count": 52
+    },
+    {
+      "year": 1991,
+      "count": 47
+    },
+    {
+      "year": 1992,
+      "count": 40
+    },
+    {
+      "year": 1993,
+      "count": 27
+    },
+    {
+      "year": 1994,
+      "count": 40
+    },
+    {
+      "year": 1995,
+      "count": 36
+    },
+    {
+      "year": 1996,
+      "count": 33
+    },
+    {
+      "year": 1997,
+      "count": 25
+    },
+    {
+      "year": 1998,
+      "count": 12
+    },
+    {
+      "year": 1999,
+      "count": 16
+    },
+    {
+      "year": 2000,
+      "count": 9
+    },
+    {
+      "year": 2001,
+      "count": 5
+    },
+    {
+      "year": 2002,
+      "count": 4
+    },
+    {
+      "year": 2003,
+      "count": 1
+    },
+    {
+      "year": 2004,
+      "count": 0
+    },
+    {
+      "year": 2005,
+      "count": 0
+    },
+    {
+      "year": 2006,
+      "count": 1
+    },
+    {
+      "year": 2007,
+      "count": 0
+    },
+    {
+      "year": 2008,
+      "count": 0
+    },
+    {
+      "year": 2009,
+      "count": 0
+    },
+    {
+      "year": 2010,
+      "count": 0
+    },
+    {
+      "year": 2011,
+      "count": 0
+    },
+    {
+      "year": 2012,
+      "count": 0
+    },
+    {
+      "year": 2013,
+      "count": 0
+    },
+    {
+      "year": 2014,
+      "count": 0
+    },
+    {
+      "year": 2015,
+      "count": 0
+    },
+    {
+      "year": 2016,
+      "count": 0
+    },
+    {
+      "year": 2017,
+      "count": 0
+    },
+    {
+      "year": 2018,
+      "count": 0
+    },
+    {
+      "year": 2019,
+      "count": 0
+    },
+    {
+      "year": 2020,
+      "count": 785
+    }
+  ],
+  "audit": {
+    "total_records": 50064,
+    "display_total": 36095,
+    "display_rows": 865,
+    "missing_cells": 407,
+    "known_years": 91,
+    "excluded_early_rows": [
+      {
+        "year": 1694,
+        "month": 5,
+        "count": 1
+      }
+    ],
+    "missing_rule": "摘要中没有出现的年月组合保留为空白 NA，不强制改写为零；空白不等于现实中没有寄信。"
+  }
+}
+
