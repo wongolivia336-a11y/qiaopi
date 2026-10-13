@@ -208,4 +208,26 @@ posters/
 - 排除“未记录批局”后展示记录量最高的 12 个批局；`万益成` 以砖红强调，因为它是跨面板叙事样本路径中的批局。
 - 明确标注：已知收批县数量是字段类别覆盖，不等同经营半径或地理距离；缺失批局与缺失收批县分别列出。
 
+## 20. 2026-10-13｜`chart:` 完成 P03 annual-confidence 时间层叠图
+
+- 从公开字段级摘要 `课程资料/侨批可用数据-summary-v3.js` 的 `yearStats` 重建 `charts/svg/panel-03-annual-confidence-v1.svg`，不读取或上传原始 Excel。
+- 上轨以堆叠柱表达年度记录条数：灰蓝＝日期/年份直读，灰褐＝推断/待核；下轨以同一线性年份轴表达两种比例，分别使用 0–100% 刻度，避免条数与百分比共用坐标。
+- 主图按 1915–2020 年线性排列；1694 年孤立记录单列说明；无年记录另列，不压入任何具体年份。当前摘要审计值：无年 13,118 条，直读 31,083 条，推断/待核 5,863 条。
+- 红色仅用于 2020 年特殊缺失结构提示，不承载叙事路线；外部历史事件竖线不纳入，避免没有史料来源的因果暗示。
+- 派生审计表保存为 `data/derived/panel-03-annual-confidence-derived-v1.json`；SVG 具有 `count-panel`、`confidence-panel`、`confidence-lines`、`legend`、`source-and-notes` 等可编辑分组。
+
+## 21. 2026-10-13｜`review:` P01 地图/矩阵/集中度视觉走查
+
+- 走查 `map-route`、`source-county-matrix`、`entropy-profile` 的 SVG 与三联海报参考图：三图均保留标题、单位、轴、图例、数据来源、缺失说明及可编辑分组；地图的县域端点因真实地理位置相邻，使用“潮汕收批地·局部展开”阅读性索引承接密集区域，不把展开位置误写成经纬度。
+- 修正 P01 生成脚本的墨色：文字/注释使用柔和深灰褐 `#3E3933`，熵值标记使用灰褐，县域索引与展开点使用灰蓝；清除旧的 `#27231F`/纯黑数据点，避免印刷和 Figma 缩放时形成黑团。
+- 地图底图继续使用 `countries-110m.json` 的 TopoJSON 解码结果；坐标范围聚焦 95–123°E、8°S–32°N，仅改变阅读视窗，不改变 `flows.source / flows.county / flows.count` 的记录口径。澳大利亚记录仍在派生审计表中保留，但不被压缩进主航域视觉。
+- 视觉复杂度来自真实聚合关系、节点/连线层、局部展开、经纬网格和注释层；不以额外虚构的装饰性线路填充空白。P01 下一步在 Figma 中可叠加轻量纸张/邮戳 PNG，但不能遮挡轴、图例、缺失说明或来源脚注。
+- 因原熵图在窄槽位中出现文字密度过高，新增 `charts/scripts/generate-panel-01-entropy-compact-svg.mjs` 与 `charts/svg/panel-01-entropy-profile-compact-v1.svg`，固定为 820×1050 槽位比例；保留公式、n/k/未知来源说明与 10 个真实县域行。
+
+## 22. 2026-10-13｜`chart:` 将 P03 时间图改为横向双面板
+
+- 原 `annual-confidence` 为 1800×1260 竖向双层图，放入 P03 的 2850×760 横向时间槽后缩放过小；新增 `charts/scripts/generate-panel-03-annual-confidence-wide-svg.mjs` 与 `charts/svg/panel-03-annual-confidence-wide-v1.svg`。
+- 新版把相同真实字段拆成左右两块：左侧灰蓝/灰褐堆叠柱为年度记录条数，右侧灰蓝/灰褐双线为日期直读/推断待核比例；下方共享年份刻度、图例、无年记录与 1694 年孤立记录说明。
+- 仍保留 2020 年砖红提示，但不把它解释为叙事路线；SVG 分组包括 `count-panel`、`confidence-panel`、`confidence-lines`、`legend`、`data-callouts`、`source-and-notes`，可独立编辑。
+
 
