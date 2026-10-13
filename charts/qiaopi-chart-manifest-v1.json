@@ -152,6 +152,38 @@
       ]
     },
     {
+      "id": "threads-circular",
+      "panel": "02 中途｜经批局",
+      "claim": "同一来源—批局—收批县网络可以用圆形弦图阅读其阶段分段、主流与细流。",
+      "source_table": "routeTriples",
+      "fields_used": ["source", "office", "county", "count"],
+      "derived_values": [
+        "all routeTriples edges remain in a low-opacity base layer",
+        "top 12 source-office and top 12 office-county relations receive focus strokes",
+        "sample path remains the real 新加坡 → 万益成 → 潮安 combination"
+      ],
+      "encodings": {
+        "mark": "circular chord / radial network",
+        "ring_segments": "来源国、批局、收批县分段排列在圆周",
+        "edge_width": "sqrt(count) for focus strokes; low-opacity hairlines for all edges",
+        "edge_color": "来源国=灰蓝；批局=灰褐；收批县=灰蓝灰；叙事样本=砖红"
+      },
+      "axes": {
+        "type": "circular categorical layout",
+        "unit": "侨批记录条数",
+        "note": "圆周位置表达阶段与类别，不表达地理方向"
+      },
+      "legend": ["淡线＝全部真实聚合关系", "加粗线＝主要关系", "砖红＝叙事样本路径"],
+      "uncertainty": [
+        "圆周位置不是地图位置",
+        "聚合路径不是每一封信的逐件中转顺序",
+        "其他与未记录仍按真实聚合边保留"
+      ],
+      "template_family": "CIRCULAR CHORD / RADIAL NETWORK",
+      "output": "charts/svg/panel-02-circular-chord-v1.svg",
+      "status": "new-real-data-alternate-view"
+    },
+    {
       "id": "office-reach",
       "panel": "02 中途｜经批局",
       "claim": "不同批局的可识别记录量和收批县覆盖范围并不相同。",
