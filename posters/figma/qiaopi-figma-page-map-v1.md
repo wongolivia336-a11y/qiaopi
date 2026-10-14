@@ -57,14 +57,20 @@
 | P01 / `SLOT_P01_ENTROPY` | `114:2` | `panel-01-entropy-profile-compact-v1.svg` | 820×1050 窄槽专用版，替换原拥挤熵图 |
 | P02 / `SLOT_P02_NETWORK` | `121:2` | `panel-02-threads-sankey-v2.svg` | 分层 Sankey：真实细流 + Top-16 主流 + 叙事样本局部放大 |
 | P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
-| P03 / `SLOT_P03_TIME` | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 横向双面板：年度堆叠柱 + 日期可信度双线 |
-| P03 / `02_SVG Chart Library` 备选时间叙事 | 待导入 | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
+| P03 / `SLOT_P03_TIME` | `184:2` | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
+| P03 / `SLOT_P03_TIME` 旧版归档 | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 已隐藏保留；用于回滚，不与当前纸带叙事同时展示 |
 | P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA；本轮统一 `Noto Sans SC` 并修复中文窄框换行 |
 | P03 / `SLOT_P03_LINEAGE` | `117:2` | `panel-03-lineage-compact-v1.svg` | 窄栏版寄批人—收批县覆盖区间 |
 
 Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导入 SVG 的可编辑向量树，不是整页截图。
 
-`panel-03-time-ribbon-v1.svg` 已先在本地与 GitHub 固化，待 Figma 连接稳定后再导入 `02_SVG Chart Library`；它是 P03 的备选时间叙事，不替换现有 `annual-confidence`，避免把两种读法误当成同一统计图。
+`panel-03-time-ribbon-v1.svg` 已导入 Figma P03 `SLOT_P03_TIME`，节点为 `184:2`；旧版 `annual-confidence-wide` 节点 `113:2` 已隐藏归档。两种读法不再同屏，避免把纸带叙事与双面板统计误读为同一图。
+
+### 2026-10-14｜P03 时间叙事替换
+
+- 将 P03 顶部时间区从横向双面板替换为 `P03_Time_Ribbon_EDITABLE_v1`（Figma `184:2`，`2850×760`）。纸带高度表达年度记录量，灰蓝/灰褐分层表达日期直读与推断/待核，底部细线表达直读比例。
+- 旧节点 `113:2` 改名为 `P03_Annual_Confidence_EDITABLE_WIDE_v1_ARCHIVED` 并隐藏，保留可回滚性。
+- 该替换让 P03 由“两个并排小图”转为一条横向档案时间带，减少 demo 感，并与日历热力矩阵、关系覆盖区间形成“年度—月份—关系”的连续阅读路径。
 
 ### 2026-10-14｜P03 中段排版收紧与连接性素材补充
 
