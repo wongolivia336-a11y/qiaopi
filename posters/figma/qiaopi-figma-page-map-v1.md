@@ -59,12 +59,19 @@
 | P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
 | P03 / `SLOT_P03_TIME` | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 横向双面板：年度堆叠柱 + 日期可信度双线 |
 | P03 / `02_SVG Chart Library` 备选时间叙事 | 待导入 | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
-| P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA |
+| P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA；本轮统一 `Noto Sans SC` 并修复中文窄框换行 |
 | P03 / `SLOT_P03_LINEAGE` | `117:2` | `panel-03-lineage-compact-v1.svg` | 窄栏版寄批人—收批县覆盖区间 |
 
 Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导入 SVG 的可编辑向量树，不是整页截图。
 
 `panel-03-time-ribbon-v1.svg` 已先在本地与 GitHub 固化，待 Figma 连接稳定后再导入 `02_SVG Chart Library`；它是 P03 的备选时间叙事，不替换现有 `annual-confidence`，避免把两种读法误当成同一统计图。
+
+### 2026-10-14｜P03 中段排版收紧与连接性素材补充
+
+- `SLOT_P03_CALENDAR` 仍保留原数据图节点 `115:2`，但放大为 `1840×1040`；`SLOT_P03_LINEAGE` 调整为 `840×1040`，关系图放大为 `820×1040`，两者共享 `y=1600` 的证据带。
+- 日历 SVG 导入后的中文字体由 Inter 改为 `Noto Sans SC`；标题、注释和月份汇总不再使用固定窄文本框，避免“空白”换行压到 A/B 标题上。
+- 家书证据槽位 `95:31` 上移至 `y=2860`；右下窗格、写信人和桌面书信仍为独立素材层，不与图表合并。
+- 新增候选 PNG：`qiaopi-archive-slip-cluster-v1.png`、`qiaopi-ledger-tab-bundle-v1.png`。它们先进入仓库和资产清单，待 Figma 上传端 TLS 恢复后放入 `04_PNG Assets`，再以低不透明度连接日历/关系图与家书区。
 
 ### P02 圆形网络替代视图
 
