@@ -59,6 +59,7 @@
 | P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
 | P03 / `SLOT_P03_TIME` | `184:2` | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
 | P03 / `SLOT_P03_TIME` 旧版归档 | `113:2` | `panel-03-annual-confidence-wide-v1.svg` | 已隐藏保留；用于回滚，不与当前纸带叙事同时展示 |
+| `02_SVG Chart Library` / P03 时间带 | `192:2` | `panel-03-time-ribbon-v1.svg` | 原尺寸 `2100×1200` 编辑母版；与 P03 槽位实例分开保留 |
 | P03 / `SLOT_P03_CALENDAR` | `115:2` | `panel-03-calendar-heat-v1.svg` | 年×月热力矩阵；缺失组合保留 NA；本轮统一 `Noto Sans SC` 并修复中文窄框换行 |
 | P03 / `SLOT_P03_LINEAGE` | `117:2` | `panel-03-lineage-compact-v1.svg` | 窄栏版寄批人—收批县覆盖区间 |
 
