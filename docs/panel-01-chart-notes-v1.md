@@ -20,6 +20,13 @@
 - 砖红线不是单件侨批实际航线，也不具有统计代表性。底图采用等距经纬投影，刻度由同一投影函数生成。
 - 归一化后本图范围内可绘 49,124 条；另有澳大利亚 3 条超出 75–122°E 的区域图范围，以及庵埠、陆丰、梅县合计 4 条缺少当前坐标匹配。未知与摘要差额均在图下注明。
 
+#### Hero Map v1
+
+- `charts/scripts/generate-panel-01-map-hero-svg.mjs` 生成 `charts/svg/panel-01-map-route-hero-v1.svg`，画布 `2200×1460`，作为 P01 的当前 Hero 版本。
+- Hero 版本不改变 `flows` 口径：49,124 条可定位来源—收批地聚合记录、7 个已知来源类别、14 个收批地类别；`新加坡 → 潮安` 聚合记录为 14,505 条。
+- 新增编辑分组：`hero-map`、`all-routes`、`focus-routes`、`sample-route`、`source-nodes`、`chaoshan-inset`、`audit-cards`、`source-and-notes`。
+- 潮汕局部展开只拆开相邻端点标签，所有展开导线均标注为阅读性结构，不新增真实路径；未知字段和 `flows` 少 2 条的限制保留。
+
 ### `source-county-matrix`
 
 - 字段：`source`、`county`、`count`。
@@ -53,7 +60,7 @@
 
 ## SVG 编辑结构
 
-每个 SVG 至少包含 `chart-title`、`axes-and-grid`、数据图层、`chart-legend`、`source-and-notes` 五类命名分组。地图另分 `basemap`、`aggregate-routes`、`location-nodes`、`narrative-route-label`；矩阵与熵图保留逐组合/逐县 `data-*` 键，便于在 Figma 中选择和重排。
+每个 SVG 至少包含 `chart-title`、`axes-and-grid`、数据图层、`chart-legend`、`source-and-notes` 五类命名分组。地图另分 `basemap`、`aggregate-routes`、`location-nodes`、`narrative-route-label`；Hero 版本进一步拆出 `all-routes`、`focus-routes`、`chaoshan-inset` 与 `audit-cards`。矩阵与熵图保留逐组合/逐县 `data-*` 键，便于在 Figma 中选择和重排。
 
 ## QA 与已知限制
 
