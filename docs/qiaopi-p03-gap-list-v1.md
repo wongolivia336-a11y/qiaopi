@@ -9,6 +9,8 @@
 - `qiaopi-ledger-tab-bundle-v1.png`：竖向账页签/装订痕迹，已在 GitHub，尚未成功上传到 Figma。
 - `panel-03-annual-confidence-wide-v1.svg`、`panel-03-calendar-heat-v1.svg`、`panel-03-lineage-compact-v1.svg`：已在 P03 使用；日历 SVG 已统一为 Noto Sans SC。
 - `P03_CATALOG_FOOTER`（Figma `158:2`）：已补上来源、口径与版本信息，当前无需再新增装饰性底图。
+- `P03_SAMPLE_TRANSITION_CUE`（Figma `159:2`）：已补上统计证据到授权家书的阅读顺序提示，当前不需要再增加跨栏红线。
+
 
 
 ## PNG 素材
