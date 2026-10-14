@@ -65,8 +65,8 @@ const endpointDots=countyOrder.map(([c,v])=>{const [x,y]=proj(counties[c]),r=4+1
 const atlasX=1400,atlasY=250,atlasW=900,atlasH=760,cardW=420,cardH=132;
 const sourceCards=sourceOrder.map(([s,total],i)=>{
   const col=i%2,row=Math.floor(i/2),x=atlasX+30+col*(cardW+24),y=atlasY+145+row*(cardH+18),top=topCounty(s),full=Math.floor(total/1000),rest=total%1000;
-  const dots=[];for(let k=0;k<Math.min(full,24);k++){const dx=x+30+(k%8)*20,dy=y+70+Math.floor(k/8)*20;dots.push(`<circle cx="${dx}" cy="${dy}" r="6.5" fill="${s==='新加坡'?C.red:C.slate}" fill-opacity=".82"/>`)}
-  if(rest>0 && full<24){const k=full,dx=x+30+(k%8)*20,dy=y+70+Math.floor(k/8)*20;dots.push(`<circle cx="${dx}" cy="${dy}" r="${(3+3*rest/1000).toFixed(1)}" fill="${s==='新加坡'?C.red:C.slate}" fill-opacity=".46"/>`)}
+  const dots=[];for(let k=0;k<Math.min(full,24);k++){const dx=x+250+(k%8)*20,dy=y+70+Math.floor(k/8)*20;dots.push(`<circle cx="${dx}" cy="${dy}" r="6.5" fill="${s==='新加坡'?C.red:C.slate}" fill-opacity=".82"/>`)}
+  if(rest>0 && full<24){const k=full,dx=x+250+(k%8)*20,dy=y+70+Math.floor(k/8)*20;dots.push(`<circle cx="${dx}" cy="${dy}" r="${(3+3*rest/1000).toFixed(1)}" fill="${s==='新加坡'?C.red:C.slate}" fill-opacity=".46"/>`)}
   return `<g id="origin-card-${esc(s)}"><rect x="${x}" y="${y}" width="${cardW}" height="${cardH}" rx="4" fill="${C.paper}" stroke="${C.pale}"/><rect x="${x}" y="${y}" width="5" height="${cardH}" fill="${s==='新加坡'?C.red:C.slate}" fill-opacity=".82"/><text class="caps" x="${x+22}" y="${y+27}">ORIGIN / ${String(i+1).padStart(2,'0')}</text><text class="cardTitle" x="${x+22}" y="${y+57}">${esc(s)}</text><text class="cardValue" x="${x+22}" y="${y+84}">${fmt(total)} 条</text><text class="cardNote" x="${x+22}" y="${y+111}">主收批地：${esc(top.county)} · ${fmt(top.count)} 条</text><g id="dot-units">${dots.join('')}</g></g>`;
 }).join('');
 
