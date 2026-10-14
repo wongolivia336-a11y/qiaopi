@@ -281,4 +281,12 @@ posters/
 - 13,118 条 `unknown_year_count` 不压入任何年份；孤立的 1694 年记录也不伪装成主时间轴连续段。空段只表示当前摘要未覆盖，不等同现实中的通信中断。
 - 该图是参考“纸带/档案层叠”视觉的真实数据替代读法，不声称复刻无法稳定访问的外部参考图，也不添加外部历史事件因果解释。SVG 分组包括 `time-ribbon`、`confidence-thread`、`peak-callouts`、`summary-cards`、`legend` 与 `source-and-notes`，保留 Figma 逐组编辑能力。
 
+## 29. 2026-10-14｜`asset:` 补充 P03 连接性 PNG，并完成中段排版修正
+
+- 走查 `03_A0 Triptych` 后确认：P03 的主要缺口不是继续堆人物或建筑，而是日历/关系证据带与家书区之间缺少“档案桌面”的连接层。因此新增 `charts/png/qiaopi-archive-slip-cluster-v1.png` 与 `charts/png/qiaopi-ledger-tab-bundle-v1.png`。
+- 两件素材均为透明氛围 PNG，不含可读中文、数字、地图、统计图或人物身份；它们只用于纸条、地址签、装订痕迹和版面边界，不能替代真实档案。
+- Figma P03 中段排版：日历节点 `115:2` 放大至 `1840×1040`，关系图 `117:2` 放大至 `820×1040` 并与日历共用 `y=1600` 证据带；家书槽位 `95:31` 上移至 `y=2860`。
+- 修复日历 SVG 导入后的中文显示：76 个文本节点统一为 `Noto Sans SC`，标题/注释改为可伸缩文本框，月份汇总字号降为 12；截图复核后，原先的标题换行和月份栏叠字已消失。
+- 两件新 PNG 已复制到 `charts/png/` 并写入资产清单；尝试上传 Figma `04_PNG Assets` 时，上传提交端仍返回 Windows Schannel `SEC_E_NO_CREDENTIALS`，因此暂不把失败的上传声称为完成。
+
 
