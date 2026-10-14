@@ -27,6 +27,15 @@
 - 新增编辑分组：`hero-map`、`all-routes`、`focus-routes`、`sample-route`、`source-nodes`、`chaoshan-inset`、`audit-cards`、`source-and-notes`。
 - 潮汕局部展开只拆开相邻端点标签，所有展开导线均标注为阅读性结构，不新增真实路径；未知字段和 `flows` 少 2 条的限制保留。
 
+#### Origin Atlas v1（当前 P01 主地图候选）
+
+- `charts/scripts/generate-panel-01-origin-atlas-svg.mjs` 生成 `charts/svg/panel-01-origin-atlas-v1.svg`，画布 `2400×1540`；Figma 当前节点为 `169:2`，放置在 P01 `84:10` 的 `x=160,y=680`，尺寸 `2050×1314.17`。
+- 视觉结构从“所有来源点挤在一张地图上”改成三层：左侧 `map-panel` 保留真实经纬关系；右侧 `origin-atlas` 把 7 个来源地拆成独立记录卡；底部 `receive-field` 以横向端点场展开 Top-10 收批地，明确其只负责标签避让、不替代地理坐标。
+- 来源卡的完整圆点约等于 1,000 条记录，残点表示不足 1,000 条的余量；这是一种聚合量级索引，不是逐封侨批的空间散点。来源卡同时显示真实来源总量与该来源的主收批地。
+- 地图与底部端点场仍从 `flows.source / flows.county / flows.count` 计算；左图灰蓝边保留全量真实聚合关系，砖红只强调 `新加坡 → 潮安`（14,505 条聚合记录）叙事样本。
+- 新增可编辑分组：`map-panel`、`grid`、`basemap`、`all-routes`、`focus-routes`、`sample-route`、`source-nodes`、`origin-atlas`、`origin-card-*`、`receive-field`、`receive-*`、`legend`、`source-and-notes`。
+- 这版借鉴参考图的点阵地图、资料图册卡片和端点索引语法，解决来源点“糊成一团”的阅读问题；它没有使用 3D、渐变、发光或黑色重块，也没有引入人工边。
+
 ### `source-county-matrix`
 
 - 字段：`source`、`county`、`count`。
