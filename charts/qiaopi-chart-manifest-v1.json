@@ -61,6 +61,52 @@
       ]
     },
     {
+      "id": "origin-atlas",
+      "panel": "01 此岸｜起信",
+      "claim": "来源地并不是一个被弧线压缩的点；拆成来源图鉴后，七个出发地的量级与主收批地可以被逐一辨认。",
+      "source_table": "flows",
+      "fields_used": ["source", "county", "count"],
+      "derived_values": [
+        "source_total = sum(count) grouped by source",
+        "top_county = argmax(count) grouped by source",
+        "receive_total = sum(count) grouped by county",
+        "dot_unit = 1,000 records per full dot; residual count uses a partial dot"
+      ],
+      "encodings": {
+        "mark": "geographic field + origin atlas cards + receive endpoint field",
+        "map_edge_width": "sqrt(count) for real source-county aggregate flows",
+        "origin_dot_field": "one full dot ≈ 1,000 records; partial dot = remainder under 1,000",
+        "receive_circle_area": "receive county total records",
+        "edge_color": "灰蓝=全库聚合关系；砖红=新加坡→潮安叙事样本"
+      },
+      "axes": {
+        "map_x": "经度 / °E",
+        "map_y": "纬度 / °N",
+        "atlas_unit": "侨批记录条数",
+        "receive_layout_note": "底部横向排列只承担标签避让，不表示新的地理坐标"
+      },
+      "legend": [
+        "灰蓝线＝可定位来源—收批地的真实聚合关系",
+        "砖红线＝叙事样本路径，不代表单件真实航线或全库总流量",
+        "完整圆点≈1,000条；残点表示不足1,000条的余量",
+        "圆点面积＝收批地聚合记录量"
+      ],
+      "uncertainty": [
+        "未知来源、未知收批地和 flows 与全库相差 2 条继续单列",
+        "来源图鉴圆点是聚合记录量派生，不是逐件记录的经纬度散点",
+        "地图坐标为名称匹配后的制图代理坐标；收批地端点仍需正式坐标字典核验"
+      ],
+      "template_family": "DOT-FIELD ATLAS / MAP + INDEX CARDS",
+      "output": "charts/svg/panel-01-origin-atlas-v1.svg",
+      "derived_output": "data/derived/panel-01-origin-atlas-derived-v1.json",
+      "status": "hero-art-directed-editable-svg",
+      "visual_upgrade": [
+        "将单一压缩地图拆成左侧真实地理场、右侧七张来源卡、底部收批端点场",
+        "借鉴参考图的点阵地图和图册卡片语法，但保留侨批项目的纸色/灰蓝/砖红档案色板",
+        "Figma 中当前作为 P01 主地图候选；旧 Hero Map 仍隐藏保留以便回溯"
+      ]
+    },
+    {
       "id": "source-county-matrix",
       "panel": "01 此岸｜起信",
       "claim": "不同海外来源地与收批县形成不同强度的组合，而不是平均连接。",
