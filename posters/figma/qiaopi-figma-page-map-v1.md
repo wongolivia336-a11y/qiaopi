@@ -103,6 +103,14 @@ Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导
 - Hero SVG 内含 `hero-map`、`all-routes`、`focus-routes`、`sample-route`、`source-nodes`、`chaoshan-inset`、`audit-cards`、`source-and-notes` 等独立可编辑分组。
 - 视觉重点从“局部地图截图”升级为“档案制图板”：来源节点外环、主流/细流层、潮汕局部展开、叙事样本卡和缺失值审计共同构成密度，不用虚构红线或装饰性网络。
 
+### 2026-10-14｜P01 Origin Atlas 主地图候选
+
+- 新增并上传 `charts/svg/panel-01-origin-atlas-v1.svg`，Figma 节点 `169:2`，已嵌入 `A0_01_此岸_起信`（`84:10`）。节点尺寸 `2050×1314.17`，放置于 `x=160,y=680`。
+- Origin Atlas 由左侧地理场、右侧七张来源记录卡、底部收批端点场组成；它解决原先海外出发点重叠且地图被压缩的问题，同时保留一个真实地图层作为空间锚点。
+- 来源卡圆点完整单位约 `1,000 条`，残点表示不足 `1,000 条` 的余量；右侧文字显示真实来源总量和主收批地。底部 Top-10 收批地横向排列只承担标签避让，不表示新的经纬度。
+- 导入后新增 `legend` 分组，图例明确灰蓝真实聚合流、砖红叙事样本、来源圆点单位和收批地圆面积；旧 Origin Atlas `166:2`、Hero Map `163:2` 与更早地图节点均隐藏保留。
+- GitHub 对应文件：`charts/scripts/generate-panel-01-origin-atlas-svg.mjs`、`charts/svg/panel-01-origin-atlas-v1.svg`、`data/derived/panel-01-origin-atlas-derived-v1.json`。Figma 当前显示的是最终带图例版本 `169:2`。
+
 ### P02 圆形网络替代视图
 
 - SVG Library：`124:2`，完整 `1900 × 1500` 版本。
