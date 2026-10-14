@@ -50,7 +50,15 @@
         "未知县/未知来源不应被解释为真实地区"
       ],
       "template_family": "MAP TRANSLATION",
-      "status": "keep-with-audit"
+      "output": "charts/svg/panel-01-map-route-v1.svg",
+      "alternate_output": "charts/svg/panel-01-map-route-hero-v1.svg",
+      "status": "hero-upgraded-editable-svg",
+      "visual_upgrade": [
+        "full archival map composition with coordinate grid, land/sea field, route hierarchy and source rings",
+        "Chaoshan endpoint cluster is separated into a labelled reading inset without changing geographic coordinates",
+        "real missing-value audit and narrative-sample card are built into editable SVG groups",
+        "all routes remain real flows aggregates; no artificial edges are added"
+      ]
     },
     {
       "id": "source-county-matrix",
