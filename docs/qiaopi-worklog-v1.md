@@ -363,5 +363,6 @@ posters/
 - 新增四项透明 PNG：`qiaopi-blue-gray-wash-v2.png`、`qiaopi-port-contact-sheet-v1.png`、`qiaopi-seal-postmark-cluster-v2.png`、`qiaopi-archive-registration-tabs-v1.png`。
 - 这些图像只表达纸张、照片、印泥和登记物件的质感，不生成地图、标题、数字、县名或统计图；已复制到 `charts/png/` 并上传到 Figma `04_PNG Assets`。
 - P01 新增低透明度 collage strip（Figma `218:2`–`218:5`），置于地图与矩阵/熵图之间，形成“SVG 数据层 → 档案物件层 → 证据图层”的过渡；不会遮挡轴、图例或来源脚注。
+- 同一张 v2 地图已归档到 `02_SVG Chart Library`（Figma `219:2`），作为 `2400×1540` 编辑母版；P01 画布使用 `202:2` 槽位实例。
 
 

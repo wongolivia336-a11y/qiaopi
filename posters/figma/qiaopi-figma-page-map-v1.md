@@ -56,6 +56,7 @@
 | P01 / `SLOT_P01_MATRIX` | `112:2` | `panel-01-source-county-matrix-v1.svg` | 已放入槽位，隐藏占位标签 |
 | P01 / `SLOT_P01_ENTROPY` | `114:2` | `panel-01-entropy-profile-compact-v1.svg` | 820×1050 窄槽专用版，替换原拥挤熵图 |
 | P01 / `SLOT_P01_MAP` 当前主图 | `202:2` | `panel-01-origin-atlas-v2.svg` | 细腻灰蓝/砖红渐变、纸色节点外环、透明度分层；旧 `174:2` 归档 |
+| `02_SVG Chart Library` / P01 Origin Atlas v2 | `219:2` | `panel-01-origin-atlas-v2.svg` | `2400×1540` 编辑母版；可拖入 A0 实例继续排版 |
 | P02 / `SLOT_P02_NETWORK` | `121:2` | `panel-02-threads-sankey-v2.svg` | 分层 Sankey：真实细流 + Top-16 主流 + 叙事样本局部放大 |
 | P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
 | P03 / `SLOT_P03_TIME` | `184:2` | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
