@@ -55,6 +55,7 @@
 | P01 / 右侧来源结构栏 | `141:2` | `panel-01-source-profile-v1.svg` | 7 个已知来源地的真实记录量排序；泰国/新加坡为主，未知来源另列 |
 | P01 / `SLOT_P01_MATRIX` | `112:2` | `panel-01-source-county-matrix-v1.svg` | 已放入槽位，隐藏占位标签 |
 | P01 / `SLOT_P01_ENTROPY` | `114:2` | `panel-01-entropy-profile-compact-v1.svg` | 820×1050 窄槽专用版，替换原拥挤熵图 |
+| P01 / `SLOT_P01_MAP` 当前主图 | `202:2` | `panel-01-origin-atlas-v2.svg` | 细腻灰蓝/砖红渐变、纸色节点外环、透明度分层；旧 `174:2` 归档 |
 | P02 / `SLOT_P02_NETWORK` | `121:2` | `panel-02-threads-sankey-v2.svg` | 分层 Sankey：真实细流 + Top-16 主流 + 叙事样本局部放大 |
 | P02 / `SLOT_P02_FLOW` | `110:2` + `125:2` | `panel-02-office-reach-v1.svg` + `panel-02-circular-chord-v1.svg` | 右侧双指标图；左侧紧凑圆形弦图替代视图 |
 | P03 / `SLOT_P03_TIME` | `184:2` | `panel-03-time-ribbon-v1.svg` | 纸带厚度＝年度记录量；细线＝直读日期比例；保留摘要空段与无年记录说明 |
@@ -117,6 +118,14 @@ Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导
 - 来源卡圆点完整单位约 `1,000 条`，残点表示不足 `1,000 条` 的余量；右侧文字显示真实来源总量和主收批地。底部 Top-10 收批地横向排列只承担标签避让，不表示新的经纬度。
 - 导入后新增 `legend` 分组，图例明确灰蓝真实聚合流、砖红叙事样本、来源圆点单位和收批地圆面积；来源卡点阵已移至右侧，89 个文本节点统一为 `Noto Sans SC` 并设为自适应宽高；旧 Origin Atlas `166:2`、`169:2`、Hero Map `163:2` 与更早地图节点均隐藏保留。
 - GitHub 对应文件：`charts/scripts/generate-panel-01-origin-atlas-svg.mjs`、`charts/svg/panel-01-origin-atlas-v1.svg`、`data/derived/panel-01-origin-atlas-derived-v1.json`。Figma 当前显示的是最终带图例与字体修正版 `174:2`。
+
+### 2026-10-14｜P01 Origin Atlas v2 与 PNG 拼贴层
+
+- 新增 `charts/scripts/generate-panel-01-origin-atlas-v2-svg.mjs`、`charts/svg/panel-01-origin-atlas-v2.svg` 与 `data/derived/panel-01-origin-atlas-derived-v2.json`。
+- v2 只在地图视觉层引入克制的 `seaWash`、`landWash`、`routeSlate`、`routeFocus`、`routeSample` 渐变；真实字段、坐标、流量和缺失值口径不变。
+- 全库细流改为更连续的灰蓝透明度层；Top-10 重点流加纸色外环和圆角线帽；叙事样本保持砖红但采用轻微深浅过渡，避免一整片死红/死灰。
+- Figma 当前显示节点为 `202:2`，字体已统一为 `Noto Sans SC`，标题层提升至顶层；旧 `174:2` 和临时重复节点隐藏归档。
+- P01 下方新增拼贴带：灰蓝水洗底纹、港口/批局照片接触片、印泥/邮戳簇、空白档案登记纸片（Figma `218:2`–`218:5`），位置在地图与证据图之间，不遮挡地图轴、图例或来源脚注。
 
 ### 2026-10-14｜P02 SVG 统一字体与标题层级
 

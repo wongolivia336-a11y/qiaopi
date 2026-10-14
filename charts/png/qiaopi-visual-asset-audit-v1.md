@@ -13,6 +13,10 @@
 | `qiaopi-torn-paper-edge-v1.png` | 结构装饰 | 纸张拼接、裁切和跨栏连接 | 放在 A0 三栏边缘或图表卡片底部；低不透明度，不作为数据线 |
 | `qiaopi-photo-mount-frame-v1.png` | 图像框 | 中栏旧照片带、右栏照片嵌片 | 作为照片容器/压纸框；照片本身另行置入，禁止当作历史相片 |
 | `qiaopi-postmark-rings-v1.png` | 印记纹理 | 信封与纸张上的圆形销戳/盖印痕迹 | 只作背景压印；不放可读文字，不编码数量或日期 |
+| `qiaopi-blue-gray-wash-v2.png` | 灰蓝水洗底纹 | P01 地图下方的拼贴背板、图表与物件之间的过渡层 | 低透明度使用；只承载纸张/颜料质感，不承载地理或数量 |
+| `qiaopi-port-contact-sheet-v1.png` | 港口/批局照片接触片 | P01 地图下方的档案物件 strip | 生成式氛围素材；不冒充具体馆藏照片，不放可读文字 |
+| `qiaopi-seal-postmark-cluster-v2.png` | 印泥/邮戳簇 | P01 地图下方的砖红视觉锚点 | 仅表达盖印与手工痕迹，不编码日期、地点或路线 |
+| `qiaopi-archive-registration-tabs-v1.png` | 档案登记纸片 | P01 地图下方的结构性空白/标签层 | 标签保持空白；轴、数字、县名和统计说明仍由 SVG/Figma 提供 |
 | `qiaopi-ledger-fragment-v1.png` | 档案底图 | 右栏大纸张、表格和账页的空白骨架 | 用于关系图、日期图背后；文本和表格线由 Figma/SVG 重做 |
 | `qiaopi-blue-wash-texture-v1.png` | 色彩底纹 | 左栏地图的灰蓝海域/墨水晕染 | 只作地图下方的统一底色，不表达流量，不替代地图几何 |
 | `qiaopi-window-lattice-fragment-v1.png` | 建筑边角 | 右栏下部室内窗格、中栏老街环境 | 作为照片/人物后方的轻量框景；降低对比，避免抢图表 |
@@ -26,6 +30,7 @@
 - 砖红线、代表性侨批路径和跨栏连接应在 Figma/SVG 中绘制，不能用生成的红线 PNG 固化。
 - 结构资产建议先去饱和、降低对比，再以 15–55% 不透明度叠放；禁止发光、渐变、玻璃拟态和高饱和蓝橙。
 - Figma `04_PNG Assets` 页统一命名为 `GENERATED/<asset-name>`，并标记 `GENERATED ATMOSPHERE / 非档案原件`。
+- 本轮新增四项 PNG 已放入 `04_PNG Assets`：`GENERATED/P01_BLUE_GRAY_WASH_v2`、`GENERATED/P01_PORT_CONTACT_SHEET_v1`、`GENERATED/P01_SEAL_POSTMARK_CLUSTER_v2`、`GENERATED/P01_ARCHIVE_REGISTRATION_TABS_v1`；P01 组合层对应 Figma `218:2`–`218:5`。
 
 ## 仍然不生成的元素
 

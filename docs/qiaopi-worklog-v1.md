@@ -351,4 +351,17 @@ posters/
 - 纸带厚度只表达公开摘要中的年度记录量；灰蓝/灰褐只表达日期直读与推断/待核；下方细线使用独立 0–100% 坐标表达直读日期比例。缺失年份保持断开，1694 年孤立记录不压入主轴。
 - 截图走查：P03 顶部时间区已从“两个并排小图”变为单条横向档案带，标题、单位、图例、来源与缺失值说明仍保留在可编辑 SVG 分组内。
 
+## 39. 2026-10-14｜`chart:` P01 Origin Atlas v2，细化透明度与纸上渐变
+
+- 用户指出 P01 地图仍有“线条透明度过于单一、视觉不够精致”的问题。本轮新增 `generate-panel-01-origin-atlas-v2-svg.mjs`，沿用同一公开摘要字段和 TopoJSON 底图，只升级绘制层。
+- v2 的灰蓝全库流使用 `routeSlate` 渐变与连续透明度；Top-10 重点流使用 `routeFocus`；砖红叙事样本使用 `routeSample`。渐变只服务于纸张印刷中的轻微深浅变化，不增加任何数据维度。
+- 来源节点增加纸色外环、虚线定位环和内层圆；收批端点增加纸色护圈，避免相邻点糊成一团。Figma 节点 `202:2` 已替换显示，`174:2` 隐藏归档。
+- 89 个导入文本节点统一切换为 `Noto Sans SC` 并设为 `WIDTH_AND_HEIGHT`；`title-block` 提升到最上层，避免底图边界覆盖标题。
+
+## 40. 2026-10-14｜`asset:` P01 档案拼贴层扩充
+
+- 新增四项透明 PNG：`qiaopi-blue-gray-wash-v2.png`、`qiaopi-port-contact-sheet-v1.png`、`qiaopi-seal-postmark-cluster-v2.png`、`qiaopi-archive-registration-tabs-v1.png`。
+- 这些图像只表达纸张、照片、印泥和登记物件的质感，不生成地图、标题、数字、县名或统计图；已复制到 `charts/png/` 并上传到 Figma `04_PNG Assets`。
+- P01 新增低透明度 collage strip（Figma `218:2`–`218:5`），置于地图与矩阵/熵图之间，形成“SVG 数据层 → 档案物件层 → 证据图层”的过渡；不会遮挡轴、图例或来源脚注。
+
 
