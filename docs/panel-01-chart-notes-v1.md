@@ -36,6 +36,13 @@
 - 新增可编辑分组：`map-panel`、`grid`、`basemap`、`all-routes`、`focus-routes`、`sample-route`、`source-nodes`、`origin-atlas`、`origin-card-*`、`receive-field`、`receive-*`、`legend`、`source-and-notes`。
 - 这版借鉴参考图的点阵地图、资料图册卡片和端点索引语法，解决来源点“糊成一团”的阅读问题；它没有使用 3D、渐变、发光或黑色重块，也没有引入人工边。
 
+#### Origin Atlas v2：Figma 可读性修正
+
+- 来源卡点阵移到卡片右侧，避免与来源名称、记录量和主收批地文字重叠；点阵仍按“完整圆点约 1,000 条、残点表示余量”解释。
+- Figma 导入后的 89 个文本节点统一改为 `Noto Sans SC`，并设置 `WIDTH_AND_HEIGHT` 自适应，修复中文竖排/窄框叠字。
+- `title-block` 被提升到 SVG 组层最上方，避免 TopoJSON 底图的超大边界覆盖标题；地图与来源卡继续保持独立可编辑层。
+- Figma 当前验收节点更新为 `174:2`（`P01_Origin_Atlas_EDITABLE_v2_Noto`）；上一版 `169:2` 隐藏保留。
+
 ### `source-county-matrix`
 
 - 字段：`source`、`county`、`count`。
