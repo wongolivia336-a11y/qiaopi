@@ -17,6 +17,10 @@
 | `qiaopi-port-contact-sheet-v1.png` | 港口/批局照片接触片 | P01 地图下方的档案物件 strip | 生成式氛围素材；不冒充具体馆藏照片，不放可读文字 |
 | `qiaopi-seal-postmark-cluster-v2.png` | 印泥/邮戳簇 | P01 地图下方的砖红视觉锚点 | 仅表达盖印与手工痕迹，不编码日期、地点或路线 |
 | `qiaopi-archive-registration-tabs-v1.png` | 档案登记纸片 | P01 地图下方的结构性空白/标签层 | 标签保持空白；轴、数字、县名和统计说明仍由 SVG/Figma 提供 |
+| `qiaopi-p03-geometric-pattern-overlay-v1.png` | 几何纹样暗纹 | P03 家书区的纸面底纹与跨栏呼吸位 | 只作低对比度边缘压纹；不承载文字、日期或统计 |
+| `qiaopi-p03-floating-letter-slips-v1.png` | 漂浮家书纸片 | P03 “一封具体家书”区的层叠、裁切和空间深度 | 透明 PNG 仅表达纸片/书写痕迹；不可当作公开档案原件 |
+| `qiaopi-p03-camellia-branch-cutout-v1.png` | 红色花枝剪影 | P03 写信人和家书之间的叙事锚点 | 低透明度框景；不与图表颜色编码混用，不生成花上文字 |
+| `qiaopi-p03-figures-on-letter-sheets-v1.png` | 人物—纸片组合 | P03 家书区的微型叙事尺度 | 匿名剪影只表达“人在等待/阅读”；不指向真实人物身份 |
 | `qiaopi-ledger-fragment-v1.png` | 档案底图 | 右栏大纸张、表格和账页的空白骨架 | 用于关系图、日期图背后；文本和表格线由 Figma/SVG 重做 |
 | `qiaopi-blue-wash-texture-v1.png` | 色彩底纹 | 左栏地图的灰蓝海域/墨水晕染 | 只作地图下方的统一底色，不表达流量，不替代地图几何 |
 | `qiaopi-window-lattice-fragment-v1.png` | 建筑边角 | 右栏下部室内窗格、中栏老街环境 | 作为照片/人物后方的轻量框景；降低对比，避免抢图表 |
@@ -31,6 +35,7 @@
 - 结构资产建议先去饱和、降低对比，再以 15–55% 不透明度叠放；禁止发光、渐变、玻璃拟态和高饱和蓝橙。
 - Figma `04_PNG Assets` 页统一命名为 `GENERATED/<asset-name>`，并标记 `GENERATED ATMOSPHERE / 非档案原件`。
 - 本轮新增四项 PNG 已放入 `04_PNG Assets`：`GENERATED/P01_BLUE_GRAY_WASH_v2`、`GENERATED/P01_PORT_CONTACT_SHEET_v1`、`GENERATED/P01_SEAL_POSTMARK_CLUSTER_v2`、`GENERATED/P01_ARCHIVE_REGISTRATION_TABS_v1`；P01 组合层对应 Figma `218:2`–`218:5`。
+- 本轮 P03 新增四项 PNG 已放入 `04_PNG Assets`：`GENERATED/P03_GEOMETRIC_PATTERN_OVERLAY_v1`、`GENERATED/P03_FLOATING_LETTER_SLIPS_v1`、`GENERATED/P03_CAMELLIA_BRANCH_CUTOUT_v1`、`GENERATED/P03_FIGURES_ON_LETTER_SHEETS_v1`；P03 画布组合层对应 Figma `223:2`–`223:5`。四项均标记为 `GENERATED ATMOSPHERE / 非档案原件`。
 
 ## 仍然不生成的元素
 
