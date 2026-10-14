@@ -111,6 +111,12 @@ Figma 仍保留旧 SVG 节点并隐藏，便于回溯；所有新节点均为导
 - 导入后新增 `legend` 分组，图例明确灰蓝真实聚合流、砖红叙事样本、来源圆点单位和收批地圆面积；来源卡点阵已移至右侧，89 个文本节点统一为 `Noto Sans SC` 并设为自适应宽高；旧 Origin Atlas `166:2`、`169:2`、Hero Map `163:2` 与更早地图节点均隐藏保留。
 - GitHub 对应文件：`charts/scripts/generate-panel-01-origin-atlas-svg.mjs`、`charts/svg/panel-01-origin-atlas-v1.svg`、`data/derived/panel-01-origin-atlas-derived-v1.json`。Figma 当前显示的是最终带图例与字体修正版 `174:2`。
 
+### 2026-10-14｜P02 SVG 统一字体与标题层级
+
+- P02 Sankey `121:2`、Office Reach `110:2`、圆形弦图 `124:2` 的导入文本统一改为 `Noto Sans SC`，并对文本节点设置 `WIDTH_AND_HEIGHT` 自适应。
+- 三个图的 `chart-title` 分组均提升到各自 SVG 组的最上层，修复中文标题窄框换行、叠字和被底图边界遮挡的问题。
+- P03 `113:2`、`115:2`、`117:2` 已截图走查；年度、日历、关系图的标题和脚注当前没有同等级别的叠字问题，保留现状以避免不必要的版式漂移。
+
 ### P02 圆形网络替代视图
 
 - SVG Library：`124:2`，完整 `1900 × 1500` 版本。
