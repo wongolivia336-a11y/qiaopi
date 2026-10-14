@@ -8,6 +8,8 @@
 - `qiaopi-archive-slip-cluster-v1.png`：档案纸条/地址签连接层，已在 GitHub，尚未成功上传到 Figma。
 - `qiaopi-ledger-tab-bundle-v1.png`：竖向账页签/装订痕迹，已在 GitHub，尚未成功上传到 Figma。
 - `panel-03-annual-confidence-wide-v1.svg`、`panel-03-calendar-heat-v1.svg`、`panel-03-lineage-compact-v1.svg`：已在 P03 使用；日历 SVG 已统一为 Noto Sans SC。
+- `P03_CATALOG_FOOTER`（Figma `158:2`）：已补上来源、口径与版本信息，当前无需再新增装饰性底图。
+
 
 ## PNG 素材
 
