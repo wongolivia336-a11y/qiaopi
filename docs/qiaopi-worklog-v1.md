@@ -464,5 +464,14 @@ posters/
 - `generate-panel-02-bundled-ribbons-svg-v2.mjs` 为每条带增加约 8% 路径长度的同宽直落端口：上端先从来源节点保持端线子段宽度，下端再以收批县端线子段宽度接回，随后才进入平滑弧线与中段展开。
 - Figma 当前显示 `P02_BUNDLED_RIBBONS_SMOOTH_PORTS_V6`（`352:2`），上一版 `P02_BUNDLED_RIBBONS_SMOOTH_BELLY_V5`（`349:2`）隐藏保留；截图复核后，端口接缝连续，未再出现立即侧移造成的宽度错觉。
 
+## 54. 2026-10-17｜`handoff:` P02 视觉深化素材与运输机制调研交接
+
+- 按用户提供的两张竖向信息海报，确定下一阶段的结构：顶部南洋来源地图、中央大桑基流场、侧边 Top4 横条证据、底部潮汕收批县地图；地图和图表继续使用可编辑 SVG，PNG 只承担少量叙事物件。
+- 新增可复现脚本 `charts/scripts/generate-panel-02-editorial-modules-svg-v1.mjs`，生成 `panel-02-map-southeast-asia-v2.svg`、`panel-02-map-chaoshan-v2.svg`、`panel-02-top4-mini-bars-v2.svg`；三者按 `map-land / routes / source-nodes / county-nodes / source-top4 / office-top4 / county-top4` 分组，方便导入 Figma 后拆改。
+- 新增 `charts/png/p02-editorial-assets-v2/` 五张高清透明物件：批封、织物包、汇票/银元、海船、潮汕骑楼。它们是视觉草稿，导入前需按调研结论复核透明通道、缩放与叙事位置；不把 PNG 当作数据编码。
+- 新增 `docs/p02-agent-handoff-v1.md`，记录了 Figma 节点、当前仓库状态、运输网络角色、可证实的水路/陆路场景、避免杜撰的边界、针对性生图提示词和下一位 agent 的执行顺序。
+- 调研口径：水客承担早期/跨海携带与水路接力；批局负责收寄登记、编号查核、盖印、分拣与汇兑协同；批脚负责国内固定路线逐户派送并带回回批；海路是重要主干，但战时曾出现越南—广西东兴陆路替代线。水客/批脚称谓存在时期和地域重叠，图例需说明。
+- 新 SVG 使用提亮色板：雾蓝灰 `#91A6AA`、深雾蓝灰 `#789296`、砖红 `#C86556`、暖灰褐 `#A9A298`、纸色 `#F7F3EB`。下一步应先导入地图和证据条，再按“跨海段—批局分拣—最后一公里”机制放置 PNG，最后截图复核并同步 GitHub。
+
 
 
