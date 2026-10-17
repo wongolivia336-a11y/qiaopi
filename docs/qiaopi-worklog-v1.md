@@ -393,4 +393,14 @@ posters/
 - 三个新标注使用 `Noto Sans SC Bold`、12 px、砖红色，位置分别为 `x=1380/1490/1600`、`y=246/226/246`，形成轻微错层，避免盖住纸带和彼此叠字。
 - 这次只重排注释层，不改变年度记录量、日期可信度或 1969–1971 的数值；截图复核后，三个标签均可见且不再形成乱码式红色块。
 
+## 45. 2026-10-17｜`data:` + `chart:` P02 接入 B 人物字段表，重做竖向桑基网络
+
+- 用户提供的 `B_人物字段清洗后.csv` 已在本地读取并核对：50,064 条、`EID` 唯一；可用于路线的字段为 `寄批国家地区_统一`／`寄批国家或地区`、`批局主体名`／`批局完整名称`、`收批县域_统一`／`收批县`。`A_人物字段清洗后.csv` 共 13,578 条，与 B 表没有稳定跨表键，题名精确重合只有 7 个唯一值，因此 A 只作为人物字段审计，不补造 B 的路线。
+- 新增 `charts/scripts/derive-panel-02-sankey-csv-v2.mjs`，输出字段级派生文件 `panel-02-sankey-derived-v2-csv.json`、两阶段边表和 Top-80 三元组表；原始 CSV 不进入仓库。
+- 新增 `charts/scripts/generate-panel-02-vertical-sankey-svg-v2.mjs`，生成 `charts/svg/panel-02-threads-vertical-sankey-v2.svg`。图面采用“来源地横带 → 批局横带 → 收批县横带”的自上而下阅读：灰蓝/灰褐为全库真实聚合流，低透明度保留复杂度；砖红虚线为真实样本 `新加坡 → 万益成 → 潮安`（1,267 条），不冒充全库总流量。
+- SVG 独立分组包含 `map-silhouette`（明确仅作装饰）、`links-base`、`links-focus`、三个节点层、`sample-path`、`legend`、`missing-audit` 与 `source-and-notes`；保留 `未记录` 与 `其他` 的字段边界。
+- P02 Figma 主槽位 `SLOT_P02_NETWORK`（`95:14`）已替换为 `P02_Threads_Vertical_Sankey_EDITABLE_v2_CSV`（`287:2`）。上一版 CSV 导入 `285:2` 与旧横向 Sankey `121:2` 均隐藏归档；截图复核后，主图不再是横向仪表盘，红色样本路径和缺失审计可读。
+- 图表清单新增 `threads-vertical`；细节与复现命令见 `docs/panel-02-vertical-sankey-v2-notes.md`。
+
+
 

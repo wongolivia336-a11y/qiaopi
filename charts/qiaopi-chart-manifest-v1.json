@@ -229,6 +229,41 @@
       ]
     },
     {
+      "id": "threads-vertical",
+      "panel": "02 中途｜经批局",
+      "claim": "使用 B 人物字段清洗表中的逐记录字段，可以把来源地、批局主体与收批县组织成一条自上而下的真实网络；缺失批局必须作为缺失层保留。",
+      "source_table": "B_人物字段清洗后.csv",
+      "fields_used": ["EID", "寄批国家地区_统一", "寄批国家或地区", "批局主体名", "批局完整名称", "收批县域_统一", "收批县"],
+      "derived_values": [
+        "rows = 50,064",
+        "complete_source_office_county = 24,068",
+        "source_top_n = 7 known categories + other + missing",
+        "office_top_n = 12 named categories + other + missing",
+        "county_top_n = 7 known categories + other + missing",
+        "narrative_sample = 新加坡 → 万益成 → 潮安 = 1,267 rows"
+      ],
+      "encodings": {
+        "mark": "three horizontal Sankey bands read top-to-bottom",
+        "band_width": "aggregated record count",
+        "edge_color": "全库关系=低透明度灰蓝/灰褐；叙事样本=砖红",
+        "map_silhouette": "decorative only; no administrative claim"
+      },
+      "axes": {
+        "type": "categorical vertical flow",
+        "stages": "寄出地 → 经手批局 → 收批县",
+        "unit": "侨批记录条数"
+      },
+      "legend": ["宽度＝记录条数", "红色虚线＝叙事样本，不代表全库总流量", "未记录＝字段缺失，不是真实地点"],
+      "uncertainty": [
+        "A 与 B 表无稳定跨表键，A 仅用于人物字段审计，未用于补造路线",
+        "批局字段含 1,601 条复合串列，图面保留复合键，不推断其中转先后",
+        "聚合网络不是每一封信的逐件时间顺序"
+      ],
+      "template_family": "VERTICAL EDITORIAL SANKEY",
+      "output": "charts/svg/panel-02-threads-vertical-sankey-v2.svg",
+      "status": "new-csv-backed-editable-svg"
+    },
+    {
       "id": "threads-circular",
       "panel": "02 中途｜经批局",
       "claim": "同一来源—批局—收批县网络可以用圆形弦图阅读其阶段分段、主流与细流。",
@@ -456,5 +491,6 @@
     }
   ]
 }
+
 
 
