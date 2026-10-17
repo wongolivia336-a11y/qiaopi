@@ -117,43 +117,75 @@ assignSlots(stageEdges, 'office', officeRails, 'officeSlot');
 assignSlots(triads, 'office', officeRails, 'officeSlot');
 assignSlots(triads, 'county', countyRails, 'countySlot');
 
-function fluidRibbon({ x0, y0, x1, y1, w0, w1, fill, opacity, pinch, pinch2, bow }) {
-  const wm1 = Math.max(3.5, w0 * pinch);
-  const wm2 = Math.max(3.5, w1 * pinch2);
+function assignMidFactors(items, startKey, startRails, endKey, endRails) {
+  const scores = items.map(item => {
+    const start = nearestRail(item[startKey], startRails).rail;
+    const end = nearestRail(item[endKey], endRails).rail;
+    return Math.min(item.count / start.total, item.count / end.total);
+  });
+  const maxScore = Math.max(...scores, 0.0001);
+  items.forEach((item, index) => {
+    // One smooth middle peak, tied to the shared share of the two endpoint nodes.
+    item.midFactor = 0.12 + 0.28 * Math.sqrt(scores[index] / maxScore);
+  });
+}
+
+assignMidFactors(stageEdges, 'source', sourceRails, 'office', officeRails);
+assignMidFactors(triads, 'office', officeRails, 'county', countyRails);
+
+const smoothStep = t => t * t * (3 - 2 * t);
+const round = value => Number(value.toFixed(2));
+
+function smoothPath(points, moveCommand = 'M') {
+  const first = points[0];
+  let d = `${moveCommand} ${round(first.x)} ${round(first.y)}`;
+  for (let i = 0; i < points.length - 1; i += 1) {
+    const p0 = points[i];
+    const p1 = points[i + 1];
+    const pPrev = points[i - 1] || p0;
+    const pNext = points[i + 2] || p1;
+    const c1 = { x: p0.x + (p1.x - pPrev.x) / 6, y: p0.y + (p1.y - pPrev.y) / 6 };
+    const c2 = { x: p1.x - (pNext.x - p0.x) / 6, y: p1.y - (pNext.y - p0.y) / 6 };
+    d += ` C ${round(c1.x)} ${round(c1.y)}, ${round(c2.x)} ${round(c2.y)}, ${round(p1.x)} ${round(p1.y)}`;
+  }
+  return d;
+}
+
+function fluidRibbon({ x0, y0, x1, y1, w0, w1, fill, opacity, midFactor, bow = 0 }) {
   const dy = y1 - y0;
   const dx = x1 - x0;
-  const yA = y0 + dy * .27;
-  const yB = y0 + dy * .66;
-  const xA = x0 + dx * .29 + bow;
-  const xB = x0 + dx * .72 - bow * .62;
-  const c = n => Number(n.toFixed(2));
-  const d = [
-    `M ${c(x0 - w0 / 2)} ${c(y0)}`,
-    `C ${c(x0 - w0 / 2)} ${c(y0 + dy * .08)}, ${c(xA - wm1 / 2)} ${c(yA - dy * .13)}, ${c(xA - wm1 / 2)} ${c(yA)}`,
-    `C ${c(xA - wm1 / 2)} ${c(yA + dy * .12)}, ${c(xB - wm2 / 2)} ${c(yB - dy * .12)}, ${c(xB - wm2 / 2)} ${c(yB)}`,
-    `C ${c(xB - wm2 / 2)} ${c(yB + dy * .12)}, ${c(x1 - w1 / 2)} ${c(y1 - dy * .08)}, ${c(x1 - w1 / 2)} ${c(y1)}`,
-    `L ${c(x1 + w1 / 2)} ${c(y1)}`,
-    `C ${c(x1 + w1 / 2)} ${c(y1 - dy * .08)}, ${c(xB + wm2 / 2)} ${c(yB + dy * .12)}, ${c(xB + wm2 / 2)} ${c(yB)}`,
-    `C ${c(xB + wm2 / 2)} ${c(yB - dy * .12)}, ${c(xA + wm1 / 2)} ${c(yA + dy * .12)}, ${c(xA + wm1 / 2)} ${c(yA)}`,
-    `C ${c(xA + wm1 / 2)} ${c(yA - dy * .13)}, ${c(x0 + w0 / 2)} ${c(y0 + dy * .08)}, ${c(x0 + w0 / 2)} ${c(y0)}`,
-    'Z',
-  ].join(' ');
+  const arc = Math.sign(dx || 1) * Math.min(240, Math.max(70, Math.abs(dx) * 0.16));
+  const gentleS = Math.max(-80, Math.min(80, bow * 0.22));
+  const tValues = [0, .25, .5, .75, 1];
+  const left = [];
+  const right = [];
+  for (const t of tValues) {
+    const eased = smoothStep(t);
+    const centerX = x0 + dx * t + arc * Math.sin(Math.PI * t) + gentleS * Math.sin(2 * Math.PI * t);
+    const centerY = y0 + dy * t;
+    const baseWidth = w0 + (w1 - w0) * eased;
+    const middleExpansion = Math.max(w0, w1) * midFactor * Math.sin(Math.PI * t) ** 1.6;
+    const width = Math.max(1.5, baseWidth + middleExpansion);
+    left.push({ x: centerX - width / 2, y: centerY });
+    right.push({ x: centerX + width / 2, y: centerY });
+  }
+  const d = `${smoothPath(left, 'M')} ${smoothPath(right.reverse(), 'L')} Z`;
   return `<path d="${d}" fill="${fill}" fill-opacity="${opacity}"/>`;
 }
 
 const topRibbons = stageEdges.map(e => fluidRibbon({
   x0: e.sourceSlot.x, y0: 921, x1: e.officeSlot.x, y1: 1702,
-  w0: e.sourceSlot.width, w1: e.officeSlot.width, ...e
+  w0: e.sourceSlot.width, w1: e.officeSlot.width, midFactor: e.midFactor, bow: e.bow, ...e
 })).join('\n');
 const bottomRibbons = triads.map(e => fluidRibbon({
   x0: e.officeSlot.x, y0: 1750, x1: e.countySlot.x, y1: 2542,
-  w0: e.officeSlot.width, w1: e.countySlot.width, ...e
+  w0: e.officeSlot.width, w1: e.countySlot.width, midFactor: e.midFactor, bow: e.bow, ...e
 })).join('\n');
 
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <title>P02 fluid woven ribbons</title>
-  <desc>Top source-office edges and office-county triads. Every endpoint is a proportional sub-segment of its editable rail; controlled midstream contractions create an editorial woven rhythm.</desc>
+  <desc>Top source-office edges and office-county triads. Every endpoint is a proportional sub-segment of its editable rail; a single smooth midstream expansion is proportional to the shared endpoint-node share.</desc>
   <g id="fluid-source-office">${topRibbons}</g>
   <g id="fluid-office-county">${bottomRibbons}</g>
 </svg>`;
