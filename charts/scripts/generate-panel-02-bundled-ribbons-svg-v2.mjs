@@ -156,15 +156,21 @@ function fluidRibbon({ x0, y0, x1, y1, w0, w1, fill, opacity, midFactor, bow = 0
   const dx = x1 - x0;
   const arc = Math.sign(dx || 1) * Math.min(240, Math.max(70, Math.abs(dx) * 0.16));
   const gentleS = Math.max(-80, Math.min(80, bow * 0.22));
-  const tValues = [0, .25, .5, .75, 1];
+  const portDepth = 0.08;
+  const tValues = [0, portDepth, .25, .5, .75, 1 - portDepth, 1];
   const left = [];
   const right = [];
   for (const t of tValues) {
-    const eased = smoothStep(t);
-    const centerX = x0 + dx * t + arc * Math.sin(Math.PI * t) + gentleS * Math.sin(2 * Math.PI * t);
+    const innerT = Math.min(1, Math.max(0, (t - portDepth) / (1 - portDepth * 2)));
+    const eased = smoothStep(innerT);
+    const centerX = t <= portDepth
+      ? x0
+      : t >= 1 - portDepth
+        ? x1
+        : x0 + dx * innerT + arc * Math.sin(Math.PI * innerT) + gentleS * Math.sin(2 * Math.PI * innerT);
     const centerY = y0 + dy * t;
     const baseWidth = w0 + (w1 - w0) * eased;
-    const middleExpansion = Math.max(w0, w1) * midFactor * Math.sin(Math.PI * t) ** 1.6;
+    const middleExpansion = Math.max(w0, w1) * midFactor * Math.sin(Math.PI * innerT) ** 1.6;
     const width = Math.max(1.5, baseWidth + middleExpansion);
     left.push({ x: centerX - width / 2, y: centerY });
     right.push({ x: centerX + width / 2, y: centerY });
