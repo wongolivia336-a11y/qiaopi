@@ -437,5 +437,12 @@ posters/
 - 替换底部物件为 Wikimedia Commons CC0 邮袋素材 `charts/png/qiaopi-open-source-mailbag-cc0.jpg`，来源与许可见 `charts/png/qiaopi-open-source-assets-v1.md`；物件层仍不编码数据。
 - 截图复核通过：主图更接近参考海报的“宽带—汇流—留白”语法，卡片数量显著减少，主要关系更容易被连续阅读；三端地图仍只作两端定位，未把地理距离误读成流量。
 
+## 50. 2026-10-17｜`chart:` P02 宽窄织带化，形成参考海报式流动节奏
+
+- 用户反馈上一版宽带仍偏“等宽曲线”，本轮以用户提供的参考海报为形态参照，新增 `charts/scripts/generate-panel-02-bundled-ribbons-svg-v2.mjs` 与 `charts/svg/panel-02-bundled-ribbons-v2.svg`。
+- v2 使用真实 Top stage edges / triads 扩展到 16 + 18 条主要关系；每条带的起点与终点宽度仍按记录数表达，中段设置确定性的收束、交叠与再展开，形成“纸带/布匹经纬”的宽窄变化，不新增第二个数据含义。
+- Figma 主图 `P02_Hero_Editorial_Sankey_EDITABLE_v4_BREATHING`（`309:2`）新增可编辑 SVG `P02_BUNDLED_RIBBONS_FLUID_V2`（`343:2`），旧版 `P02_BUNDLED_RIBBONS_TOP10`（`338:2`）隐藏保留作回滚；图例说明同步为“节点端宽度 ∝ 记录数；中段收束为版式编织，不新增数据含义”。
+- 截图复核通过：大流量带更有层次，小流量关系退为细带，三段节点仍可定位，批局中段没有重新恢复密集卡片；材料、地图剪影、图例和底部留白保持原结构。
+
 
 
