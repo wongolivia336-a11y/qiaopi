@@ -402,5 +402,12 @@ posters/
 - P02 Figma 主槽位 `SLOT_P02_NETWORK`（`95:14`）已替换为 `P02_Threads_Vertical_Sankey_EDITABLE_v2_CSV`（`287:2`）。上一版 CSV 导入 `285:2` 与旧横向 Sankey `121:2` 均隐藏归档；截图复核后，主图不再是横向仪表盘，红色样本路径和缺失审计可读。
 - 图表清单新增 `threads-vertical`；细节与复现命令见 `docs/panel-02-vertical-sankey-v2-notes.md`。
 
+## 46. 2026-10-17｜`layout:` 恢复 P02 原竖向 Sankey 主图
+
+- 用户复核后明确：P02 需要恢复较早的竖向 CSV Sankey，不采用误导入的整页本地 SVG 作为海报主图。
+- Figma `A0_02_中途_经批局`（`84:11`）已恢复显示 `P02_Threads_Vertical_Sankey_EDITABLE_v2_CSV`（`287:2`，`1840×2050`）。本轮误导入的本地 SVG 节点 `316:375` 与纸页替代副本 `316:2` 均隐藏，保留作回溯，不参与当前版面。
+- 当前恢复不改动原有数据、字段口径或三段关系；底部圆形网络与批局覆盖度图保持原位置。
+- 用户授权同步的三份源文件已放入 `data/source/`：`A_人物字段清洗后.csv`、`B_人物字段清洗后.csv`、`侨批可用数据(1).xlsx`。源文件与 Figma 节点状态均以本节留痕。
+
 
 
