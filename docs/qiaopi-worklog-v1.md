@@ -427,5 +427,15 @@ posters/
 - 三端素材的格式分工固定为：地图/结构用可编辑 Vector/SVG，邮戳、批局门面、邮袋/木箱用低透明度 PNG 质感素材，标题、索引、图例用 Figma 原生文字；素材只建立“寄出—经手—落地”的阅读叙事，不编码新的统计量。
 - `310:2` 截图复核：批局中段拥挤明显缓解，图例可见，三端素材均位于流场外缘，整体保留参考海报所需的呼吸感与主图放大效果。
 
+## 49. 2026-10-17｜`chart:` P02 宽带主流 + 细线全库，去卡片化
+
+- 按 lieflat-charts 的数据语义审计，P02 继续使用后备关系图族 `G22 Aggregate Sankey`：它适合两端聚合流量；`B3 Threads` 会保留逐条路径，但在静态 A0 上过密，因此不作为主视觉。当前结构不改变源数据，只改变层级表达。
+- 新增可复现脚本 `charts/scripts/generate-panel-02-bundled-ribbons-svg-v1.mjs` 与 `charts/svg/panel-02-bundled-ribbons-v1.svg`。细线层保留全库关系，宽带层抽出 Top 10 stage edges / triads；宽度按记录数线性表达。Figma 新增 `P02_BUNDLED_RIBBONS_TOP10`（`338:2`）。
+- `links-base` 降至低透明度、`links-focus` 与旧红色路径组隐藏，避免“点到点”抢主角；主阅读转为“带到带”的连续流场，保持参考海报的大型穿插带形。
+- 顶部四张 KPI 卡片改为无卡片的 `P02_EVIDENCE_RAIL_NO_CARDS`（`338:25`）；批局名称改为左侧 `P02_OFFICE_RANKING_MARKS`（`338:46`）的小型横向长度编码。旧三端说明卡隐藏，仅保留三端物件与短标签。
+- 图例 `LEGEND_READABLE`（`332:3`）去除白色卡片背景，保留原生文字、四个色标和规则线；副标题同步改为“宽带看主流，细带保留全库关系”。
+- 替换底部物件为 Wikimedia Commons CC0 邮袋素材 `charts/png/qiaopi-open-source-mailbag-cc0.jpg`，来源与许可见 `charts/png/qiaopi-open-source-assets-v1.md`；物件层仍不编码数据。
+- 截图复核通过：主图更接近参考海报的“宽带—汇流—留白”语法，卡片数量显著减少，主要关系更容易被连续阅读；三端地图仍只作两端定位，未把地理距离误读成流量。
+
 
 
