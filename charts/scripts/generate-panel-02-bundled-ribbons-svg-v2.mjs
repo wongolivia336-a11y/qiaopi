@@ -49,11 +49,75 @@ const triads = [
   { office: 2077, county: 2320, count: 617, fill: '#A2A19B', opacity: .23, pinch: .39, pinch2: .66, bow: 185 },
 ];
 
-const width = count => Math.max(5, count * 0.0065);
+// These spans are read back from the editable endpoint rails in Figma (309:221,
+// 309:240, 309:269). A ribbon's endpoint is a sub-segment of the corresponding
+// rail, so its width is count / nodeTotal * railWidth rather than an arbitrary
+// visual stroke width.
+const sourceRails = new Map([
+  [832, { x0: 357.74, x1: 1306.16, total: 24274 }],
+  [1694, { x0: 1331.13, x1: 2056.26, total: 18558 }],
+  [2183, { x0: 2081.22, x1: 2285.00, total: 5216 }],
+]);
 
-function fluidRibbon({ x0, y0, x1, y1, count, fill, opacity, pinch, pinch2, bow }) {
-  const w0 = width(count);
-  const w1 = width(count);
+const officeRails = new Map([
+  [414, { x0: 385.77, x1: 443.18, total: 1568 }],
+  [493, { x0: 468.14, x1: 517.50, total: 1349 }],
+  [563, { x0: 542.35, x1: 584.44, total: 1150 }],
+  [690, { x0: 671.69, x1: 707.77, total: 987 }],
+  [750, { x0: 732.73, x1: 767.68, total: 955 }],
+  [808, { x0: 792.64, x1: 825.20, total: 890 }],
+  [866, { x0: 850.17, x1: 880.80, total: 839 }],
+  [920, { x0: 905.76, x1: 934.47, total: 785 }],
+  [974, { x0: 959.43, x1: 987.80, total: 777 }],
+  [1072, { x0: 1060.75, x1: 1083.10, total: 610 }],
+  [1348, { x0: 1108.07, x1: 1588.47, total: 13133 }],
+  [2077, { x0: 1613.42, x1: 2541.54, total: 25374 }],
+]);
+
+const countyRails = new Map([
+  [914, { x0: 381.46, x1: 1446.52, total: 27258 }],
+  [1798, { x0: 1471.37, x1: 2124.23, total: 16709 }],
+  [2263, { x0: 2234.63, x1: 2290.91, total: 1441 }],
+  [2320, { x0: 2315.86, x1: 2354.78, total: 996 }],
+]);
+
+function nearestRail(rawX, rails) {
+  return [...rails.entries()].reduce((best, entry) => {
+    const distance = Math.abs(entry[0] - rawX);
+    return !best || distance < best.distance ? { key: entry[0], rail: entry[1], distance } : best;
+  }, null);
+}
+
+function assignSlots(items, key, rails, slotKey) {
+  const groups = new Map();
+  for (const item of items) {
+    const match = nearestRail(item[key], rails);
+    if (!match) throw new Error(`No endpoint rail for ${key}=${item[key]}`);
+    item[`${slotKey}Rail`] = match;
+    if (!groups.has(match.key)) groups.set(match.key, []);
+    groups.get(match.key).push(item);
+  }
+  for (const [railKey, groupItems] of groups.entries()) {
+    const rail = rails.get(railKey);
+    const group = groupItems.slice().sort((a, b) => b.count - a.count);
+    const railWidth = rail.x1 - rail.x0;
+    const widths = group.map(item => Math.max(1.5, item.count / rail.total * railWidth));
+    const visibleWidth = widths.reduce((sum, value) => sum + value, 0);
+    let cursor = rail.x0 + Math.max(0, (railWidth - visibleWidth) / 2);
+    group.forEach((item, index) => {
+      const w = widths[index];
+      item[slotKey] = { x: cursor + w / 2, width: w };
+      cursor += w;
+    });
+  }
+}
+
+assignSlots(stageEdges, 'source', sourceRails, 'sourceSlot');
+assignSlots(stageEdges, 'office', officeRails, 'officeSlot');
+assignSlots(triads, 'office', officeRails, 'officeSlot');
+assignSlots(triads, 'county', countyRails, 'countySlot');
+
+function fluidRibbon({ x0, y0, x1, y1, w0, w1, fill, opacity, pinch, pinch2, bow }) {
   const wm1 = Math.max(3.5, w0 * pinch);
   const wm2 = Math.max(3.5, w1 * pinch2);
   const dy = y1 - y0;
@@ -77,13 +141,19 @@ function fluidRibbon({ x0, y0, x1, y1, count, fill, opacity, pinch, pinch2, bow 
   return `<path d="${d}" fill="${fill}" fill-opacity="${opacity}"/>`;
 }
 
-const topRibbons = stageEdges.map(e => fluidRibbon({ x0: e.source, y0: 921, x1: e.office, y1: 1702, ...e })).join('\n');
-const bottomRibbons = triads.map(e => fluidRibbon({ x0: e.office, y0: 1750, x1: e.county, y1: 2542, ...e })).join('\n');
+const topRibbons = stageEdges.map(e => fluidRibbon({
+  x0: e.sourceSlot.x, y0: 921, x1: e.officeSlot.x, y1: 1702,
+  w0: e.sourceSlot.width, w1: e.officeSlot.width, ...e
+})).join('\n');
+const bottomRibbons = triads.map(e => fluidRibbon({
+  x0: e.officeSlot.x, y0: 1750, x1: e.countySlot.x, y1: 2542,
+  w0: e.officeSlot.width, w1: e.countySlot.width, ...e
+})).join('\n');
 
 const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <title>P02 fluid woven ribbons</title>
-  <desc>Top source-office edges and office-county triads. Endpoint width is proportional to real record count; controlled midstream contractions create an editorial woven rhythm.</desc>
+  <desc>Top source-office edges and office-county triads. Every endpoint is a proportional sub-segment of its editable rail; controlled midstream contractions create an editorial woven rhythm.</desc>
   <g id="fluid-source-office">${topRibbons}</g>
   <g id="fluid-office-county">${bottomRibbons}</g>
 </svg>`;
